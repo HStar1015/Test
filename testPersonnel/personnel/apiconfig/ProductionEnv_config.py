@@ -38,7 +38,8 @@ APP_a = {
     "ifThuWork": 1,
     "ifFriWork": 1,
     "ifSatWork": 1,
-    "ifSunWork": 1
+    "ifSunWork": 1,
+    "pageSize":100,
 }
 Base_url = "https://www.iumer.cn/umer/webService"
 Personnel_url = Base_url +"/personnel"
@@ -139,3 +140,13 @@ CoreServer_updateRegistrationId_01.url = Personnel_url + "/sys/user/updateRegist
 CoreServer_updateRegistrationId_01.registrationId = APP_a["registrationId"]
 #exp
 CoreServer_updateRegistrationId_01.code = APP_a["error_code_correct"]
+#***************************************3.2*******************************************
+#3.2.1
+CoreServer_projectList_01 = projectList()
+CoreServer_projectList_01.url = Personnel_url + "/biz/project/projectList"
+CoreServer_projectList_01.X_Type= APP_a["X-Type"]
+CoreServer_projectList_01.shopId = APP_a["shopId"]
+CoreServer_projectList_01.personnelId = APP_a["personnelId"]
+CoreServer_projectList_01.pageSize = APP_a["pageSize"]
+#exp
+CoreServer_projectList_01.code = APP_a["error_code_correct"]

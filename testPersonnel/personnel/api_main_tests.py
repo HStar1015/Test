@@ -68,3 +68,9 @@ class core_server_tests(unittest.TestCase):
         auth = apimsg.CoreServer_updateRegistrationId_01
         self.test.test_updateRegistration(auth)
         print "**********************************************************************************************"
+    #3.2.1
+    def test0010_projectList(self):
+        print "**********************************#3.2.1获取门店项目列表**************************************************"
+        auth = apimsg.CoreServer_projectList_01
+        self.test.test_projectList(auth)
+        print "**********************************************************************************************"

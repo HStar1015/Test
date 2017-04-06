@@ -37,3 +37,8 @@ class test_core_server():
     def test_updateRegistration(self,updateRegistration_obj):
         res = actions.updateRegistrationId(updateRegistration_obj.url,updateRegistration_obj.id,updateRegistration_obj.registrationId,
                                            updateRegistration_obj.X_Type)
+    #*********************************************3.2********************************************
+    #3.2.1
+    def test_projectList(self,projectList_obj):
+        res = actions.projecList(projectList_obj.url,projectList_obj.shopId,projectList_obj.personnelId,projectList_obj.pageSize,
+                                 projectList_obj.X_Type)

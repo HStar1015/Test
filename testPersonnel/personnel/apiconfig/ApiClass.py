@@ -97,5 +97,14 @@ class updateRegistrationId:
     #exp
     code = ""
 #********************************3.2******************************************
+#3.2.1
+class projectList:
+    url= ""
+    X_Type = ""
+    shopId = ""
+    personnelId = ""
+    pageSize = ""
+    #exp
+    code  = ""
 
 
