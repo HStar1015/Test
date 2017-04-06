@@ -56,3 +56,15 @@ class core_server_tests(unittest.TestCase):
         auth = apimsg.CoreServer_getWorkTime_01
         self.test.test_getWorkTime(auth)
         print "**********************************************************************************************"
+    #3.1.8
+    def test0008_shopInfo_test(self):
+        print "**********************************#3.1.8获取所属门店信息**************************************************"
+        auth = apimsg.CoreServer_shopInfo_01
+        self.test.test_shopInfo(auth)
+        print "**********************************************************************************************"
+    #3.1.9
+    def test0009_updateRegistrationId(self):
+        print "**********************************#3.1.9更新用户设备id**************************************************"
+        auth = apimsg.CoreServer_updateRegistrationId_01
+        self.test.test_updateRegistration(auth)
+        print "**********************************************************************************************"

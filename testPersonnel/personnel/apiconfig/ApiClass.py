@@ -81,7 +81,21 @@ class getWorkTime:
     personnelId= ""
     #exp
     code= ""
-
-
+#3.1.8
+class shopInfo:
+    url = ""
+    X_Type = ""
+    shopId = ""
+    #exp
+    code = ""
+#3.1.9
+class updateRegistrationId:
+    url = ""
+    X_Type = ""
+    id = ""
+    registrationId = ""
+    #exp
+    code = ""
+#********************************3.2******************************************
 
 

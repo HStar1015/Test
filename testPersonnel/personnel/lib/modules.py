@@ -30,3 +30,10 @@ class test_core_server():
     #3.1.7
     def test_getWorkTime(selfm,getWorkTime_obj):
         res = actions.getWorkTime(getWorkTime_obj.url ,getWorkTime_obj.personnelId ,getWorkTime_obj.X_Type)
+    #3.1.8
+    def test_shopInfo(self,shopInfo_obj):
+        res = actions.shopInfo(shopInfo_obj.url,shopInfo_obj.shopId,shopInfo_obj.X_Type)
+    #3.1.9
+    def test_updateRegistration(self,updateRegistration_obj):
+        res = actions.updateRegistrationId(updateRegistration_obj.url,updateRegistration_obj.id,updateRegistration_obj.registrationId,
+                                           updateRegistration_obj.X_Type)

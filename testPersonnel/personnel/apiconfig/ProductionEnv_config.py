@@ -125,3 +125,17 @@ CoreServer_getWorkTime_01.X_Type  = APP_a["X-Type"]
 CoreServer_getWorkTime_01.personnelId = APP_a["personnelId"]
 #exp
 CoreServer_getWorkTime_01.code = APP_a["error_code_correct"]
+
+#3.1.8
+CoreServer_shopInfo_01 = shopInfo()
+CoreServer_shopInfo_01.url = Personnel_url +"/sys/user/shopInfo"
+CoreServer_shopInfo_01.X_Type = APP_a["X-Type"]
+CoreServer_shopInfo_01.shopId = APP_a["shopId"]
+#exp
+CoreServer_shopInfo_01.code = APP_a["error_code_correct"]
+#3.1.9
+CoreServer_updateRegistrationId_01 = updateRegistrationId()
+CoreServer_updateRegistrationId_01.url = Personnel_url + "/sys/user/updateRegistrationId"
+CoreServer_updateRegistrationId_01.registrationId = APP_a["registrationId"]
+#exp
+CoreServer_updateRegistrationId_01.code = APP_a["error_code_correct"]

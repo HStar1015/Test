@@ -218,3 +218,19 @@ def getWorkTime(url ="",personnelId ="",X_Type="2"):
     header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
     res = post_json(url, data, header)
     return null2None2dict(res)
+#3.1.8
+def shopInfo(url = "",shopId= "",X_Type = "2"):
+    url = url
+    data = {"shopId":shopId}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#3.1.9
+def updateRegistrationId(url = "",id="",registrationId="",X_Type="2"):
+    url = url
+    data = {"id":id,"registrationId":registrationId}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
