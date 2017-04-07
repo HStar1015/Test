@@ -275,3 +275,11 @@ def projectDetails(url ="",id ="",X_Type =""):
     header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
     res = post_json(url, data, header)
     return null2None2dict(res)
+#***********************************3.3************************************
+def orderGroupNum(url = "",shopId ="",personnelId="",X_Typ ="2"):
+    url = url
+    data = {"shopId":shopId,"personnelId":personnelId}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)

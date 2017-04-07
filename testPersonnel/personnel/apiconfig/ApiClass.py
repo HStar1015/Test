@@ -138,3 +138,12 @@ class projectDetails:
     id = ""
     #exp
     code = ""
+#**************************************3.3****************************
+#3.3.1
+class orderGroupNum:
+    url = ""
+    X_Type = ""
+    shopId = ""
+    personnelId = ""
+    #exp
+    code = ""

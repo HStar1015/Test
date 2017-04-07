@@ -98,3 +98,9 @@ class core_server_tests(unittest.TestCase):
         auth = apimsg.CoreServer_projectDetails_01
         self.test.test_projectDetailsa(auth)
         print "**********************************************************************************************"
+    #3.3.1
+    def test015_projectDetails(self):
+        print "**********************************#3.3.1我的订单分组数量**************************************************"
+        auth = apimsg.CoreServer_orderGroupNum_01
+        self.test.test_orderGroupNum(auth)
+        print "**********************************************************************************************"

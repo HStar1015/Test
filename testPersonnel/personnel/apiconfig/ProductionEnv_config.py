@@ -183,3 +183,12 @@ CoreServer_projectDetails_01.X_Type = APP_a["X-Type"]
 CoreServer_projectDetails_01.id = APP_a["projectId"]
 #exp
 CoreServer_projectDetails_01.code = APP_a["error_code_correct"]
+#**************************************3.3*********************************************
+#3.3.1
+CoreServer_orderGroupNum_01 = orderGroupNum()
+CoreServer_orderGroupNum_01.url = Personnel_url +"/biz/order/orderGroupNum"
+CoreServer_orderGroupNum_01.X_Typze = APP_a["X-Type"]
+CoreServer_orderGroupNum_01.shopId = APP_a["shopId"]
+CoreServer_orderGroupNum_01.personnelId = APP_a["personnelId"]
+#exp
+CoreServer_orderGroupNum_01.code = APP_a["error_code_correct"]

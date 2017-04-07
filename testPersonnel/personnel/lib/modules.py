@@ -56,3 +56,7 @@ class test_core_server():
     #3.2.5
     def test_projectDetailsa(self,projectDetails_obj):
         res = actions.projectDetails(projectDetails_obj.url,projectDetails_obj.id,projectDetails_obj.X_Type)
+    #*******************************************3.3*****************************************
+    def test_orderGroupNum(self,orderGroupNum_obj):
+        res = actions.orderGroupNum(orderGroupNum_obj.url ,orderGroupNum_obj.shopId,
+                                    orderGroupNum_obj.personnelId,orderGroupNum_obj.X_Type)
