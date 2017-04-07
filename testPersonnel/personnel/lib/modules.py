@@ -82,3 +82,12 @@ class test_core_server():
     def test_orderSave(self,orderSave_obj):
         res = actions.orderSave(orderSave_obj.url,orderSave_obj.projectId,orderSave_obj.personnelId,orderSave_obj.makeStartDate,
                                 orderSave_obj.makeEndDate,orderSave_obj.priceType,orderSave_obj.reserveName,orderSave_obj.reservePhone,orderSave_obj.X_Type)
+    #****************************************3.4**********************************************************
+    #3.4.1
+    def test_customerList(self,customerList_obj):
+        res = actions.customerList(customerList_obj.url,customerList_obj.shopId,customerList_obj.personnelId,
+                                   customerList_obj.pageSize,customerList_obj.X_Type)
+    #3.4.2
+    def test_changeRemark(self,changeRemark_obj):
+        res = actions.changeRemark(changeRemark_obj.url,changeRemark_obj.shopId,changeRemark_obj.personnelId,
+                                   changeRemark_obj.remark,changeRemark_obj.customerId,changeRemark_obj.X_Type)

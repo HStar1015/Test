@@ -201,3 +201,23 @@ class orderSave:
     reservePhone = ""
     #exp
     code = ""
+#***************************************************3.4*****************************************
+#3.4.1
+class customerList:
+    url = ""
+    X_Type = ""
+    shopId =""
+    personnelId = ""
+    pageSize = ""
+    #exp
+    code = ""
+#3.4.2
+class changeRemark:
+    url = ""
+    X_Type =""
+    shopId = ""
+    personnelId = ""
+    remark = ""
+    customerId = ""
+    #exp
+    code=""

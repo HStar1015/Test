@@ -334,3 +334,21 @@ def orderSave(url ="",projectId = "",personnelId = "",makeStartDate="",makeEndDa
     header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
     res = post_json(url, data, header)
     return null2None2dict(res)
+#***********************************************3.4************************************************
+#3.4.1
+def customerList(url ="",shopId = "",personnelId="",pageSize="",X_Type=""):
+    url = url
+    data= {"shopId":shopId,"personnelId":personnelId,"pageSize":pageSize}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#3.4.2
+def changeRemark(url="",shopId="",personnelId="",remark="",customerId="",X_Type=""):
+    url = url
+    data = {"shopId":shopId,'personnelId':personnelId,"remark":remark,"customerId":customerId}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+

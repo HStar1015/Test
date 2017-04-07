@@ -140,3 +140,15 @@ class core_server_tests(unittest.TestCase):
         auth = apimsg.CoreServer_orderSave_01
         self.test.test_orderSave(auth)
         print "**********************************************************************************************"
+    #3.4.1
+    def test0022_customerList(self):
+        print "**********************************#3.4.1我的顾客列表**************************************************"
+        auth = apimsg.CoreServer_customerList_01
+        self.test.test_customerList(auth)
+        print "**********************************************************************************************"
+    #3.4.2
+    def test0023_changeRemark(self):
+        print "**********************************#3.4.2改变顾客备注**************************************************"
+        auth = apimsg.CoreServer_changeRemark_01
+        self.test.test_changeRemark(auth)
+        print "**********************************************************************************************"

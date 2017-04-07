@@ -47,7 +47,9 @@ APP_a = {
     "makeEndDate":"2017-03-28 12:30:00",#预约结束时间
     "priceType":1,#价格类型,0(单价)/1(疗程)
     "reserveName":"xing",
-    "reservePhone":"13051175683"
+    "reservePhone":"13051175683",
+    "customerId":43,#顾客id
+    "remark":"hello",
 }
 Base_url = "https://www.iumer.cn/umer/webService"
 Personnel_url = Base_url +"/personnel"
@@ -250,3 +252,22 @@ CoreServer_orderSave_01.reserveName = APP_a["reserveName"]
 CoreServer_orderSave_01.reservePhone = APP_a["reservePhone"]
 #exp
 CoreServer_orderSave_01.code = APP_a["error_code_correct"]
+#******************************************3.4**********************************************
+#3.4.1
+CoreServer_customerList_01 = customerList()
+CoreServer_customerList_01.url = Personnel_url + "/biz/customer/customerList"
+CoreServer_customerList_01.X_Type = APP_a["X-Type"]
+CoreServer_customerList_01.shopId = APP_a["shopId"]
+CoreServer_customerList_01.personnelId = APP_a["personnelId"]
+CoreServer_customerList_01.pageSize = APP_a["pageSize"]
+#exp
+CoreServer_customerList_01.code = APP_a["error_code_correct"]
+#3.4.2
+CoreServer_changeRemark_01 = changeRemark()
+CoreServer_changeRemark_01.url= Personnel_url + "/biz/customer/changeRemark"
+CoreServer_changeRemark_01.X_Type = APP_a["X-Type"]
+CoreServer_changeRemark_01.shopId = APP_a["personnelId"]
+CoreServer_changeRemark_01.personnelId = APP_a["personnelId"]
+CoreServer_changeRemark_01.remark = APP_a["remark"]
+#exp
+CoreServer_changeRemark_01.code = APP_a["error_code_correct"]
