@@ -41,6 +41,7 @@ APP_a = {
     "ifSunWork": 1,
     "pageSize":100,
     "projectId":"216",
+    "orderNo":"DD7312548808254750113",#订单编号
 
 }
 Base_url = "https://www.iumer.cn/umer/webService"
@@ -192,3 +193,19 @@ CoreServer_orderGroupNum_01.shopId = APP_a["shopId"]
 CoreServer_orderGroupNum_01.personnelId = APP_a["personnelId"]
 #exp
 CoreServer_orderGroupNum_01.code = APP_a["error_code_correct"]
+#3.3.2
+CoreServer_myOrderList_01= myOrderList()
+CoreServer_myOrderList_01.url = Personnel_url +"/biz/order/myOrderList"
+CoreServer_myOrderList_01.shopId = APP_a["shopId"]
+CoreServer_myOrderList_01.personnelId = APP_a["personnelId"]
+CoreServer_myOrderList_01.pageSize = APP_a["pageSize"]
+#exp
+CoreServer_myOrderList_01.code = APP_a["error_code_correct"]
+#3.3.3
+CoreServer_orderDetail_01 = orderDetail()
+CoreServer_orderDetail_01.url = Personnel_url +"/biz/order/orderDetail"
+CoreServer_orderDetail_01.X_Type = APP_a["X-Type"]
+CoreServer_orderDetail_01.personnelId  =APP_a["personnelId"]
+CoreServer_orderDetail_01.orderNo = APP_a["orderNo"]
+#exp
+CoreServer_orderDetail_01.code= APP_a["error_code_correct"]

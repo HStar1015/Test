@@ -104,3 +104,15 @@ class core_server_tests(unittest.TestCase):
         auth = apimsg.CoreServer_orderGroupNum_01
         self.test.test_orderGroupNum(auth)
         print "**********************************************************************************************"
+    #3.3.2
+    def test016_myOrderList(self):
+        print "**********************************#3.3.2我的订单列表**************************************************"
+        auth = apimsg.CoreServer_myOrderList_01
+        self.test.test_myOrderList(auth)
+        print "**********************************************************************************************"
+    #3.3.3
+    def test017_orderDetail(self):
+        print "**********************************#3.3.3订单详情**************************************************"
+        auth = apimsg.CoreServer_orderDetail_01
+        self.test.test_orderDetail(auth)
+        print "**********************************************************************************************"

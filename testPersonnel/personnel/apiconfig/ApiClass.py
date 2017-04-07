@@ -147,3 +147,20 @@ class orderGroupNum:
     personnelId = ""
     #exp
     code = ""
+#3.3.2
+class myOrderList:
+    url= ""
+    X_Type = ""
+    shopId = ""
+    personnelId = ""
+    pageSize = ""
+    #exp
+    code=""
+#3.3.3
+class orderDetail:
+    url = ""
+    X_Type =""
+    personnelId = ""
+    orderNo = ""
+    #exp
+    code =""

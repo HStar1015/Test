@@ -57,6 +57,14 @@ class test_core_server():
     def test_projectDetailsa(self,projectDetails_obj):
         res = actions.projectDetails(projectDetails_obj.url,projectDetails_obj.id,projectDetails_obj.X_Type)
     #*******************************************3.3*****************************************
+    #3.3.1
     def test_orderGroupNum(self,orderGroupNum_obj):
         res = actions.orderGroupNum(orderGroupNum_obj.url ,orderGroupNum_obj.shopId,
                                     orderGroupNum_obj.personnelId,orderGroupNum_obj.X_Type)
+    #3.3.2
+    def test_myOrderList(self, myOrderList_obj):
+        res = actions.myOrderList(myOrderList_obj.url, myOrderList_obj.shopId,
+                                    myOrderList_obj.personnelId,myOrderList_obj.pageSize, myOrderList_obj.X_Type)
+    #3.3.3
+    def test_orderDetail(self,orderDetail_obj):
+        res= actions.orderDetail(orderDetail_obj.url,orderDetail_obj.personnelId,orderDetail_obj.orderNo,orderDetail_obj.X_Type)

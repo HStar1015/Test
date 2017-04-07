@@ -276,9 +276,26 @@ def projectDetails(url ="",id ="",X_Type =""):
     res = post_json(url, data, header)
     return null2None2dict(res)
 #***********************************3.3************************************
+#3.3.1
 def orderGroupNum(url = "",shopId ="",personnelId="",X_Typ ="2"):
     url = url
     data = {"shopId":shopId,"personnelId":personnelId}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#3.3.2
+def myOrderList(url ="",shopId= "",personnelId="",pageSize= "",X_Type ="2"):
+    url = url
+    data = {"shopId": shopId, "personnelId": personnelId,"pageSize":pageSize}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#3.3.3
+def orderDetail(url="",personnelId="",orderNo="",X_Type= ""):
+    url = url
+    data= {"personnelId":personnelId,"orderNo":orderNo}
     token = mylogin()
     header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
     res = post_json(url, data, header)
