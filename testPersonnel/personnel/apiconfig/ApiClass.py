@@ -106,5 +106,35 @@ class projectList:
     pageSize = ""
     #exp
     code  = ""
-
-
+#3.2.2
+class chooseProject:
+    url = ""
+    X_Type = ""
+    projectIds = ""
+    personnelId = ""
+    #exp
+    code = ""
+#3.2.3
+class myProjectList:
+    url = ""
+    X_Type = ""
+    shopId = ""
+    personnelId= ""
+    pageSize = ""
+    #exp
+    code  = ""
+#3.2.4
+class delProject:
+    url = ""
+    X_Type =""
+    projectIds = ""
+    personnelId = ""
+    #exp
+    code = ""
+#3.2.5
+class projectDetails:
+    url = ""
+    X_Type= ""
+    id = ""
+    #exp
+    code = ""

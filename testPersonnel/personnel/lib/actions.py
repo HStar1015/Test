@@ -243,3 +243,35 @@ def projecList(url = "",shopId ="",personnelId="",pageSize="",X_Type="2"):
     header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
     res = post_json(url, data, header)
     return null2None2dict(res)
+#3.2.2
+def chooseProject(url ="",projectIds ="",personnelId="",X_Type = "2"):
+    url = url
+    data = {"projectIds":projectIds,"personnelId":personnelId}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#3.2.3
+def myProjectList(url = "",shopId= "",personnelId="",pageSize="",X_Type =""):
+    url = url
+    data = {"shopId":shopId,"personnelId":personnelId,"pageSize":pageSize}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#3.2.4
+def delProject(url = "",projectIds ="",personnelId="",X_Type= "2"):
+    url = url
+    data = {"projectIds":projectIds,"personnelId":personnelId}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#3.2.5
+def projectDetails(url ="",id ="",X_Type =""):
+    url = url
+    data = {"id":id}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)

@@ -74,3 +74,27 @@ class core_server_tests(unittest.TestCase):
         auth = apimsg.CoreServer_projectList_01
         self.test.test_projectList(auth)
         print "**********************************************************************************************"
+    #3.2.2
+    def test0011_chooseProject(self):
+        print "**********************************#3.2.2选择项目**************************************************"
+        auth = apimsg.CoreServer_chooseProject_01
+        self.test.test_chooseProject(auth)
+        print "**********************************************************************************************"
+    #3.2.3
+    def test0012_myProjectList(self):
+        print "**********************************#3.2.3我的项目列表**************************************************"
+        auth = apimsg.CoreServer_myProjectList_01
+        self.test.test_myProjectList(auth)
+        print "**********************************************************************************************"
+    #3.2.4
+    def test013_delProject(self):
+        print "**********************************#3.2.4删除我的项目**************************************************"
+        auth = apimsg.CoreServer_delProject_01
+        self.test.test_delProject(auth)
+        print "**********************************************************************************************"
+    #3.2.5
+    def test014_projectDetails(self):
+        print "**********************************#3.2.5项目详情**************************************************"
+        auth = apimsg.CoreServer_projectDetails_01
+        self.test.test_projectDetailsa(auth)
+        print "**********************************************************************************************"

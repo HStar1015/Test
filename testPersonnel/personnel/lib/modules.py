@@ -42,3 +42,17 @@ class test_core_server():
     def test_projectList(self,projectList_obj):
         res = actions.projecList(projectList_obj.url,projectList_obj.shopId,projectList_obj.personnelId,projectList_obj.pageSize,
                                  projectList_obj.X_Type)
+    #3.2.2
+    def test_chooseProject(self,chooseProject_obj):
+        res = actions.chooseProject(chooseProject_obj.url,chooseProject_obj.projectIds,chooseProject_obj.personnelId,
+                                    chooseProject_obj.X_Type)
+    #3.2.3
+    def test_myProjectList(self,myProjectList_obj):
+        res = actions.myProjectList(myProjectList_obj.url,myProjectList_obj.shopId,myProjectList_obj.personnelId,
+                                    myProjectList_obj.pageSize,myProjectList_obj.X_Type)
+    #3.2.4
+    def test_delProject(self,delProject_obj):
+        res = actions.delProject(delProject_obj.url,delProject_obj.projectIds,delProject_obj.personnelId,delProject_obj.X_Type)
+    #3.2.5
+    def test_projectDetailsa(self,projectDetails_obj):
+        res = actions.projectDetails(projectDetails_obj.url,projectDetails_obj.id,projectDetails_obj.X_Type)

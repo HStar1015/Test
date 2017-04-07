@@ -40,6 +40,8 @@ APP_a = {
     "ifSatWork": 1,
     "ifSunWork": 1,
     "pageSize":100,
+    "projectId":"216",
+
 }
 Base_url = "https://www.iumer.cn/umer/webService"
 Personnel_url = Base_url +"/personnel"
@@ -150,3 +152,34 @@ CoreServer_projectList_01.personnelId = APP_a["personnelId"]
 CoreServer_projectList_01.pageSize = APP_a["pageSize"]
 #exp
 CoreServer_projectList_01.code = APP_a["error_code_correct"]
+#3.2.2
+CoreServer_chooseProject_01 = chooseProject()
+CoreServer_chooseProject_01.url = Personnel_url +"/biz/project/chooseProject"
+CoreServer_chooseProject_01.X_Type = APP_a["X-Type"]
+CoreServer_chooseProject_01.personnelId = APP_a["personnelId"]
+CoreServer_chooseProject_01.projectIds = APP_a["projectId"]
+#exp
+CoreServer_chooseProject_01.code = APP_a["error_code_correct"]
+#3.2.3
+CoreServer_myProjectList_01 = myProjectList()
+CoreServer_myProjectList_01.url = Personnel_url +"/biz/project/myProjectList"
+CoreServer_myProjectList_01.shopId = APP_a["shopId"]
+CoreServer_myProjectList_01.personnelId = APP_a["personnelId"]
+CoreServer_myProjectList_01.pageSize = APP_a["pageSize"]
+#exp
+CoreServer_myProjectList_01.code = APP_a["error_code_correct"]
+#3.2.4
+CoreServer_delProject_01 = delProject()
+CoreServer_delProject_01.url = Personnel_url + "/biz/project/delProject"
+CoreServer_delProject_01.X_Type = APP_a["X-Type"]
+CoreServer_delProject_01.personnelId = APP_a["personnelId"]
+CoreServer_delProject_01.projectIds = APP_a["projectId"]
+#exp
+CoreServer_delProject_01.code = APP_a["error_code_correct"]
+#3.2.5
+CoreServer_projectDetails_01 = projectDetails()
+CoreServer_projectDetails_01.url = Personnel_url +"/biz/project/projectDetails"
+CoreServer_projectDetails_01.X_Type = APP_a["X-Type"]
+CoreServer_projectDetails_01.id = APP_a["projectId"]
+#exp
+CoreServer_projectDetails_01.code = APP_a["error_code_correct"]
