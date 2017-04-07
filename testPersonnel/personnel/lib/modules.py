@@ -68,3 +68,17 @@ class test_core_server():
     #3.3.3
     def test_orderDetail(self,orderDetail_obj):
         res= actions.orderDetail(orderDetail_obj.url,orderDetail_obj.personnelId,orderDetail_obj.orderNo,orderDetail_obj.X_Type)
+    #3.3.4
+    def test_cancelOrder(self,cancelOrder_obj):
+        res = actions.cancelOrder(cancelOrder_obj.url,cancelOrder_obj.personnelId,cancelOrder_obj.orderNo,cancelOrder_obj.X_Type)
+    #3.3.5
+    def test_confirmFinishOrder(self,confirmFinishOrder_obj):
+        res = actions.confirmFinishOrder(confirmFinishOrder_obj.url,confirmFinishOrder_obj.personnelId,confirmFinishOrder_obj.orderNo,confirmFinishOrder_obj.X_Type)
+    #3.3.6
+    def test_scanFinishOrder(self,scanFinishOrder_obj):
+        res = actions.scanFinishOrder(scanFinishOrder_obj.url,scanFinishOrder_obj.personnelId,scanFinishOrder_obj.payCode,
+                                      scanFinishOrder_obj.X_Type)
+    #3.3.7
+    def test_orderSave(self,orderSave_obj):
+        res = actions.orderSave(orderSave_obj.url,orderSave_obj.projectId,orderSave_obj.personnelId,orderSave_obj.makeStartDate,
+                                orderSave_obj.makeEndDate,orderSave_obj.priceType,orderSave_obj.reserveName,orderSave_obj.reservePhone,orderSave_obj.X_Type)

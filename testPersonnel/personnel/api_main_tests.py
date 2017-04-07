@@ -116,3 +116,27 @@ class core_server_tests(unittest.TestCase):
         auth = apimsg.CoreServer_orderDetail_01
         self.test.test_orderDetail(auth)
         print "**********************************************************************************************"
+    #3.3.4
+    def test0018_cancelOrder(self):
+        print "**********************************#3.3.4取消预约**************************************************"
+        auth = apimsg.CoreServer_cancelOrder_01
+        self.test.test_cancelOrder(auth)
+        print "**********************************************************************************************"
+    #3.3.5
+    def test0019_confirmFinishOrder(self):
+        print "**********************************#3.3.5确认完成**************************************************"
+        auth = apimsg.CoreServer_confirmFinishOrder_01
+        self.test.test_confirmFinishOrder(auth)
+        print "**********************************************************************************************"
+    #3.3.6
+    def test0020_scanFinishOrder(self):
+        print "**********************************#3.3.6扫码确认完成**************************************************"
+        auth = apimsg.CoreServer_scanFinishOrder_01
+        self.test.test_scanFinishOrder(auth)
+        print "**********************************************************************************************"
+    #3.3.7
+    def test0021_orderSave(self):
+        print "**********************************#3.3.7美容师手动添加订单**************************************************"
+        auth = apimsg.CoreServer_orderSave_01
+        self.test.test_orderSave(auth)
+        print "**********************************************************************************************"

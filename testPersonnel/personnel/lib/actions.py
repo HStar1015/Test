@@ -300,3 +300,37 @@ def orderDetail(url="",personnelId="",orderNo="",X_Type= ""):
     header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
     res = post_json(url, data, header)
     return null2None2dict(res)
+#3.3.4
+def cancelOrder(url ="",personnelId="",orderNo="",X_Type="2"):
+    url = url
+    data = {"personnelId":personnelId,"orderNo":orderNo}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#3.3.5
+def confirmFinishOrder(url = "",personnelId="",orderNo="",X_Type="2"):
+    url = url
+    data = {"personnelId": personnelId, "orderNo": orderNo}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#3.3.5
+def scanFinishOrder(url = "",personnelId="",payCode="",X_Type="2"):
+    url = url
+    data = {"personnelId": personnelId, "payCode":payCode}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#3.3.6
+def orderSave(url ="",projectId = "",personnelId = "",makeStartDate="",makeEndDate="",priceType="",reserveName="",
+              reservePhone="",X_Type = "2"):
+    url = url;
+    data ={"projectId":projectId,"personnelId":personnelId,"makeStartDate":makeStartDate,"makeEndDate":makeEndDate,
+            "priceType":priceType,"reserveName":reserveName,"reservePhone":reservePhone}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)

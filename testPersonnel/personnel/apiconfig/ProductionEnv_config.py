@@ -42,7 +42,12 @@ APP_a = {
     "pageSize":100,
     "projectId":"216",
     "orderNo":"DD7312548808254750113",#订单编号
-
+    "payCode":"QR7543166741178590773",#支付码
+    "makeStartDate":"2017-03-28 12:00:00",#预约开始时间
+    "makeEndDate":"2017-03-28 12:30:00",#预约结束时间
+    "priceType":1,#价格类型,0(单价)/1(疗程)
+    "reserveName":"xing",
+    "reservePhone":"13051175683"
 }
 Base_url = "https://www.iumer.cn/umer/webService"
 Personnel_url = Base_url +"/personnel"
@@ -209,3 +214,39 @@ CoreServer_orderDetail_01.personnelId  =APP_a["personnelId"]
 CoreServer_orderDetail_01.orderNo = APP_a["orderNo"]
 #exp
 CoreServer_orderDetail_01.code= APP_a["error_code_correct"]
+#3.3.4
+CoreServer_cancelOrder_01 = cancelOrder()
+CoreServer_cancelOrder_01.url = Personnel_url +"/biz/order/cancelOrder"
+CoreServer_cancelOrder_01.X_Type = APP_a["X-Type"]
+CoreServer_cancelOrder_01.personnelId = APP_a["personnelId"]
+CoreServer_cancelOrder_01.orderNo = APP_a["orderNo"]
+#exp
+CoreServer_cancelOrder_01.code = APP_a["error_code_correct"]
+#3.3.5
+CoreServer_confirmFinishOrder_01 = confirmFinishOrder()
+CoreServer_confirmFinishOrder_01.url = Personnel_url +"/biz/order/confirmFinishOrder"
+CoreServer_confirmFinishOrder_01.X_Type = APP_a["X-Type"]
+CoreServer_confirmFinishOrder_01.personnelId = APP_a["personnelId"]
+CoreServer_confirmFinishOrder_01.orderNo = APP_a["orderNo"]
+#exp
+CoreServer_confirmFinishOrder_01.code = APP_a["error_code_correct"]
+#3.3.6
+CoreServer_scanFinishOrder_01 = scanFinishOrder()
+CoreServer_scanFinishOrder_01.url = Personnel_url +"/biz/order/scanFinishOrder"
+CoreServer_scanFinishOrder_01.personnelId = APP_a["personnelId"]
+CoreServer_scanFinishOrder_01.payCode = APP_a["payCode"]
+#exp
+CoreServer_scanFinishOrder_01.code = APP_a["error_code_correct"]
+#3.3.7
+CoreServer_orderSave_01 = orderSave()
+CoreServer_orderSave_01.url = Personnel_url +"/biz/order/orderSave"
+CoreServer_orderSave_01.X_Type = APP_a["X-Type"]
+CoreServer_orderSave_01.projectId = APP_a["projectId"]
+CoreServer_orderSave_01.personnelId = APP_a["personnelId"]
+CoreServer_orderSave_01.makeStartDate = APP_a["makeStartDate"]
+CoreServer_orderSave_01.makeEndDate = APP_a["makeEndDate"]
+CoreServer_orderSave_01.priceType = APP_a["priceType"]
+CoreServer_orderSave_01.reserveName = APP_a["reserveName"]
+CoreServer_orderSave_01.reservePhone = APP_a["reservePhone"]
+#exp
+CoreServer_orderSave_01.code = APP_a["error_code_correct"]

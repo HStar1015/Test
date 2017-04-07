@@ -164,3 +164,40 @@ class orderDetail:
     orderNo = ""
     #exp
     code =""
+#3.3.4
+class cancelOrder:
+    url = ""
+    X_Type = ""
+    personnelId = ""
+    orderNo = ""
+    #exp
+    code = ""
+#3.3.5
+class confirmFinishOrder:
+    url = ""
+    X_Type = ""
+    personnelId = ""
+    orderNo = ""
+    #exp
+    code = ""
+#3.3.6
+class scanFinishOrder:
+    url = ""
+    X_Type = ""
+    personnelId =""
+    payCode =""
+    #exp
+    code = ""
+#3.3.7
+class orderSave:
+    url = ""
+    X_Type = ""
+    projectId =  ""
+    personnelId =""
+    makeStartDate = ""
+    makeEndDate = ""
+    priceType = ""
+    reserveName = ""
+    reservePhone = ""
+    #exp
+    code = ""
