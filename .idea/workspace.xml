@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2f60d0d8-627e-4908-9e6e-bb00670ed1fa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testPersonnel/personnel/api_main_tests.py" afterPath="$PROJECT_DIR$/testPersonnel/personnel/api_main_tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testPersonnel/personnel/apiconfig/ApiClass.py" afterPath="$PROJECT_DIR$/testPersonnel/personnel/apiconfig/ApiClass.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testPersonnel/personnel/apiconfig/ProductionEnv_config.py" afterPath="$PROJECT_DIR$/testPersonnel/personnel/apiconfig/ProductionEnv_config.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testPersonnel/personnel/lib/actions.py" afterPath="$PROJECT_DIR$/testPersonnel/personnel/lib/actions.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testPersonnel/personnel/lib/modules.py" afterPath="$PROJECT_DIR$/testPersonnel/personnel/lib/modules.py" />
     </list>
     <ignored path="Test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -478,7 +473,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491531824192</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="3.3.1compelte">
+      <created>1491533734150</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1491533734150</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
