@@ -182,3 +182,27 @@ class core_server_tests(unittest.TestCase):
         auth = apimsg.CoreServer_rankInfoList_01
         self.test.test_rankInfoList(auth)
         print "**********************************************************************************************"
+    # #3.4.8.1
+    # def test0029_createCard(self):
+    #     print "**********************************#3.4.8.1新增卡项**************************************************"
+    #     auth = apimsg.CoreServer_createCard_01
+    #     self.test.test_createCard(auth)
+    #     print "**********************************************************************************************"
+    # #3.4.8.2
+    # #3.4.8.3
+    # #3.4.8.4
+    # #3.4.8.5
+    # #3.4.8.6
+    #3.5.1
+    #3.5.1
+    def test0029_commentGroupNum(self):
+        print "**********************************#3.5.1我的评论分组数量**************************************************"
+        auth = apimsg.CoreServer_commentGroupNum_01
+        self.test.test_commentGroupNum(auth)
+        print "**********************************************************************************************"
+    #3.5.2
+    def test0030_commentList(self):
+        print "**********************************#3.5.2我的评论列表**************************************************"
+        auth = apimsg.CoreServer_commentList_01
+        self.test.test_commentList(auth)
+        print "**********************************************************************************************"

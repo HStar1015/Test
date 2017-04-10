@@ -51,7 +51,14 @@ APP_a = {
     "customerId":43,#顾客id
     "remark":"hello",
     "rankId":1,
-    "remarkId":1,
+    "cardType_1":1,
+    "cardType_2":2,
+    "cardType_3":3, #卡类型：1-年卡，2次卡，3储值卡
+    "cardName":"cardName",
+    "cardRemark":"REMARK",
+    "cardCalidityDate":"2018-04-18",#有效期
+    "commentLevel":"",
+    "pageSize":100,
 }
 Base_url = "https://www.iumer.cn/umer/webService"
 Personnel_url = Base_url +"/personnel"
@@ -314,4 +321,38 @@ CoreServer_rankInfoList_01.url = Personnel_url +"/biz/customer/rankInfoList"
 CoreServer_rankInfoList_01.X_Type = APP_a["X-Type"]
 CoreServer_rankInfoList_01.shopId = APP_a["shopId"]
 CoreServer_rankInfoList_01.personnelId = APP_a["personnelId"]
-
+#3.4.8.1
+CoreServer_createCard_01 = createCard()
+CoreServer_createCard_01.url = Personnel_url +"/biz/customer/createCard"
+CoreServer_createCard_01.X_Type = APP_a["X-Type"]
+CoreServer_createCard_01.shopId = APP_a["shopId"]
+CoreServer_createCard_01.personnelId = APP_a["personnelId"]
+CoreServer_createCard_01.customerId = APP_a["customerId"]
+CoreServer_createCard_01.cardType = APP_a["cardType_2"]
+CoreServer_createCard_01.name = APP_a["cardName"]
+CoreServer_createCard_01.remark = APP_a["cardRemark"]
+CoreServer_createCard_01.validityDate = APP_a["cardCalidityDate"]
+#exp
+CoreServer_createCard_01.code = APP_a["error_code_correct"]
+# 3.4.8.2
+# 3.4.8.3
+# 3.4.8.4
+# 3.4.8.5
+# 3.4.8.6
+#************************************************3.5****************************************
+#3.5.1
+CoreServer_commentGroupNum_01 = commentGroupNum()
+CoreServer_commentGroupNum_01.url = Personnel_url +"/biz/comment/commentGroupNum"
+CoreServer_commentGroupNum_01.X_Type = APP_a["X-Type"]
+CoreServer_commentGroupNum_01.personnelId = APP_a["personnelId"]
+#exp
+CoreServer_commentGroupNum_01.code = APP_a["error_code_correct"]
+#3.5.2
+CoreServer_commentList_01 = commentList()
+CoreServer_commentList_01.url = Personnel_url +"/biz/comment/commentList"
+CoreServer_commentList_01.personnelId = APP_a["personnelId"]
+CoreServer_commentList_01.commentLevel = APP_a["commentLevel"]
+CoreServer_commentList_01.pageSize = APP_a["pageSize"]
+CoreServer_commentList_01.X_Type = APP_a["X-Type"]
+#exp
+CoreServer_commentList_01.code = APP_a["error_code_correct"]

@@ -265,3 +265,40 @@ class rankInfoList:
 
     #exp
     code = ""
+#3.4.8.1
+class createCard:
+    url = ""
+    X_Type = ""
+    shopId = ""
+    personnelId =""
+    customerId = ""
+    cardType = ""
+    name = ""
+    remark = ""
+    validityDate = ""
+    #exp
+    code = ""
+# 3.4.8.2
+# 3.4.8.3
+# 3.4.8.4
+# 3.4.8.5
+# 3.4.8.6
+#*****************************************************3.5*********************************************
+#3.5.1
+class commentGroupNum:
+    url = ""
+    X_Type =""
+    personnelId = ""
+    #exp
+    code = ""
+#3.5.2
+class commentList:
+    url = ""
+    X_Type = ""
+    personnelId =""
+    commentLevel =""
+    pageSize = ""
+    #exp
+    code = ""
+
+

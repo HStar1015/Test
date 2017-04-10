@@ -391,4 +391,35 @@ def rankInfoList(url ="",shopId="",personnelId ="",X_Type ="2"):
     header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
     res = post_json(url, data, header)
     return null2None2dict(res)
+#3.4.8.1
+def createCard(url="",shopId="",personnelId="",customerId="",cardType="",name="",remark="",validityDate="",X_Type="2"):
+    url = url
+    data = {"shopId":shopId,"personnelId":personnelId,"customerId":customerId,"cardType":cardType,
+            "name":name,"remark":remark,"validityDate":validityDate}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+# 3.4.8.2
+# 3.4.8.3
+# 3.4.8.4
+# 3.4.8.5
+# 3.4.8.6
+# *********************************************3.5.1***********************************************
+#3.5.1
+def commentGroupNum(url ="",personnelId="",X_Type="2"):
+    url = url
+    data = {"personnelId":personnelId}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#3.5.2
+def commentList(url="",personnelId="",commentLevel="",pageSize="",X_Type="2"):
+    url = url
+    data = {"personnelId":personnelId,"commentLevel":commentLevel,"pageSize":pageSize}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
 

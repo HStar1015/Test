@@ -110,3 +110,20 @@ class test_core_server():
     #3.4.7
     def test_rankInfoList(self,rankInfoList_obj):
         res = actions.rankInfoList(rankInfoList_obj.url,rankInfoList_obj.shopId,rankInfoList_obj.personnelId,rankInfoList_obj.X_Type)
+    ############新增接口###########
+    #3.4.8.1
+    def test_createCard(self,createCard_obj):
+        res = actions.createCard(createCard_obj.url,createCard_obj.shopId,createCard_obj.personnelId,createCard_obj.customerId,createCard_obj.cardType,
+                                 createCard_obj.name,createCard_obj.remark,createCard_obj.validityDate,createCard_obj.X_Type)
+    # 3.4.8.2
+    # 3.4.8.3
+    # 3.4.8.4
+    # 3.4.8.5
+    # 3.4.8.6
+    #******************************************3.5.1*********************************************
+    #3.5.1
+    def test_commentGroupNum(self,commentGroupNum_obj):
+        res = actions.commentGroupNum(commentGroupNum_obj.url,commentGroupNum_obj.personnelId)
+    #3.5.2
+    def test_commentList(self,commentList_obj):
+        res = actions.commentList(commentList_obj.url,commentList_obj.personnelId,commentList_obj.commentLevel,commentList_obj.pageSize ,commentList_obj.X_Type)
