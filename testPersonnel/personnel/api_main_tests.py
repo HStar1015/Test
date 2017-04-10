@@ -176,3 +176,9 @@ class core_server_tests(unittest.TestCase):
         auth = apimsg.CoreServer_expenseProject_01
         self.test.test_expenseProject(auth)
         print "**********************************************************************************************"
+    #3.4.7
+    def test0028_rankInfoList(self):
+        print "**********************************#3.4.7获取分组信息列表**************************************************"
+        auth = apimsg.CoreServer_rankInfoList_01
+        self.test.test_rankInfoList(auth)
+        print "**********************************************************************************************"

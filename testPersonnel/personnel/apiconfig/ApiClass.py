@@ -262,8 +262,6 @@ class rankInfoList:
     X_Type = ""
     shopId = ""
     personnelId = ""
-    id = ""
-    rank = ""
-    customerCount = ""
+
     #exp
     code = ""

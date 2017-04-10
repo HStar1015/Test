@@ -383,4 +383,12 @@ def expenseProject(url="",customerId ="",shopId= "",pageSize="",X_Type ="2"):
     header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
     res = post_json(url, data, header)
     return null2None2dict(res)
+#3.4.7
+def rankInfoList(url ="",shopId="",personnelId ="",X_Type ="2"):
+    url = url
+    data = {"shopId":shopId,"personnelId":personnelId}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
 

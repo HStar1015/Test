@@ -107,3 +107,6 @@ class test_core_server():
     def test_expenseProject(self,expenseProject_obj):
         res = actions.expenseProject(expenseProject_obj.url,expenseProject_obj.customerId,expenseProject_obj.shopId,expenseProject_obj.pageSize,
                                      expenseProject_obj.X_Type)
+    #3.4.7
+    def test_rankInfoList(self,rankInfoList_obj):
+        res = actions.rankInfoList(rankInfoList_obj.url,rankInfoList_obj.shopId,rankInfoList_obj.personnelId,rankInfoList_obj.X_Type)
