@@ -152,3 +152,27 @@ class core_server_tests(unittest.TestCase):
         auth = apimsg.CoreServer_changeRemark_01
         self.test.test_changeRemark(auth)
         print "**********************************************************************************************"
+    #3.4.3
+    def test0024_changeRank(self):
+        print "**********************************#3.4.3改变顾客分组**************************************************"
+        auth = apimsg.CoreServer_changeRank_01
+        self.test.test_changeRank(auth)
+        print "**********************************************************************************************"
+    #3.4.4
+    def test0025_customerDetails(self):
+        print "**********************************#3.4.4顾客详情**************************************************"
+        auth = apimsg.CoreServer_customerDetails_01
+        self.test.test_customerDetails(auth)
+        print "**********************************************************************************************"
+    #3.4.5
+    def test0026_expenseRecord(self):
+        print "**********************************#3.4.5消费记录**************************************************"
+        auth = apimsg.CoreServer_expenseRecord_01
+        self.test.test_expenseRecord(auth)
+        print "**********************************************************************************************"
+    #3.4.6
+    def test0027_expenseProject(self):
+        print "**********************************#3.4.6消费项目**************************************************"
+        auth = apimsg.CoreServer_expenseProject_01
+        self.test.test_expenseProject(auth)
+        print "**********************************************************************************************"

@@ -351,4 +351,36 @@ def changeRemark(url="",shopId="",personnelId="",remark="",customerId="",X_Type=
     header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
     res = post_json(url, data, header)
     return null2None2dict(res)
+#3.4.3
+def changeRank(url = "",shopId = "",rankId ="",customerIds="",X_Type ="2"):
+    url = url
+    data = {"shopId":shopId,"rankId":rankId,"customerIds":customerIds}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#3.4.4
+def customerDetails(url ="",shopId = "",customerId ="",X_Type="2"):
+    url = url
+    data = {"shopId":shopId,"customerId":customerId}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#3.4.5
+def expenseRecord(url ="",customerId ="",shopId ="",pageSize ="",X_Type="2"):
+    url = url
+    data = {"customerId":customerId,"shopId":shopId,"pageSize":pageSize}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#3.4.6
+def expenseProject(url="",customerId ="",shopId= "",pageSize="",X_Type ="2"):
+    url = url
+    data = {"customerId":customerId,"shopId":shopId,"pageSize":pageSize}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
 

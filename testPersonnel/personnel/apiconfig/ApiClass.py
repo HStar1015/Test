@@ -221,3 +221,49 @@ class changeRemark:
     customerId = ""
     #exp
     code=""
+#3.4.3
+class changeRank:
+    url = ""
+    X_Type = ""
+    shopId = ""
+    rankId = ""
+    customerIds = ""
+    #exp
+    code = ""
+#3.4.4
+class customerDetails:
+    url = ""
+    X_Type = ""
+    shopId = ""
+    customerId = ""
+    #exp
+    code = ""
+#3.4.5
+class expenseRecord:
+    url = ""
+    X_Type = ""
+    customerId = ""
+    shopId = ""
+    pageSize = ""
+    #exp
+    code = ""
+#3.4.6
+class expenseProject:
+    url = ""
+    X_Type = ""
+    customerId  =""
+    shopId = ""
+    pageSize = ""
+    #exp
+    code = ""
+#3.4.7
+class rankInfoList:
+    url = ""
+    X_Type = ""
+    shopId = ""
+    personnelId = ""
+    id = ""
+    rank = ""
+    customerCount = ""
+    #exp
+    code = ""

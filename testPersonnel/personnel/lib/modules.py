@@ -91,3 +91,19 @@ class test_core_server():
     def test_changeRemark(self,changeRemark_obj):
         res = actions.changeRemark(changeRemark_obj.url,changeRemark_obj.shopId,changeRemark_obj.personnelId,
                                    changeRemark_obj.remark,changeRemark_obj.customerId,changeRemark_obj.X_Type)
+    #3.4.3
+    def test_changeRank(self,changeRank_obj):
+        res = actions.changeRank(changeRank_obj.url,changeRank_obj.shopId,changeRank_obj.rankId,changeRank_obj.customerIds,
+                                 changeRank_obj.X_Type)
+    #3.4.4
+    def test_customerDetails(self,customerDetails_obj):
+        res = actions.customerDetails(customerDetails_obj.url,customerDetails_obj.shopId,customerDetails_obj.customerId,
+                                      customerDetails_obj.X_Type)
+    #3.4.5
+    def test_expenseRecord(self,expenseRecord_obj):
+        res = actions.expenseRecord(expenseRecord_obj.url,expenseRecord_obj.customerId,expenseRecord_obj.shopId,expenseRecord_obj.pageSize,
+                                    expenseRecord_obj.X_Type)
+    #3.4.6
+    def test_expenseProject(self,expenseProject_obj):
+        res = actions.expenseProject(expenseProject_obj.url,expenseProject_obj.customerId,expenseProject_obj.shopId,expenseProject_obj.pageSize,
+                                     expenseProject_obj.X_Type)

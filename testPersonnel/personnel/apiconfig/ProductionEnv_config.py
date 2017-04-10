@@ -50,6 +50,8 @@ APP_a = {
     "reservePhone":"13051175683",
     "customerId":43,#顾客id
     "remark":"hello",
+    "rankId":1,
+    "remarkId":1,
 }
 Base_url = "https://www.iumer.cn/umer/webService"
 Personnel_url = Base_url +"/personnel"
@@ -271,3 +273,45 @@ CoreServer_changeRemark_01.personnelId = APP_a["personnelId"]
 CoreServer_changeRemark_01.remark = APP_a["remark"]
 #exp
 CoreServer_changeRemark_01.code = APP_a["error_code_correct"]
+#3.4.3
+CoreServer_changeRank_01 = changeRank()
+CoreServer_changeRank_01.url  = Personnel_url +"/biz/customer/changeRank"
+CoreServer_changeRank_01.X_Type = APP_a["X-Type"]
+CoreServer_changeRank_01.shopId = APP_a["shopId"]
+CoreServer_changeRank_01.rankId = APP_a["rankId"]
+CoreServer_changeRank_01.customerIds = APP_a["customerId"]
+#exp
+CoreServer_changeRank_01.code = APP_a["error_code_correct"]
+#3.4.4
+CoreServer_customerDetails_01 = customerDetails()
+CoreServer_customerDetails_01.url = Personnel_url +"/biz/customer/customerDetails"
+CoreServer_customerDetails_01.X_Type = APP_a["X-Type"]
+CoreServer_customerDetails_01.shopId = APP_a["shopId"]
+CoreServer_customerDetails_01.customerId = APP_a["customerId"]
+#exp
+CoreServer_customerDetails_01.code = APP_a["error_code_correct"]
+#3.4.5
+CoreServer_expenseRecord_01 = expenseRecord()
+CoreServer_expenseRecord_01.url = Personnel_url +"/biz/customer/expenseRecord"
+CoreServer_expenseRecord_01.X_Type = APP_a["X-Type"]
+CoreServer_expenseRecord_01.customerId = APP_a["customerId"]
+CoreServer_expenseRecord_01.shopId = APP_a["shopId"]
+CoreServer_expenseRecord_01.pageSize = APP_a["pageSize"]
+#Exp
+CoreServer_expenseRecord_01.code = APP_a["error_code_correct"]
+#3.4.6
+CoreServer_expenseProject_01 = expenseProject()
+CoreServer_expenseProject_01.url = Personnel_url +"/biz/customer/expenseProject"
+CoreServer_expenseProject_01.X_Type = APP_a["X-Type"]
+CoreServer_expenseProject_01.customerId = APP_a["customerId"]
+CoreServer_expenseProject_01.shopId = APP_a["shopId"]
+CoreServer_expenseProject_01.pageSize = APP_a["pageSize"]
+#exp
+CoreServer_expenseProject_01.code = APP_a["error_code_correct"]
+#3.4.7
+CoreServer_rankInfoList_01 = rankInfoList()
+CoreServer_rankInfoList_01.url = Personnel_url +"/biz/customer/rankInfoList"
+CoreServer_rankInfoList_01.X_Type = APP_a["X-Type"]
+CoreServer_rankInfoList_01.shopId = APP_a["shopId"]
+CoreServer_rankInfoList_01.personnelId = APP_a["personnelId"]
+CoreServer_rankInfoList_01.id = APP_a["remarkId"]
