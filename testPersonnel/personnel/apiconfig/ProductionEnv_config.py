@@ -59,6 +59,17 @@ APP_a = {
     "cardCalidityDate":"2018-04-18",#有效期
     "commentLevel":"",
     "pageSize":100,
+    "activityId":163,
+    "month":"2022-06",
+    "personnelPlanDetailDtos":"",
+    "customerRankId": 1,
+    "planPerformance": "12.12",
+    "planIntroduce": "12",
+    "planId":"16",
+    "operationType":"add",
+    "recordType":"month",
+    "customerType":0,
+
 }
 Base_url = "https://www.iumer.cn/umer/webService"
 Personnel_url = Base_url +"/personnel"
@@ -356,3 +367,70 @@ CoreServer_commentList_01.pageSize = APP_a["pageSize"]
 CoreServer_commentList_01.X_Type = APP_a["X-Type"]
 #exp
 CoreServer_commentList_01.code = APP_a["error_code_correct"]
+#************************************************3.6****************************************
+#3.6.1
+CoreServer_activityList_01 = activityList()
+CoreServer_activityList_01.url = Personnel_url +"/biz/projectActivity/activityList"
+CoreServer_activityList_01.X_Type = APP_a["X-Type"]
+CoreServer_activityList_01.shopId = APP_a["shopId"]
+CoreServer_activityList_01.pageSize = APP_a["pageSize"]
+#exp
+CoreServer_activityList_01.code = APP_a["error_code_correct"]
+#3.6.2
+CoreServer_activityDetail_01 = activityDetail()
+CoreServer_activityDetail_01.url = Personnel_url + "/biz/projectActivity/activityDetail"
+CoreServer_activityDetail_01.activityId = APP_a["activityId"]
+CoreServer_activityDetail_01.shopId = APP_a["shopId"]
+CoreServer_activityDetail_01.pageSize = APP_a["pageSize"]
+#exp
+CoreServer_activityDetail_01.code = APP_a["error_code_correct"]
+#3.6.3
+CoreServer_activityQr_01 = activityQr()
+CoreServer_activityQr_01.url = Personnel_url +"/biz/projectActivity/activityQr"
+CoreServer_activityQr_01.shopId = APP_a["shopId"]
+CoreServer_activityQr_01.activityId = APP_a["activityId"]
+CoreServer_activityQr_01.personnelId = APP_a["personnelId"]
+#exp
+CoreServer_activityQr_01.code  = APP_a["error_code_correct"]
+#**************************************************3.7***************************************
+#3.7.1
+CoreServer_createPlan_01 = createPlan()
+CoreServer_createPlan_01.url= Personnel_url +"/biz/plan/createPlan"
+CoreServer_createPlan_01.X_Type = APP_a["X-Type"]
+CoreServer_createPlan_01.month = APP_a["month"]
+CoreServer_createPlan_01.personnelId = APP_a["personnelId"]
+CoreServer_createPlan_01.personnelPlanDetailDtos ={}
+CoreServer_createPlan_01.customerRankId = APP_a["customerRankId"]
+CoreServer_createPlan_01.planPerformance = APP_a["planPerformance"]
+CoreServer_createPlan_01.planIntroduce = APP_a["planIntroduce"]
+#Exp
+CoreServer_createPlan_01.code = APP_a["error_code_correct"]
+#3.7.2
+CoreServer_editPlan_01 = editPlan()
+CoreServer_editPlan_01.url = Personnel_url + "/biz/plan/editPlan"
+CoreServer_editPlan_01.X_Type = APP_a["X-Type"]
+CoreServer_editPlan_01.id = APP_a["planId"]
+CoreServer_editPlan_01.personnelPlanDetailDtos = APP_a["personnelPlanDetailDtos"]
+CoreServer_editPlan_01.customerRankId = APP_a["customerRankId"]
+CoreServer_editPlan_01.planIntroduce = APP_a["planIntroduce"]
+CoreServer_editPlan_01.planPerformance = APP_a["planPerformance"]
+#exp
+CoreServer_editPlan_01.code = APP_a["error_code_correct"]
+#3.7.3
+CoreServer_selectPlanDetail_01 = selectPlanDetail()
+CoreServer_selectPlanDetail_01.url = Personnel_url +"/biz/plan/selectPlanDetail"
+CoreServer_selectPlanDetail_01.X_Type = APP_a["X-Type"]
+CoreServer_selectPlanDetail_01.planId = APP_a["planId"]
+#exp
+CoreServer_selectPlanDetail_01.code = APP_a["error_code_correct"]
+#3.7.4
+CoreServer_selectCustomerList_01 = selectCustomerList()
+CoreServer_selectCustomerList_01.url = Personnel_url +"/biz/plan/selectCustomerList"
+CoreServer_selectCustomerList_01.X_Type = APP_a["X-Type"]
+CoreServer_selectCustomerList_01.shopId = APP_a["shopId"]
+CoreServer_selectCustomerList_01.personnelId = APP_a["personnelId"]
+CoreServer_selectCustomerList_01.operationType = APP_a["operationType"]
+CoreServer_selectCustomerList_01.recordType = APP_a["recordType"]
+CoreServer_selectCustomerList_01.customerType = APP_a["customerType"]
+#exp
+CoreServer_selectCustomerList_01.code = APP_a["error_code_correct"]

@@ -405,7 +405,7 @@ def createCard(url="",shopId="",personnelId="",customerId="",cardType="",name=""
 # 3.4.8.4
 # 3.4.8.5
 # 3.4.8.6
-# *********************************************3.5.1***********************************************
+# *********************************************3.5***********************************************
 #3.5.1
 def commentGroupNum(url ="",personnelId="",X_Type="2"):
     url = url
@@ -422,4 +422,57 @@ def commentList(url="",personnelId="",commentLevel="",pageSize="",X_Type="2"):
     header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
     res = post_json(url, data, header)
     return null2None2dict(res)
-
+# *********************************************3.6***********************************************
+#3.6.1
+def activityList(url="",shopId="",pageSiz="",X_Type="2"):
+    url = url
+    data = {"shopId":shopId,"pageSize":pageSiz}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#3.6.2
+def activityDetail(url="",activityId="",shopId="",pageSize="",X_Type="2"):
+    url = url
+    data = {"activityId":activityId,"shopId":shopId,"pageSize":pageSize}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#3.6.3
+def activityQr(url = "",shopId ="",activityId="",personnelId="",X_Type=""):
+    url=url
+    data = {"shopId":shopId,"activityId":activityId,"personnelId":personnelId}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#******************************************3.7************************************
+#3.7.1
+def createPlan(url ="",month= "",personnelId="",personnelPlanDetailDtos={},customerRankId="",planPerformance="",planIntroduce="",X_Type="2"):
+    url = url
+    data = {"month":month,"personnelId":personnelId,"personnelPlanDetailDtos":[{"customerRankId":customerRankId,"planPerformance":planPerformance,"planIntroduce":planIntroduce},]}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#3.7.2
+def editPlan(url,id= "",personnelPlanDetailDtos={},customerRankId="",planPerformance="",planIntroduce="",X_Type="2"):
+    url = url
+    data = {"id":id,"personnelPlanDetailDtos":[{"customerRankId":customerRankId,"planPerformance":planPerformance,"planIntroduce":planIntroduce},]}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#3.7.3
+def selectPlanDetail(url= "",planId="",X_Type="2"):
+    url= url
+    data = {"planId":planId}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#3.7.4
+def selectCustomerList(url= "",shopId ="",personneld="",operationType="",recordType="",customerType=""):
+    url = url
+    data = {"shopId":shopId}

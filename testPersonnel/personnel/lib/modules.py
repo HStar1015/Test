@@ -120,10 +120,38 @@ class test_core_server():
     # 3.4.8.4
     # 3.4.8.5
     # 3.4.8.6
-    #******************************************3.5.1*********************************************
+    #******************************************3.5********************************************
     #3.5.1
     def test_commentGroupNum(self,commentGroupNum_obj):
         res = actions.commentGroupNum(commentGroupNum_obj.url,commentGroupNum_obj.personnelId)
     #3.5.2
     def test_commentList(self,commentList_obj):
         res = actions.commentList(commentList_obj.url,commentList_obj.personnelId,commentList_obj.commentLevel,commentList_obj.pageSize ,commentList_obj.X_Type)
+    # ******************************************3.6*********************************************
+    #3.6.1
+    def test_activityList(self,activityList_obj):
+        res = actions.activityList(activityList_obj.url,activityList_obj.shopId,activityList_obj.pageSize,activityList_obj.X_Type)
+    #3.6.2
+    def test_activityDetail(self,activityDetail_obj):
+        res = actions.activityDetail(activityDetail_obj.url,activityDetail_obj.activityId,activityDetail_obj.shopId,
+                                     activityDetail_obj.pageSize,activityDetail_obj.X_Type)
+    #3.6.3
+    def test_activityQr(self,activityQr_obj):
+        res = actions.activityQr(activityQr_obj.url,activityQr_obj.shopId,activityQr_obj.activityId,
+                                 activityQr_obj.personnelId,activityQr_obj.X_Type)
+    # ******************************************3.7*********************************************
+    #3.7.1
+    def test_createPlan(self,createPlan_obj):
+        res = actions.createPlan(createPlan_obj.url,createPlan_obj.month,createPlan_obj.personnelId,createPlan_obj.personnelPlanDetailDtos,
+                                 createPlan_obj.customerRankId,createPlan_obj.planPerformance,createPlan_obj.planIntroduce,
+                                 createPlan_obj.X_Type)
+    #3.7.2
+    def test_editPlan(self, editPlan_obj):
+        res = actions.editPlan(editPlan_obj.url, editPlan_obj.id,
+                               editPlan_obj.personnelPlanDetailDtos,
+                               editPlan_obj.customerRankId, editPlan_obj.planPerformance,
+                               editPlan_obj.planIntroduce,
+                               editPlan_obj.X_Type)
+    #3.7.3
+    def test_selectPlanDetail(self,selectPlanDetail_obj):
+        res = actions.selectPlanDetail(selectPlanDetail_obj.url,selectPlanDetail_obj.planId,selectPlanDetail_obj.X_Type)

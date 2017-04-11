@@ -300,5 +300,74 @@ class commentList:
     pageSize = ""
     #exp
     code = ""
+#******************************************************3.6********************************************
+#3.6.1
+class activityList:
+    url = ""
+    X_Type = ""
+    shopId = ""
+    pageSize =""
+    #exp
+    code = ""
+#3.6.2
+class activityDetail:
+    url = ""
+    X_Type = ""
+    activityId = ""
+    shopId = ""
+    pageSize = ""
+    #exp
+    code = ""
+#3.6.3
+class activityQr:
+    url = ""
+    X_Type = ""
+    shopId = ""
+    activityId = ""
+    personnelId = ""
+    #exp
+    code = ""
+#**************************************************3.7***************************************
+#3.7.1
+class createPlan:
+    url = ""
+    X_Type = ""
+    month = ""
+    personnelId = ""
+    personnelPlanDetailDtos =""
+    customerRankId = ""
+    planPerformance = ""
+    planIntroduce = ""
+    #exp
+    code = ""
+#3.7.2
+class editPlan:
+    url = ""
+    X_Type = ""
+    id =""
+    personnelPlanDetailDtos = ""
+    customerRankId = ""
+    planPerformance = ""
+    planIntroduce = ""
+    #exp
+    code= ""
+#3.7.3
+class selectPlanDetail:
+    url = ""
+    X_Type =""
+    planId = ""
+    #exp
+    code = ""
+#3.7.4
+class selectCustomerList:
+    url = ""
+    X_Type = ""
+    shopId = ""
+    personnelId= ""
+    operationType = ""
+    recordType =""
+    customerType = ""
+    #exp
+    code = ""
 
 
