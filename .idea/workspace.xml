@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f60d0d8-627e-4908-9e6e-bb00670ed1fa" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/接口文档1.0.docx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/字典排序城市.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testPersonnel/personnel/api_main_tests.py" afterPath="$PROJECT_DIR$/testPersonnel/personnel/api_main_tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testPersonnel/personnel/apiconfig/ApiClass.py" afterPath="$PROJECT_DIR$/testPersonnel/personnel/apiconfig/ApiClass.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testPersonnel/personnel/apiconfig/ProductionEnv_config.py" afterPath="$PROJECT_DIR$/testPersonnel/personnel/apiconfig/ProductionEnv_config.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testPersonnel/personnel/lib/actions.py" afterPath="$PROJECT_DIR$/testPersonnel/personnel/lib/actions.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testPersonnel/personnel/lib/modules.py" afterPath="$PROJECT_DIR$/testPersonnel/personnel/lib/modules.py" />
     </list>
     <ignored path="Test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,7 +30,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ApiClass.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ApiClass.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testPersonnel/personnel/apiconfig/ApiClass.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="502">
@@ -44,8 +43,8 @@
       <file leaf-file-name="ProductionEnv_config.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testPersonnel/personnel/apiconfig/ProductionEnv_config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="355" column="53" selection-start-line="355" selection-start-column="53" selection-end-line="355" selection-end-column="53" />
+            <state relative-caret-position="525">
+              <caret line="364" column="9" selection-start-line="364" selection-start-column="9" selection-end-line="364" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -71,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="api_main_tests.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="api_main_tests.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/testPersonnel/personnel/api_main_tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="279" column="0" selection-start-line="279" selection-start-column="0" selection-end-line="279" selection-end-column="0" />
+            <state relative-caret-position="-913">
+              <caret line="217" column="68" selection-start-line="217" selection-start-column="68" selection-end-line="217" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -94,9 +93,9 @@
       <list>
         <option value="$PROJECT_DIR$/testPersonnel/personnel/lib/modules.py" />
         <option value="$PROJECT_DIR$/testPersonnel/personnel/lib/actions.py" />
+        <option value="$PROJECT_DIR$/testPersonnel/personnel/apiconfig/ApiClass.py" />
         <option value="$PROJECT_DIR$/testPersonnel/personnel/apiconfig/ProductionEnv_config.py" />
         <option value="$PROJECT_DIR$/testPersonnel/personnel/api_main_tests.py" />
-        <option value="$PROJECT_DIR$/testPersonnel/personnel/apiconfig/ApiClass.py" />
       </list>
     </option>
   </component>
@@ -177,6 +176,9 @@
     <property name="last_opened_file_path" value="D:/Han_test" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\hanxing\Test\Test" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\hanxing\Test\Test" />
     </key>
@@ -579,7 +581,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491907376263</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="2017-04-12：员工接口除顾客卡项接口外接口都完成">
+      <created>1491991635053</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1491991635053</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -633,7 +642,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24056095" sideWeight="0.49763033" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2838428" sideWeight="0.49763033" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2838428" sideWeight="0.49763033" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24983074" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -654,7 +663,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24056095" sideWeight="0.49763033" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29017857" sideWeight="0.49763033" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2838428" sideWeight="0.49763033" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24847664" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -662,7 +671,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24983074" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33832976" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33802816" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -690,7 +699,8 @@
     <MESSAGE value="3.4complete" />
     <MESSAGE value="3.5complete" />
     <MESSAGE value="3..7.3complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="3..7.3complete" />
+    <MESSAGE value="2017-04-12：员工接口除顾客卡项接口外接口都完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="2017-04-12：员工接口除顾客卡项接口外接口都完成" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.87456447" />
   </component>
   <component name="XDebuggerManager">
@@ -716,8 +726,13 @@
           <line>503</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/testPersonnel/personnel/api_main_tests.py</url>
+          <line>258</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="21" />
+      <option name="time" value="22" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -786,26 +801,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/testPersonnel/personnel/apiconfig/ApiClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="282" column="0" selection-start-line="282" selection-start-column="0" selection-end-line="282" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/testPersonnel/personnel/apiconfig/ProductionEnv_config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="355" column="53" selection-start-line="355" selection-start-column="53" selection-end-line="355" selection-end-column="53" />
+        <state relative-caret-position="525">
+          <caret line="364" column="9" selection-start-line="364" selection-start-column="9" selection-end-line="364" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testPersonnel/personnel/api_main_tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="279" column="0" selection-start-line="279" selection-start-column="0" selection-end-line="279" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testPersonnel/personnel/apiconfig/ApiClass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="282" column="0" selection-start-line="282" selection-start-column="0" selection-end-line="282" selection-end-column="0" />
+        <state relative-caret-position="-913">
+          <caret line="217" column="68" selection-start-line="217" selection-start-column="68" selection-end-line="217" selection-end-column="68" />
           <folding />
         </state>
       </provider>

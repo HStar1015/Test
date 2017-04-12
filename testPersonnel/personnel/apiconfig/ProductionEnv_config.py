@@ -345,7 +345,7 @@ CoreServer_rankInfoList_01.url = Personnel_url +"/biz/customer/rankInfoList"
 CoreServer_rankInfoList_01.X_Type = APP_a["X-Type"]
 CoreServer_rankInfoList_01.shopId = APP_a["shopId"]
 CoreServer_rankInfoList_01.personnelId = APP_a["personnelId"]
-#*******************************************新增接口----卡项相关*************************************
+#*******************************************新增接口3.4.8----卡项相关*************************************
 #3.4.8.1
 CoreServer_createCard_01 = createCard()
 CoreServer_createCard_01.url = Personnel_url +"/biz/customer/createCard"
