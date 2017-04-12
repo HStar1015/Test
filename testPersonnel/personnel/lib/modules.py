@@ -155,3 +155,37 @@ class test_core_server():
     #3.7.3
     def test_selectPlanDetail(self,selectPlanDetail_obj):
         res = actions.selectPlanDetail(selectPlanDetail_obj.url,selectPlanDetail_obj.planId,selectPlanDetail_obj.X_Type)
+    #3.7.4
+    def test_selectCustomerList(self,selectCustomerList_obj):
+        res = actions.selectCustomerList(selectCustomerList_obj.url,selectCustomerList_obj.shopId,selectCustomerList_obj.personnelId,
+                                         selectCustomerList_obj.operationType,selectCustomerList_obj.recordType,selectCustomerList_obj.customerType,
+                                         selectCustomerList_obj.X_Type)
+    #3.7.5
+    def test_selectPlanList(self,selectPlanList_obj):
+        res = actions.selectPlanList(selectPlanList_obj.url,selectPlanList_obj.personnelId,selectPlanList_obj.X_Type)
+    #3.7.6
+    def test_createDaySummarize(self,createDaySummarize_obj):
+        res = actions.createDaySummarize(createDaySummarize_obj.url,createDaySummarize_obj.personnelId,createDaySummarize_obj.day,
+                                         createDaySummarize_obj.dayPerformance,createDaySummarize_obj.dayExpend,createDaySummarize_obj.dayOrder,
+                                         createDaySummarize_obj.newExperienceIntroduce,createDaySummarize_obj.newExperienceDevelop,
+                                         createDaySummarize_obj.newTransactionIntroduce,createDaySummarize_obj.newTransactionDevelop,
+                                         createDaySummarize_obj.summary,createDaySummarize_obj.performanceList,createDaySummarize_obj.customerRankId,
+                                         createDaySummarize_obj.planPerformance,createDaySummarize_obj.customerType,createDaySummarize_obj.expendList,
+                                         createDaySummarize_obj.X_Type)
+    #3.7.7
+    def test_editDaySummarize(self, editDaySummarize_obj):
+        res = actions.editDaySummarize(editDaySummarize_obj.url, editDaySummarize_obj.planId,editDaySummarize_obj.id,
+        editDaySummarize_obj.day,editDaySummarize_obj.dayPerformance, editDaySummarize_obj.dayExpend,
+        editDaySummarize_obj.dayOrder,editDaySummarize_obj.newExperienceIntroduce,
+        editDaySummarize_obj.newExperienceDevelop, editDaySummarize_obj.newTransactionIntroduce,
+        editDaySummarize_obj.newTransactionDevelop,editDaySummarize_obj.summary, editDaySummarize_obj.performanceList,
+        editDaySummarize_obj.customerRankId,editDaySummarize_obj.planPerformance, editDaySummarize_obj.customerType,
+        editDaySummarize_obj.expendList,editDaySummarize_obj.X_Type)
+    #3.7.8
+    def test_selectDaySummarizeDetail(self,selectDaySummarizeDetail_obj):
+        res = actions.selectDaySummarizeDetail(selectDaySummarizeDetail_obj.url,selectDaySummarizeDetail_obj.summarizeId,selectDaySummarizeDetail_obj.X_Type)
+    #3.7.9
+    def test_selectSummarizeList(self,selectSummarizeList_obj):
+        res = actions.selectSummarizeList(selectSummarizeList_obj.url,selectSummarizeList_obj.planId,selectSummarizeList_obj.X_Type)
+
+

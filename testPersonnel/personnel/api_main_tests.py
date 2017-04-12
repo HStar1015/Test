@@ -182,17 +182,7 @@ class core_server_tests(unittest.TestCase):
         auth = apimsg.CoreServer_rankInfoList_01
         self.test.test_rankInfoList(auth)
         print "**********************************************************************************************"
-    # #3.4.8.1
-    # def test0029_createCard(self):
-    #     print "**********************************#3.4.8.1新增卡项**************************************************"
-    #     auth = apimsg.CoreServer_createCard_01
-    #     self.test.test_createCard(auth)
-    #     print "**********************************************************************************************"
-    # #3.4.8.2
-    # #3.4.8.3
-    # #3.4.8.4
-    # #3.4.8.5
-    # #3.4.8.6
+
     #3.5.1
     #3.5.1
     def test0029_commentGroupNum(self):
@@ -224,6 +214,8 @@ class core_server_tests(unittest.TestCase):
         auth = apimsg.CoreServer_activityQr_01
         self.test.test_activityQr(auth)
         print "**************** ******************************************************************************"
+
+    # *******新增接口******#
     #3.7.1
     def test0034_createPlan(self):
         print "**********************************#3.7.1新增月计划**************************************************"
@@ -242,3 +234,51 @@ class core_server_tests(unittest.TestCase):
         auth = apimsg.CoreServer_selectPlanDetail_01
         self.test.test_selectPlanDetail(auth)
         print "**************** ******************************************************************************"
+    #3.7.4
+    def test0037_selectCustomerList(self):
+        print "**********************************#3.7.4 查询顾客列表**************************************************"
+        auth = apimsg.CoreServer_selectCustomerList_01
+        self.test.test_selectCustomerList(auth)
+        print "**************** ******************************************************************************"
+    #3.7.5
+    def test0038_selectPlanList(self):
+        print "**********************************#3.7.5查询月计划列表**************************************************"
+        auth = apimsg.CoreServer_selectPlanList_01
+        self.test.test_selectPlanList(auth)
+        print "**************** ******************************************************************************"
+    #3.7.6
+    def test0039_createDaySummarize(self):
+        print "**********************************#3.7.6新增日总结**************************************************"
+        auth = apimsg.CoreServer_createDaySummarize_01
+        self.test.test_createDaySummarize(auth)
+        print "**************** ******************************************************************************"
+    #3.7.7
+    def test0040_editDaySummarize(self):
+        print "**********************************#3.7.7编辑日总结**************************************************"
+        auth = apimsg.CoreServer_editDaySummarize_01
+        self.test.test_editDaySummarize(auth)
+        print "**************** ******************************************************************************"
+    #3.7.8
+    def test0041_selectDaySummarize(self):
+        print "**********************************#3.7.8查询日总结详情**************************************************"
+        auth = apimsg.CoreServer_selectDaySummarizeDetail_01
+        self.test.test_selectDaySummarizeDetail(auth)
+        print "**************** ******************************************************************************"
+    # 3.7.9
+    def test0042_selectSummarizeList(self):
+        print "**********************************#3.7.8查询日总结列表*************************************************"
+        auth = apimsg.CoreServer_selectSummarizeList_01
+        self.test.test_selectSummarizeList(auth)
+        print "**************** ******************************************************************************"
+    # 3.4.8.1
+    def test0043_createCard(self):
+        print "**********************************#3.4.8.1新增卡项**************************************************"
+        auth = apimsg.CoreServer_createCard_01
+        self.test.test_createCard(auth)
+        print "**********************************************************************************************"
+    # #3.4.8.2
+
+    # #3.4.8.3
+    # #3.4.8.4
+    # #3.4.8.5
+    # #3.4.8.6

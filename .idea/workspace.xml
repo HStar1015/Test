@@ -31,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ApiClass.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ApiClass.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/testPersonnel/personnel/apiconfig/ApiClass.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="370" column="12" selection-start-line="370" selection-start-column="12" selection-end-line="370" selection-end-column="12" />
+            <state relative-caret-position="502">
+              <caret line="282" column="0" selection-start-line="282" selection-start-column="0" selection-end-line="282" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -44,18 +44,18 @@
       <file leaf-file-name="ProductionEnv_config.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testPersonnel/personnel/apiconfig/ProductionEnv_config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="434" column="4" selection-start-line="434" selection-start-column="4" selection-end-line="434" selection-end-column="4" />
+            <state relative-caret-position="375">
+              <caret line="355" column="53" selection-start-line="355" selection-start-column="53" selection-end-line="355" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="actions.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="actions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testPersonnel/personnel/lib/actions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="469" column="28" selection-start-line="469" selection-start-column="28" selection-end-line="469" selection-end-column="28" />
+            <state relative-caret-position="322">
+              <caret line="397" column="68" selection-start-line="397" selection-start-column="68" selection-end-line="397" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -64,8 +64,8 @@
       <file leaf-file-name="modules.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testPersonnel/personnel/lib/modules.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="581">
-              <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+            <state relative-caret-position="2227">
+              <caret line="188" column="131" selection-start-line="188" selection-start-column="131" selection-end-line="188" selection-end-column="131" />
               <folding />
             </state>
           </provider>
@@ -74,11 +74,9 @@
       <file leaf-file-name="api_main_tests.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testPersonnel/personnel/api_main_tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="228" column="31" selection-start-line="228" selection-start-column="31" selection-end-line="228" selection-end-column="31" />
-              <folding>
-                <element signature="e#10642#10652#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="402">
+              <caret line="279" column="0" selection-start-line="279" selection-start-column="0" selection-end-line="279" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -95,18 +93,18 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/testPersonnel/personnel/lib/modules.py" />
+        <option value="$PROJECT_DIR$/testPersonnel/personnel/lib/actions.py" />
+        <option value="$PROJECT_DIR$/testPersonnel/personnel/apiconfig/ProductionEnv_config.py" />
         <option value="$PROJECT_DIR$/testPersonnel/personnel/api_main_tests.py" />
         <option value="$PROJECT_DIR$/testPersonnel/personnel/apiconfig/ApiClass.py" />
-        <option value="$PROJECT_DIR$/testPersonnel/personnel/apiconfig/ProductionEnv_config.py" />
-        <option value="$PROJECT_DIR$/testPersonnel/personnel/lib/actions.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="398" />
-    <option name="y" value="64" />
+    <option name="x" value="898" />
+    <option name="y" value="55" />
     <option name="width" value="1515" />
-    <option name="height" value="1029" />
+    <option name="height" value="1049" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -141,6 +139,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -173,8 +181,8 @@
       <recent name="D:\hanxing\Test\Test" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittest core_server_tests.test0036_selectPlanDetail">
-    <configuration default="false" name="Unittest core_server_tests.test0032_activityDetail" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Unittest core_server_tests.test0043_createCard">
+    <configuration default="false" name="Unittest core_server_tests.test0039_createDaySummarize" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -186,7 +194,7 @@
       <module name="Test" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testPersonnel/personnel/api_main_tests.py" />
       <option name="CLASS_NAME" value="core_server_tests" />
-      <option name="METHOD_NAME" value="test0032_activityDetail" />
+      <option name="METHOD_NAME" value="test0039_createDaySummarize" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
@@ -196,7 +204,7 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittest core_server_tests.test0033_activityQr" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Unittest core_server_tests.test0040_editDaySummarize" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -208,7 +216,7 @@
       <module name="Test" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testPersonnel/personnel/api_main_tests.py" />
       <option name="CLASS_NAME" value="core_server_tests" />
-      <option name="METHOD_NAME" value="test0033_activityQr" />
+      <option name="METHOD_NAME" value="test0040_editDaySummarize" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
@@ -218,7 +226,7 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittest core_server_tests.test0034_createPlan" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Unittest core_server_tests.test0041_selectDaySummarize" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -230,7 +238,7 @@
       <module name="Test" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testPersonnel/personnel/api_main_tests.py" />
       <option name="CLASS_NAME" value="core_server_tests" />
-      <option name="METHOD_NAME" value="test0034_createPlan" />
+      <option name="METHOD_NAME" value="test0041_selectDaySummarize" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
@@ -240,7 +248,7 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittest core_server_tests.test0035_editPlan" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Unittest core_server_tests.test0042_selectSummarizeList" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -252,7 +260,7 @@
       <module name="Test" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testPersonnel/personnel/api_main_tests.py" />
       <option name="CLASS_NAME" value="core_server_tests" />
-      <option name="METHOD_NAME" value="test0035_editPlan" />
+      <option name="METHOD_NAME" value="test0042_selectSummarizeList" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
@@ -262,7 +270,7 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittest core_server_tests.test0036_selectPlanDetail" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Unittest core_server_tests.test0043_createCard" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -274,7 +282,7 @@
       <module name="Test" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testPersonnel/personnel/api_main_tests.py" />
       <option name="CLASS_NAME" value="core_server_tests" />
-      <option name="METHOD_NAME" value="test0036_selectPlanDetail" />
+      <option name="METHOD_NAME" value="test0043_createCard" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
@@ -419,19 +427,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0032_activityDetail" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0033_activityQr" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0034_createPlan" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0035_editPlan" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0036_selectPlanDetail" />
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0039_createDaySummarize" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0040_editDaySummarize" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0041_selectDaySummarize" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0042_selectSummarizeList" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0043_createCard" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0036_selectPlanDetail" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0035_editPlan" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0034_createPlan" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0033_activityQr" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0032_activityDetail" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0043_createCard" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0042_selectSummarizeList" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0041_selectDaySummarize" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0040_editDaySummarize" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0039_createDaySummarize" />
       </list>
     </recent_temporary>
   </component>
@@ -564,39 +572,46 @@
       <option name="project" value="LOCAL" />
       <updated>1491817748908</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="3..7.3complete">
+      <created>1491907376263</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1491907376263</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittest_core_server_tests_test0033_activityQr - 2017.04.11 at 10h 52m 30s.xml">
-      <configuration name="Unittest core_server_tests.test0033_activityQr" configurationId="tests" />
+    <history-entry file="Unittest_core_server_tests_test0039_createDaySummarize - 2017.04.12 at 16h 42m 45s.xml">
+      <configuration name="Unittest core_server_tests.test0039_createDaySummarize" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_core_server_tests_test0034_createPlan - 2017.04.11 at 10h 52m 25s.xml">
-      <configuration name="Unittest core_server_tests.test0034_createPlan" configurationId="tests" />
+    <history-entry file="Unittest_core_server_tests_test0039_createDaySummarize - 2017.04.12 at 16h 42m 51s.xml">
+      <configuration name="Unittest core_server_tests.test0039_createDaySummarize" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_core_server_tests_test0034_createPlan - 2017.04.11 at 10h 52m 36s.xml">
-      <configuration name="Unittest core_server_tests.test0034_createPlan" configurationId="tests" />
+    <history-entry file="Unittest_core_server_tests_test0040_editDaySummarize - 2017.04.12 at 17h 02m 23s.xml">
+      <configuration name="Unittest core_server_tests.test0040_editDaySummarize" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_core_server_tests_test0034_createPlan - 2017.04.11 at 11h 00m 50s.xml">
-      <configuration name="Unittest core_server_tests.test0034_createPlan" configurationId="tests" />
+    <history-entry file="Unittest_core_server_tests_test0040_editDaySummarize - 2017.04.12 at 17h 04m 49s.xml">
+      <configuration name="Unittest core_server_tests.test0040_editDaySummarize" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_core_server_tests_test0034_createPlan - 2017.04.11 at 11h 01m 00s.xml">
-      <configuration name="Unittest core_server_tests.test0034_createPlan" configurationId="tests" />
+    <history-entry file="Unittest_core_server_tests_test0040_editDaySummarize - 2017.04.12 at 17h 04m 54s.xml">
+      <configuration name="Unittest core_server_tests.test0040_editDaySummarize" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_core_server_tests_test0034_createPlan - 2017.04.11 at 11h 01m 07s.xml">
-      <configuration name="Unittest core_server_tests.test0034_createPlan" configurationId="tests" />
+    <history-entry file="Unittest_core_server_tests_test0041_selectDaySummarize - 2017.04.12 at 17h 31m 49s.xml">
+      <configuration name="Unittest core_server_tests.test0041_selectDaySummarize" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_core_server_tests_test0035_editPlan - 2017.04.11 at 16h 50m 39s.xml">
-      <configuration name="Unittest core_server_tests.test0035_editPlan" configurationId="tests" />
+    <history-entry file="Unittest_core_server_tests_test0042_selectSummarizeList - 2017.04.12 at 17h 40m 40s.xml">
+      <configuration name="Unittest core_server_tests.test0042_selectSummarizeList" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_core_server_tests_test0035_editPlan - 2017.04.11 at 16h 51m 17s.xml">
-      <configuration name="Unittest core_server_tests.test0035_editPlan" configurationId="tests" />
+    <history-entry file="Unittest_core_server_tests_test0043_createCard - 2017.04.12 at 17h 55m 51s.xml">
+      <configuration name="Unittest core_server_tests.test0043_createCard" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_core_server_tests_test0035_editPlan - 2017.04.11 at 16h 52m 13s.xml">
-      <configuration name="Unittest core_server_tests.test0035_editPlan" configurationId="tests" />
+    <history-entry file="Unittest_core_server_tests_test0043_createCard - 2017.04.12 at 17h 58m 31s.xml">
+      <configuration name="Unittest core_server_tests.test0043_createCard" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_core_server_tests_test0036_selectPlanDetail - 2017.04.11 at 17h 00m 40s.xml">
-      <configuration name="Unittest core_server_tests.test0036_selectPlanDetail" configurationId="tests" />
+    <history-entry file="Unittest_core_server_tests_test0043_createCard - 2017.04.12 at 18h 05m 25s.xml">
+      <configuration name="Unittest core_server_tests.test0043_createCard" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -609,7 +624,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="398" y="64" width="1515" height="1029" extended-state="0" />
+    <frame x="898" y="55" width="1515" height="1049" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24847664" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -618,11 +633,11 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24056095" sideWeight="0.49763033" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29017857" sideWeight="0.49763033" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2838428" sideWeight="0.49763033" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24983074" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33832976" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33802816" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -631,15 +646,15 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279396" sideWeight="0.50236964" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24056095" sideWeight="0.49763033" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28896105" sideWeight="0.49763033" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29017857" sideWeight="0.49763033" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24847664" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -647,7 +662,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24983074" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3764833" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33832976" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -674,12 +689,35 @@
     <MESSAGE value="3.4.6complete" />
     <MESSAGE value="3.4complete" />
     <MESSAGE value="3.5complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="3.5complete" />
+    <MESSAGE value="3..7.3complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="3..7.3complete" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.87456447" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="16" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/testPersonnel/personnel/lib/modules.py</url>
+          <line>166</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/testPersonnel/personnel/lib/modules.py</url>
+          <line>173</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/testPersonnel/personnel/lib/actions.py</url>
+          <line>491</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/testPersonnel/personnel/lib/actions.py</url>
+          <line>503</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="21" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -720,9 +758,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#10642#10652#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -736,42 +772,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/testPersonnel/personnel/lib/modules.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testPersonnel/personnel/api_main_tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="228" column="31" selection-start-line="228" selection-start-column="31" selection-end-line="228" selection-end-column="31" />
-          <folding>
-            <element signature="e#10642#10652#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testPersonnel/personnel/apiconfig/ApiClass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="370" column="12" selection-start-line="370" selection-start-column="12" selection-end-line="370" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testPersonnel/personnel/apiconfig/ProductionEnv_config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="434" column="4" selection-start-line="434" selection-start-column="4" selection-end-line="434" selection-end-column="4" />
+        <state relative-caret-position="2227">
+          <caret line="188" column="131" selection-start-line="188" selection-start-column="131" selection-end-line="188" selection-end-column="131" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testPersonnel/personnel/lib/actions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="469" column="28" selection-start-line="469" selection-start-column="28" selection-end-line="469" selection-end-column="28" />
+        <state relative-caret-position="322">
+          <caret line="397" column="68" selection-start-line="397" selection-start-column="68" selection-end-line="397" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testPersonnel/personnel/apiconfig/ProductionEnv_config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="355" column="53" selection-start-line="355" selection-start-column="53" selection-end-line="355" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testPersonnel/personnel/api_main_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="279" column="0" selection-start-line="279" selection-start-column="0" selection-end-line="279" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testPersonnel/personnel/apiconfig/ApiClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="282" column="0" selection-start-line="282" selection-start-column="0" selection-end-line="282" selection-end-column="0" />
           <folding />
         </state>
       </provider>

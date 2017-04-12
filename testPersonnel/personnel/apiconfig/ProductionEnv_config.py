@@ -56,7 +56,7 @@ APP_a = {
     "cardType_3":3, #卡类型：1-年卡，2次卡，3储值卡
     "cardName":"cardName",
     "cardRemark":"REMARK",
-    "cardCalidityDate":"2018-04-18",#有效期
+    "cardCalidityDate":"2017-04-18 00:00:00",#有效期
     "commentLevel":"",
     "pageSize":100,
     "activityId":163,
@@ -69,6 +69,19 @@ APP_a = {
     "operationType":"add",
     "recordType":"month",
     "customerType":0,
+    "day" : "2017-04-12",
+    "dayPerformance" :"0",
+    "dayExpend" :"0",
+    "dayOrder" : "0",
+    "newExperienceIntroduce": "0",
+    "newExperienceDevelop" :"0",
+    "newTransactionIntroduce" :"0",
+    "newTransactionDevelop" :"0",
+    "summary" :"0000",
+    "performanceList" :"0",
+    "custmerType" :"0",
+    "expendList" :{},
+    "summaryId":7,
 
 }
 Base_url = "https://www.iumer.cn/umer/webService"
@@ -332,6 +345,7 @@ CoreServer_rankInfoList_01.url = Personnel_url +"/biz/customer/rankInfoList"
 CoreServer_rankInfoList_01.X_Type = APP_a["X-Type"]
 CoreServer_rankInfoList_01.shopId = APP_a["shopId"]
 CoreServer_rankInfoList_01.personnelId = APP_a["personnelId"]
+#*******************************************新增接口----卡项相关*************************************
 #3.4.8.1
 CoreServer_createCard_01 = createCard()
 CoreServer_createCard_01.url = Personnel_url +"/biz/customer/createCard"
@@ -339,7 +353,7 @@ CoreServer_createCard_01.X_Type = APP_a["X-Type"]
 CoreServer_createCard_01.shopId = APP_a["shopId"]
 CoreServer_createCard_01.personnelId = APP_a["personnelId"]
 CoreServer_createCard_01.customerId = APP_a["customerId"]
-CoreServer_createCard_01.cardType = APP_a["cardType_2"]
+CoreServer_createCard_01.cardType = APP_a["cardType_1"]
 CoreServer_createCard_01.name = APP_a["cardName"]
 CoreServer_createCard_01.remark = APP_a["cardRemark"]
 CoreServer_createCard_01.validityDate = APP_a["cardCalidityDate"]
@@ -434,3 +448,69 @@ CoreServer_selectCustomerList_01.recordType = APP_a["recordType"]
 CoreServer_selectCustomerList_01.customerType = APP_a["customerType"]
 #exp
 CoreServer_selectCustomerList_01.code = APP_a["error_code_correct"]
+#3.7.5
+CoreServer_selectPlanList_01 = selectPlanList()
+CoreServer_selectPlanList_01.url = Personnel_url + "/biz/plan/selectPlanList"
+CoreServer_selectPlanList_01.X_Type = APP_a["X-Type"]
+CoreServer_selectPlanList_01.personnelId = APP_a["personnelId"]
+#exp
+CoreServer_selectPlanList_01.code = APP_a["error_code_correct"]
+#3.7.5
+CoreServer_createDaySummarize_01 = createDaySummarize()
+CoreServer_createDaySummarize_01.url = Personnel_url +"/biz/plan/createDaySummarize"
+CoreServer_createDaySummarize_01.X_Type = APP_a["X-Type"]
+CoreServer_createDaySummarize_01.personnelId = APP_a["personnelId"]
+CoreServer_createDaySummarize_01.personnelId = APP_a["personnelId"]
+CoreServer_createDaySummarize_01.day = APP_a["day"]
+CoreServer_createDaySummarize_01.dayPerformance = APP_a["dayPerformance"]
+CoreServer_createDaySummarize_01.dayExpend = APP_a["dayExpend"]
+CoreServer_createDaySummarize_01.dayOrder = APP_a["dayOrder"]
+CoreServer_createDaySummarize_01.newExperienceIntroduce = APP_a["newExperienceIntroduce"]
+CoreServer_createDaySummarize_01.newExperienceDevelop = APP_a["newExperienceDevelop"]
+CoreServer_createDaySummarize_01.newTransactionDevelop = APP_a["newTransactionDevelop"]
+CoreServer_createDaySummarize_01.newTransactionIntroduce = APP_a["newTransactionIntroduce"]
+CoreServer_createDaySummarize_01.summary = APP_a["summary"]
+CoreServer_createDaySummarize_01.performanceList ={}
+CoreServer_createDaySummarize_01.customerRankId = APP_a["customerRankId"]
+CoreServer_createDaySummarize_01.planPerformance = APP_a["planPerformance"]
+CoreServer_createDaySummarize_01.customerType = APP_a["customerType"]
+CoreServer_createDaySummarize_01.expendList = APP_a["expendList"]
+#exp
+CoreServer_createDaySummarize_01.code = APP_a["error_code_correct"]
+#3.7.7
+CoreServer_editDaySummarize_01 = editDaySummarize()
+CoreServer_editDaySummarize_01.url = Personnel_url +"/biz/plan/editDaySummarize"
+CoreServer_editDaySummarize_01.X_Type= APP_a["X-Type"]
+CoreServer_editDaySummarize_01.planId = APP_a["planId"]
+CoreServer_editDaySummarize_01.id = APP_a["summaryId"]
+CoreServer_editDaySummarize_01.day = APP_a["day"]
+CoreServer_editDaySummarize_01.dayPerformance = APP_a["dayPerformance"]
+CoreServer_editDaySummarize_01.dayExpend = APP_a["dayExpend"]
+CoreServer_editDaySummarize_01.dayOrder = APP_a["dayOrder"]
+CoreServer_editDaySummarize_01.newExperienceIntroduce = APP_a["newExperienceIntroduce"]
+CoreServer_editDaySummarize_01.newExperienceDevelop = APP_a["newExperienceDevelop"]
+CoreServer_editDaySummarize_01.newTransactionDevelop = APP_a["newTransactionDevelop"]
+CoreServer_editDaySummarize_01.newTransactionIntroduce = APP_a["newTransactionIntroduce"]
+CoreServer_editDaySummarize_01.summary = APP_a["summary"]
+CoreServer_editDaySummarize_01.performanceList ={}
+CoreServer_editDaySummarize_01.customerRankId = APP_a["customerRankId"]
+CoreServer_editDaySummarize_01.planPerformance = APP_a["planPerformance"]
+CoreServer_editDaySummarize_01.customerType = APP_a["customerType"]
+CoreServer_editDaySummarize_01.expendList = APP_a["expendList"]
+#exp
+CoreServer_editDaySummarize_01.code =APP_a["error_code_correct"]
+#3.7.8
+CoreServer_selectDaySummarizeDetail_01 = selectDaySummarizeDetail()
+CoreServer_selectDaySummarizeDetail_01.url = Personnel_url +"/biz/plan/selectDaySummarizeDetail"
+CoreServer_selectDaySummarizeDetail_01.X_Type = APP_a["X-Type"]
+CoreServer_selectDaySummarizeDetail_01.summarizeId = APP_a["summaryId"]
+#exp
+CoreServer_editDaySummarize_01.code = APP_a["error_code_correct"]
+#3.7.9
+CoreServer_selectSummarizeList_01 = selectSummarizeList()
+CoreServer_selectSummarizeList_01.url = Personnel_url +"/biz/plan/selectSummarizeList"
+CoreServer_selectSummarizeList_01.X_Type = APP_a["X-Type"]
+CoreServer_selectSummarizeList_01.planId = APP_a["planId"]
+#exp
+CoreServer_selectSummarizeList_01.code = APP_a["error_code_correct"]
+

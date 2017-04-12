@@ -265,6 +265,7 @@ class rankInfoList:
 
     #exp
     code = ""
+
 #3.4.8.1
 class createCard:
     url = ""
@@ -279,6 +280,7 @@ class createCard:
     #exp
     code = ""
 # 3.4.8.2
+
 # 3.4.8.3
 # 3.4.8.4
 # 3.4.8.5
@@ -327,6 +329,7 @@ class activityQr:
     personnelId = ""
     #exp
     code = ""
+#******************************2017-3-29新增接口---工作计划总结相关**************************
 #**************************************************3.7***************************************
 #3.7.1
 class createPlan:
@@ -369,5 +372,74 @@ class selectCustomerList:
     customerType = ""
     #exp
     code = ""
+#3.7.5
+class selectPlanList:
+    url=""
+    X_Type = ""
+    personnelId= ""
+    #exp
+    code = ""
+#3.7.6
+class createDaySummarize:
+    url = ""
+    X_Type = ""
+    personnelId = ""
+    day = ""
+    dayPerformance = ""
+    dayExpend = ""
+    dayOrder =""
+    newExperienceIntroduce = ""
+    newExperienceDevelop = ""
+    newTransactionIntroduce = ""
+    newTransactionDevelop = ""
+    summary =""
+    performanceList=""
+    customerRankId=""
+    planPerformance=""
+    custmerType=""
+    expendList=""
+    customerRankId=""
+    planPerformance=""
+    #exp
+    code = ""
+#3.7.9
+class editDaySummarize:
+    url = ""
+    X_Type = ""
+    planId = ""
+    id =""
+    day = ""
+    dayPerformance = ""
+    dayExpend = ""
+    dayOrder = ""
+    newExperienceIntroduce = ""
+    newExperienceDevelop = ""
+    newTransactionIntroduce = ""
+    newTransactionDevelop = ""
+    summary = ""
+    performanceList = ""
+    customerRankId = ""
+    planPerformance = ""
+    custmerType = ""
+    expendList = ""
+    customerRankId = ""
+    planPerformance = ""
+    # exp
+    code = ""
+#3.7.8
+class selectDaySummarizeDetail:
+    url =""
+    X_Type = ""
+    summarizeId = ""
+    #exp
+    code = ""
+#3.7.9
+class selectSummarizeList:
+    url = ""
+    X_Type =""
+    planId =""
+    #exp
+    code = ""
+
 
 

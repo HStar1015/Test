@@ -473,6 +473,67 @@ def selectPlanDetail(url= "",planId="",X_Type="2"):
     res = post_json(url, data, header)
     return null2None2dict(res)
 #3.7.4
-def selectCustomerList(url= "",shopId ="",personneld="",operationType="",recordType="",customerType=""):
+def selectCustomerList(url= "",shopId ="",personneId="",operationType="",recordType="",customerType="",X_Type ="2"):
     url = url
-    data = {"shopId":shopId}
+    data = {"shopId":shopId,"personnelId":personneId,"operationType":operationType,"recordType":recordType,"customerType":customerType}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#3.7.5
+def selectPlanList(url ="",personnelId="",X_Type="2"):
+    url = url
+    data = {"personnelId":personnelId}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#3.7.6
+def createDaySummarize(url="",personnelId="",day= "",dayPerformance="",dayExpend="",dayOrder= "",newExperienceIntroduce="",
+                       newExperienceDevelop="",newTransactionIntroduce="",newTransactionDevelop="",summary="",performanceList={},
+                       customerRankId="",planPerformance="",customerType="",expendList={},X_Type ="2"):
+    url = url
+    data = {"personnelId":personnelId,"day":day,"dayPerformance":dayPerformance,"dayExpend":dayExpend,"dayOrder":dayOrder,
+            "newExperienceIntroduce":newExperienceIntroduce,"newExperienceDevelop":newExperienceDevelop,"newTransactionIntroduce":newTransactionIntroduce,
+            "newTransactionDevelop":newTransactionDevelop,"summary":summary,
+            "performanceList":[{"customerRankId":customerRankId,"planPerformance":planPerformance,"customerType":customerType}],
+            "expendList":[{"customerRankId":customerRankId,"planPerformance":planPerformance,"customerType":customerType}]}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#3.7.7
+def editDaySummarize(url="",planId="",id="",day= "",dayPerformance="",dayExpend="",dayOrder= "",newExperienceIntroduce="",
+                       newExperienceDevelop="",newTransactionIntroduce="",newTransactionDevelop="",summary="",performanceList={},
+                       customerRankId="",planPerformance="",customerType="",expendList={},X_Type ="2"):
+
+    url = url
+    data = {"planId": planId,"id":id, "day": day, "dayPerformance": dayPerformance, "dayExpend": dayExpend,
+            "dayOrder": dayOrder,
+            "newExperienceIntroduce": newExperienceIntroduce, "newExperienceDevelop": newExperienceDevelop,
+            "newTransactionIntroduce": newTransactionIntroduce,
+            "newTransactionDevelop": newTransactionDevelop, "summary": summary,
+            "performanceList": [
+                {"customerRankId": customerRankId, "planPerformance": planPerformance, "customerType": customerType}],
+            "expendList": [
+                {"customerRankId": customerRankId, "planPerformance": planPerformance, "customerType": customerType}]}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#3.7.8
+def selectDaySummarizeDetail(url="",summarizeId="",X_Type="2"):
+    url = url
+    data = {"summarizeId":summarizeId}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#3.7.9
+def selectSummarizeList(url="",planId="",X_Type="2"):
+    url = url
+    data = {"planId": planId}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
