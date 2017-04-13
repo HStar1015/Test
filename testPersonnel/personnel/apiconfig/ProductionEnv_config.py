@@ -65,12 +65,12 @@ APP_a = {
     "commentLevel":"",
     "pageSize":100,
     "activityId":163,
-    "month":"2022-06",
+    "month":"2017-06",
     "personnelPlanDetailDtos":"",
     "customerRankId": 1,
     "planPerformance": "12.12",
     "planIntroduce": "12",
-    "planId":"16",
+    "planId":"23",
     "operationType":"add",
     "recordType":"month",
     "customerType":0,
@@ -86,7 +86,7 @@ APP_a = {
     "performanceList" :"0",
     "custmerType" :"0",
     "expendList" :{},
-    "summaryId":7,
+    "summaryId":7,#总结Id
 
 }
 Base_url = "https://www.iumer.cn/umer/webService"
