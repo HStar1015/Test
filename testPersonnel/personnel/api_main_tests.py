@@ -276,8 +276,32 @@ class core_server_tests(unittest.TestCase):
         self.test.test_createCard(auth)
         print "**********************************************************************************************"
     # #3.4.8.2
-
+    def test0043_createCard(self):
+        print "**********************************#3.4.8.2编辑卡项**************************************************"
+        auth = apimsg.CoreServer_editCard_01
+        self.test.test_editCard(auth)
+        print "**********************************************************************************************"
     # #3.4.8.3
+    def test0044_cardDetail(self):
+        print "**********************************#3.4.8.3卡项详情**************************************************"
+        auth = apimsg.CoreServer_cardDetail_01
+        self.test.test_cardDetail(auth)
+        print "**********************************************************************************************"
     # #3.4.8.4
+    def test0045_customerCardList(self):
+        print "**********************************#3.4.8.4顾客卡项列表**************************************************"
+        auth = apimsg.CoreServer_customerCardList_01
+        self.test.test_customerCardList(auth)
+        print "**********************************************************************************************"
     # #3.4.8.5
+    def test0046_operationCard(self):
+        print "**********************************#3.4.8.5操作卡项**************************************************"
+        auth = apimsg.CoreServer_operationCard_01
+        self.test.test_operationCard(auth)
+        print "**********************************************************************************************"
     # #3.4.8.6
+    def test0047_cardConsummerDetailList(self):
+        print "**********************************#3.4.8.6**************************************************"
+        auth = apimsg.CoreServer_cardConsummerDetailList_01
+        self.test.test_cardConsummerDetailList(auth)
+        print "**********************************************************************************************"

@@ -401,10 +401,46 @@ def createCard(url="",shopId="",personnelId="",customerId="",cardType="",name=""
     res = post_json(url, data, header)
     return null2None2dict(res)
 # 3.4.8.2
+def editCard(url="",shopId="",personnelId="",customerId="",cardType="",id="",name="",remark="",validityDate="",X_Type="2"):
+    url = url
+    data = {"shopId":shopId,"personnelId":personnelId,"customerId":customerId,"cardType":cardType,"id":id,
+            "name":name,"remark":remark,"validityDate":validityDate}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
 # 3.4.8.3
+def cardDetail(url="",cardId="",X_Type="2"):
+    url = url
+    data = {"cardId":cardId}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
 # 3.4.8.4
+def customerCardList(url="",shopId="",customerId="",pageSize="",X_Type = "2"):
+    url = url
+    data ={"shopId":shopId,"customerId":customerId,"pageSize":pageSize}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
 # 3.4.8.5
+def operationCard(url="",shopId = "",personnelId="",customerId="",cardType="",id ="",deductNum="",X_Type ="2"):
+    url = url
+    data = {"shopId":shopId,"personnelId":personnelId,"customerId":customerId,"cardType":cardType,"id":id,"deductNum":deductNum}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
 # 3.4.8.6
+def cardConsummerDetailList(url="",cardId="",pageSize="",X_Type="2"):
+    url = url
+    data = {"cardId":cardId,"pageSize":pageSize}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
 # *********************************************3.5***********************************************
 #3.5.1
 def commentGroupNum(url ="",personnelId="",X_Type="2"):

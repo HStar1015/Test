@@ -116,10 +116,26 @@ class test_core_server():
         res = actions.createCard(createCard_obj.url,createCard_obj.shopId,createCard_obj.personnelId,createCard_obj.customerId,createCard_obj.cardType,
                                  createCard_obj.name,createCard_obj.remark,createCard_obj.validityDate,createCard_obj.X_Type)
     # 3.4.8.2
+    def test_editCard(self, editCard_obj):
+        res = actions.editCard(editCard_obj.url, editCard_obj.shopId, editCard_obj.personnelId,
+                                 editCard_obj.customerId, editCard_obj.cardType,editCard_obj.id,
+                                 editCard_obj.name, editCard_obj.remark, editCard_obj.validityDate,
+                                 editCard_obj.X_Type)
     # 3.4.8.3
+    def test_cardDetail(self,cardDetail_obj):
+        res = actions.cardDetail(cardDetail_obj.url,cardDetail_obj.cardId,cardDetail_obj.X_Type)
     # 3.4.8.4
+    def test_customerCardList(self,customerCardList_obj):
+        res = actions.customerCardList(customerCardList_obj.url,customerCardList_obj.shopId,customerCardList_obj.customerId,
+                                       customerCardList_obj.pageSize,customerCardList_obj.X_Type)
     # 3.4.8.5
+    def test_operationCard(self,operationCard_obj):
+        res = actions.operationCard(operationCard_obj.url,operationCard_obj.shopId,operationCard_obj.personnelId,operationCard_obj.customerId,
+                                    operationCard_obj.cardType,operationCard_obj.id,operationCard_obj.deductNum,operationCard_obj.X_Type)
     # 3.4.8.6
+    def test_cardConsummerDetailList(self,cardConsummerDetailList_obj):
+        res = actions.cardConsummerDetailList(cardConsummerDetailList_obj.url,cardConsummerDetailList_obj.cardId,cardConsummerDetailList_obj.pageSize,
+                                              cardConsummerDetailList_obj.X_Type)
     #******************************************3.5********************************************
     #3.5.1
     def test_commentGroupNum(self,commentGroupNum_obj):

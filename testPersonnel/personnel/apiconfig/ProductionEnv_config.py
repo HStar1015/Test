@@ -55,8 +55,13 @@ APP_a = {
     "cardType_2":2,
     "cardType_3":3, #卡类型：1-年卡，2次卡，3储值卡
     "cardName":"cardName",
+    "cardId":15,#年卡id
+    "numCardId":16,
+    "deductNum":1,#扣次
     "cardRemark":"REMARK",
-    "cardCalidityDate":"2017-04-18 00:00:00",#有效期
+    "cardCalidityDate":"2018-04-18 00:00:00",#有效期
+    "totalNum":50,
+    "surplusNum":40,
     "commentLevel":"",
     "pageSize":100,
     "activityId":163,
@@ -69,7 +74,7 @@ APP_a = {
     "operationType":"add",
     "recordType":"month",
     "customerType":0,
-    "day" : "2017-04-12",
+    "day" : "2017-04-12 00:00:00",
     "dayPerformance" :"0",
     "dayExpend" :"0",
     "dayOrder" : "0",
@@ -360,10 +365,57 @@ CoreServer_createCard_01.validityDate = APP_a["cardCalidityDate"]
 #exp
 CoreServer_createCard_01.code = APP_a["error_code_correct"]
 # 3.4.8.2
+CoreServer_editCard_01 = editCard()
+CoreServer_editCard_01.url = Personnel_url +"/biz/customer/editCard"
+CoreServer_editCard_01.X_Type = APP_a["X-Type"]
+CoreServer_editCard_01.shopId = APP_a["shopId"]
+CoreServer_editCard_01.personnelId = APP_a["personnelId"]
+CoreServer_editCard_01.customerId = APP_a["customerId"]
+CoreServer_editCard_01.cardType = APP_a["cardType_1"]
+CoreServer_editCard_01.id  = APP_a["cardId"]
+CoreServer_editCard_01.name = APP_a["cardName"]
+CoreServer_editCard_01.remark = APP_a["cardRemark"]
+CoreServer_editCard_01.validityDate = APP_a["cardCalidityDate"]
+# CoreServer_editCard_01.totalNum =APP_a["totalNum"]
+# CoreServer_editCard_01.surplusNum = APP_a["surplusNum"]
+#exp
+CoreServer_editCard_01.code = APP_a["error_code_correct"]
 # 3.4.8.3
+CoreServer_cardDetail_01 = cardDetail()
+CoreServer_cardDetail_01.url = Personnel_url +"/biz/customer/cardDetail"
+CoreServer_cardDetail_01.X_Type = APP_a["X-Type"]
+CoreServer_cardDetail_01.cardId = APP_a["cardId"]
+#exp
+CoreServer_cardDetail_01.code = APP_a["error_code_correct"]
 # 3.4.8.4
+CoreServer_customerCardList_01 = customerCardList()
+CoreServer_customerCardList_01.url = Personnel_url + "/biz/customer/customerCardList"
+CoreServer_customerCardList_01.X_Type = APP_a["X-Type"]
+CoreServer_customerCardList_01.shopId = APP_a["shopId"]
+CoreServer_customerCardList_01.customerId = APP_a["customerId"]
+CoreServer_customerCardList_01.pageSize = APP_a["pageSize"]
+#exp
+CoreServer_customerCardList_01.code = APP_a["error_code_correct"]
 # 3.4.8.5
+CoreServer_operationCard_01 = operationCard()
+CoreServer_operationCard_01.url = Personnel_url +"/biz/customer/operationCard"
+CoreServer_operationCard_01.X_Type = APP_a["X-Type"]
+CoreServer_operationCard_01.shopId = APP_a["shopId"]
+CoreServer_operationCard_01.personnelId = APP_a["personnelId"]
+CoreServer_operationCard_01.customerId = APP_a["customerId"]
+CoreServer_operationCard_01.cardType = APP_a["cardType_2"]
+CoreServer_operationCard_01.id = APP_a["numCardId"]
+CoreServer_operationCard_01.deductNum = APP_a["deductNum"]
+#exp
+CoreServer_operationCard_01.code = APP_a["error_code_correct"]
 # 3.4.8.6
+CoreServer_cardConsummerDetailList_01 = cardConsummerDetailList()
+CoreServer_cardConsummerDetailList_01.X_Type = APP_a["X-Type"]
+CoreServer_cardConsummerDetailList_01.url = Personnel_url +"/biz/customer/cardConsummerDetailList"
+CoreServer_cardConsummerDetailList_01.cardId = APP_a["numCardId"]
+CoreServer_cardConsummerDetailList_01.pageSize = APP_a["pageSize"]
+#exp
+CoreServer_cardConsummerDetailList_01.code = APP_a["error_code_correct"]
 #************************************************3.5****************************************
 #3.5.1
 CoreServer_commentGroupNum_01 = commentGroupNum()

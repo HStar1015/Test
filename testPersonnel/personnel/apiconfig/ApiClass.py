@@ -280,11 +280,57 @@ class createCard:
     #exp
     code = ""
 # 3.4.8.2
-
+class editCard:
+    url = ""
+    X_Type =""
+    shopId = ""
+    personnelId = ""
+    customerId = ""
+    cardType = ""
+    id = ""
+    name = ""
+    remark = ""
+    validityDate = ""
+    # totalNum =""
+    # surplusNum =""
+    #exp
+    code = ""
 # 3.4.8.3
+class cardDetail:
+    url = ""
+    X_Type = ""
+    cardId = ""
+    #exp
+    code = ""
 # 3.4.8.4
+class customerCardList:
+    url = ""
+    X_Type=""
+    shopId = ""
+    customerId = ""
+    pageSize = ""
+    #exp
+    code = ""
 # 3.4.8.5
+class operationCard:
+    url = ""
+    X_Type =""
+    shopId = ""
+    personnelId = ""
+    customerId =""
+    cardType = ""
+    id = ""
+    deductNum = ""
+    #exp
+    code = ""
 # 3.4.8.6
+class cardConsummerDetailList:
+    url = ""
+    X_Type = ""
+    cardId = ""
+    pageSize =""
+    # exp
+    code = ""
 #*****************************************************3.5*********************************************
 #3.5.1
 class commentGroupNum:
