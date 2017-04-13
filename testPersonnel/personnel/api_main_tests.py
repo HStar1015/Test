@@ -182,8 +182,6 @@ class core_server_tests(unittest.TestCase):
         auth = apimsg.CoreServer_rankInfoList_01
         self.test.test_rankInfoList(auth)
         print "**********************************************************************************************"
-
-    #3.5.1
     #3.5.1
     def test0029_commentGroupNum(self):
         print "**********************************#3.5.1我的评论分组数量**************************************************"
