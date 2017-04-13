@@ -2,28 +2,28 @@
 import actions
 class test_core_server():
     # ************************2.1*******************************
-    # 注册
+    # 2.1.1
     def test_register_test(self, register_obj):
         res = actions.register_test(register_obj.url,register_obj.phone,register_obj.password,register_obj.authCode,
                                     register_obj.inviteCode,register_obj.X_Type)
-    #登录
+    #2.1.2
     def test_login_test(self,login_test_obj):
         res = actions.login_test(login_test_obj.url,login_test_obj.phone,login_test_obj.password,
                                  login_test_obj.X_Type)
-    #申请邀请码
+    #2.1.3
     def test_applyInvite_test(self,applyInvite_test_obj):
         res = actions.applyInvite_test(applyInvite_test_obj.url,applyInvite_test_obj.phone,applyInvite_test_obj.name,
                                        applyInvite_test_obj.provinceId,applyInvite_test_obj.cityId,applyInvite_test_obj.areaId,
                                        applyInvite_test_obj.X_Type)
-    #修改商家信息
+    #2.1.4
     def test_updateInfo_test(self,updateInfo_test_obj):
 
         res = actions.updateInfo_test(updateInfo_test_obj.url, updateInfo_test_obj.id, updateInfo_test_obj.X_Type)
-    #获取商家信息
+    #2.1.5
     def test_businessInfo_test(self, businessInfo_test_obj):
 
         res = actions.businessInfo_test(businessInfo_test_obj.url, businessInfo_test_obj.id, businessInfo_test_obj.X_Type)
-    #更新用户设备ID
+    #2.1.6
     def test_updateRegistrationId_test(self,updateRegistrationId_obj):
         res = actions.updateRegistrationId(updateRegistrationId_obj.url,updateRegistrationId_obj.id,
                                            updateRegistrationId_obj.registrationId,updateRegistrationId_obj.X_Type)
@@ -50,7 +50,19 @@ class test_core_server():
     #2.2.5
     def test_deleteShop_test(self,deleteShop_obj):
         res = actions.deleteShop(deleteShop_obj.url,deleteShop_obj.id,deleteShop_obj.businessId,deleteShop_obj.X_Type)
-    # ************************2.3*******************************
+    #2.2.6.1
+    def test_shopStatics_test(self,shopStatics_obj):
+        res = actions.shopStatics(shopStatics_obj.url,shopStatics_obj.shopId,shopStatics_obj.X_Type)
+    # 2.2.6.2
+    def test_saleStatics_test(self, saleStatics_obj):
+        res = actions.saleStatics(saleStatics_obj.url, saleStatics_obj.shopId, saleStatics_obj.X_Type)
+    # 2.2.6.3
+    def test_newCustomerStatistics_test(self, newCustomerStatistics_obj):
+        res = actions.newCustomerStatistics(newCustomerStatistics_obj.url, newCustomerStatistics_obj.shopId, newCustomerStatistics_obj.X_Type)
+    # 2.2.6.4
+    def test_projectSaleStatistics_test(self, projectSaleStatistics_obj):
+        res = actions.projectSaleStatistics(projectSaleStatistics_obj.url, projectSaleStatistics_obj.shopId, projectSaleStatistics_obj.X_Type)
+    # ************************2.3*************************************************************************************************
     #2.3.1
     def test_addProject_test(self,addProject_obj):
         res = actions.addProject(addProject_obj.url,addProject_obj.businessId,addProject_obj.shopIds,addProject_obj.projectName,
@@ -102,6 +114,27 @@ class test_core_server():
     def test_commentList_test(self,commentList_obj):
         res = actions.commentList(commentList_obj.url,commentList_obj.personnelId,
                                       commentList_obj.commentLevel,commentList_obj.pageSize,commentList_obj.X_Type)
+    #2.4.7.1
+    def test_daySummarizeList(self,daySummarizeList_obj):
+        res = actions.daySummarizeList(daySummarizeList_obj.url,daySummarizeList_obj.day,daySummarizeList_obj.shopId,daySummarizeList_obj.pageSize,
+                                       daySummarizeList_obj.X_Type)
+    #2.4.7.2
+    def test_daySummarizeDetail(self,daySummarizeDetail_obj):
+        res = actions.daySummarizeDetail(daySummarizeDetail_obj.url,daySummarizeDetail_obj.summarizeId,daySummarizeDetail_obj.X_Type)
+    #2.4.7.3
+    def test_monthPlanList(self,monthPlanList_obj):
+        res = actions.monthPlanList(monthPlanList_obj.url,monthPlanList_obj.month,monthPlanList_obj.shopId,monthPlanList_obj.pageSize,
+                                    monthPlanList_obj.X_Type)
+    #2.4.7.4
+    def test_monthPlanDetail(self,monthPlanDetail_obj):
+        res = actions.monthPlanDetail(monthPlanDetail_obj.url,monthPlanDetail_obj.planId,monthPlanDetail_obj.X_Type)
+    #2.4.8.1
+    def test_operationCaseList(self,operationCaseList_obj):
+        res = actions.operationCaseList(operationCaseList_obj.url,operationCaseList_obj.shopId,operationCaseList_obj.X_Type)
+    #2.4.8.2
+    def test_operationCaseDetail(self,operationCaseDetail_obj):
+        res = actions.operationCaseDetail(operationCaseDetail_obj.url,operationCaseDetail_obj.shopId,operationCaseDetail_obj.month,
+                                          operationCaseDetail_obj.X_Type)
     #************************2.5*******************************
     #2.5.1
     def test_customerList_test(self,customerList_obj):
@@ -131,6 +164,14 @@ class test_core_server():
     #2.5.7
     def test_rankInfoList_test(self,rankInfoList_obj):
         res = actions.rankInfoList(rankInfoList_obj.url,rankInfoList_obj.shopId,rankInfoList_obj.X_Type)
+    #2.5.8.1
+    def test_customerCardList(self,customerCardList_obj):
+        res = actions.customerCardList(customerCardList_obj.url,customerCardList_obj.shopId,customerCardList_obj.customerId,
+                                       customerCardList_obj.pageSize,customerCardList_obj.X_Type)
+    #2.5.8.2
+    def test_cardConsummerDetailList(self, cardConsummerDetailList_obj):
+        res = actions.cardConsummerDetailList(cardConsummerDetailList_obj.url, cardConsummerDetailList_obj.cardId,
+                                              cardConsummerDetailList_obj.pageSize, cardConsummerDetailList_obj.X_Type)
     # *****************************************2.6*****************************************
     #2.6.1
     def test_findAccountBalance_test(self,findAccountBalance_obj):

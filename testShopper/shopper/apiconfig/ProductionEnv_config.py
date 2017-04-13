@@ -63,7 +63,11 @@ APP_a = {
     "activityUnitPrice":"0.01",#活动单价
     "activityCoursePrice":"1",#活动疗程价格
     "activityId":"164",#活动id
-
+    "day":"2017-04-12",
+    "month":"2017-04",
+    "summarizeId":"2",
+    "planId":"23",
+    "cardId":16,
 }
 Base_url = "https://www.iumer.cn/umer/webService"
 Shop_url = Base_url +"/shop"
@@ -195,6 +199,34 @@ CoreServer_deleteShop_01.id = APP_a["deleteShopId"]
 CoreServer_deleteShop_01.businessId = APP_a["shopId"]
 #exp
 CoreServer_deleteShop_01.code = APP_a["error_code_correct"]
+#2.2.6.1
+CoreServer_shopStatics_01 = shopStatics()
+CoreServer_shopStatics_01.url = Shop_url +"/biz/shopdata/shopStatistics"
+CoreServer_shopStatics_01.X_Type = APP_a["X-Type"]
+CoreServer_shopStatics_01.shopId = APP_a["mendianId"]
+#exp
+CoreServer_shopStatics_01.code = APP_a["error_code_correct"]
+#2.2.6.2
+CoreServer_saleStatistics_01 = saleStatistics()
+CoreServer_saleStatistics_01.url = Shop_url +"/biz/shopdata/saleStatistics"
+CoreServer_saleStatistics_01.X_Type = APP_a["X-Type"]
+CoreServer_saleStatistics_01.shopId = APP_a["mendianId"]
+#exp
+CoreServer_saleStatistics_01.code = APP_a["error_code_correct"]
+#2.2.6.3
+CoreServer_newCustomerStatistics_01 = newCustomerStatistics()
+CoreServer_newCustomerStatistics_01.url = Shop_url +"/biz/shopdata/newCustomerStatistics"
+CoreServer_newCustomerStatistics_01.X_Type = APP_a["X-Type"]
+CoreServer_newCustomerStatistics_01.shopId = APP_a["mendianId"]
+#exp
+CoreServer_newCustomerStatistics_01.code = APP_a["error_code_correct"]
+#2.2.6.4
+CoreServer_projectSaleStatistics_01 = projectSaleStatistics()
+CoreServer_projectSaleStatistics_01.url = Shop_url +"/biz/shopdata/projectSaleStatistics"
+CoreServer_projectSaleStatistics_01.X_Type = APP_a["X-Type"]
+CoreServer_projectSaleStatistics_01.shopId = APP_a["mendianId"]
+#exp
+CoreServer_projectSaleStatistics_01.code = APP_a["error_code_correct"]
 #************************2.3*******************************
 #2.3.1
 CoreServer_addProject_01 = addProject()
@@ -329,7 +361,53 @@ CoreServer_commentList_01.commentLevel = APP_a["commentLevel_all"]
 CoreServer_commentList_01.pageSize = APP_a["pageSize"]
 #exp
 CoreServer_commentList_01.code = APP_a["error_code_correct"]
-#************************2.5*******************************
+#2.4.7.1
+CoreServer_daySummarizeList_01 = daySummarizeList()
+CoreServer_daySummarizeList_01.url = Shop_url +"/biz/personnel/daySummarizeList"
+CoreServer_daySummarizeList_01.day = APP_a["day"]
+CoreServer_daySummarizeList_01.shopId = APP_a["mendianId"]
+CoreServer_daySummarizeList_01.pageSize = APP_a["pageSize"]
+#exp
+CoreServer_daySummarizeList_01.code = APP_a["error_code_correct"]
+#2.4.7.2
+CoreServer_daySummarizeDetail_01 = daySummarizeDetail()
+CoreServer_daySummarizeDetail_01.url = Shop_url +"/biz/personnel/daySummarizeDetail"
+CoreServer_daySummarizeDetail_01.X_Type = APP_a["X-Type"]
+CoreServer_daySummarizeDetail_01.summarizeId = APP_a["summarizeId"]
+#exp
+CoreServer_daySummarizeDetail_01.code = APP_a["error_code_correct"]
+#2.4.7.3
+CoreServer_monthPlanList_01 = monthPlanList()
+CoreServer_monthPlanList_01.url = Shop_url +"/biz/personnel/monthPlanList"
+CoreServer_monthPlanList_01.X_Type = APP_a["X-Type"]
+CoreServer_monthPlanList_01.month = APP_a["month"]
+CoreServer_monthPlanList_01.shopId = APP_a["mendianId"]
+CoreServer_monthPlanList_01.pageSize = APP_a["pageSize"]
+#exp
+CoreServer_monthPlanList_01.code = APP_a["error_code_correct"]
+#2.4.7.4
+CoreServer_monthDetail_01 = monthPlanDetail()
+CoreServer_monthDetail_01.url = Shop_url +"/biz/personnel/monthPlanDetail"
+CoreServer_monthDetail_01.X_Type = APP_a["X-Type"]
+CoreServer_monthDetail_01.planId = APP_a["planId"]
+#exp
+CoreServer_monthDetail_01.code = APP_a["error_code_correct"]
+#2.4.8.1
+CoreServer_operationCaseList_01 = operationCaseList()
+CoreServer_operationCaseList_01.url = Shop_url +"/biz/personnel/operationCaseList"
+CoreServer_operationCaseList_01.X_Type = APP_a["X-Type"]
+CoreServer_operationCaseList_01.shopId = APP_a["mendianId"]
+#exp
+CoreServer_operationCaseList_01.code = APP_a["error_code_correct"]
+#2.4.8.2
+CoreServer_operationDetail_01 = operationCaseDetail()
+CoreServer_operationDetail_01.url = Shop_url +"/biz/personnel/operationCaseDetail"
+CoreServer_operationDetail_01.X_Type = APP_a["X-Type"]
+CoreServer_operationDetail_01.shopId = APP_a["mendianId"]
+CoreServer_operationDetail_01.month = APP_a["month"]
+#exp
+CoreServer_operationDetail_01.code = APP_a["error_code_correct"]
+#***************************************2.5*******************************
 #2.5.1
 CoreServer_customerList_01 = customerList()
 CoreServer_customerList_01.url = Shop_url +"/biz/customer/customerList"
@@ -387,6 +465,23 @@ CoreServer_rankInfoList_01.shopId = APP_a["shopId"]
 CoreServer_rankInfoList_01.X_Type = APP_a["X-Type"]
 #exp
 CoreServer_rankInfoList_01.code = APP_a["error_code_correct"]
+#2.5.8.1
+CoreServer_customerCardList_01 = customerCardList()
+CoreServer_customerCardList_01.url = Shop_url + "/biz/customer/customerCardList"
+CoreServer_customerCardList_01.X_Type = APP_a["X-Type"]
+CoreServer_customerCardList_01.shopId = APP_a["mendianId"]
+CoreServer_customerCardList_01.customerId = APP_a["customerId"]
+CoreServer_customerCardList_01.pageSize = APP_a["pageSize"]
+#exp
+CoreServer_customerCardList_01.code = APP_a["error_code_correct"]
+#2.5.8.2
+CoreServer_cardConsummerDetailList_01 = cardConsummerDetailList()
+CoreServer_cardConsummerDetailList_01.url = Shop_url +"/biz/customer/cardConsummerDetailList"
+CoreServer_cardConsummerDetailList_01.X_Type = APP_a["X-Type"]
+CoreServer_cardConsummerDetailList_01.cardId = APP_a["cardId"]
+CoreServer_cardConsummerDetailList_01.pageSize = APP_a["pageSize"]
+#exp
+CoreServer_cardConsummerDetailList_01.code = APP_a["error_code_correct"]
 #*****************************************2.6*****************************************
 #2.6.1
 CoreServer_findAccountBalance_01 = findAccountBalance()

@@ -123,6 +123,39 @@ class deleteShop:
     X_Type = ""
     #exp
     code = ""
+#************************2017-04-12-新增接口--2.2.6店数据统计**************************
+#2.2.6.1
+class shopStatics:
+    url = ""
+    X_Type = ""
+    shopId = ""
+    month = ""
+    #exp
+    code = ""
+#2.2.6.2
+class saleStatistics:
+    url = ""
+    X_Type = ""
+    shopId = ""
+    month = ""
+    #exp
+    code = ""
+#2.2.6.3
+class newCustomerStatistics:
+    url = ""
+    X_Type = ""
+    shopId = ""
+    month = ""
+    #exp
+    code = ""
+#2.2.6.4
+class projectSaleStatistics:
+    url = ""
+    X_Type = ""
+    shopId = ""
+    month = ""
+    #exp
+    code = ""
 #************************2.3*******************************
 #2.3.1
 class addProject:
@@ -254,6 +287,53 @@ class commentList:
     pageSize = ""
     #exp
     code =""
+#2.4.7.1
+class daySummarizeList:
+    url= ""
+    X_Type = ""
+    day = ""
+    shopId = ""
+    pageSize=""
+    #exp
+    code = ""
+#2.4.7.2
+class daySummarizeDetail:
+    url = ""
+    X_Type = ""
+    summarizeId = ""
+    #exp
+    code = ""
+#2.4.7.3
+class monthPlanList:
+    url= ""
+    X_Type = ""
+    month = ""
+    shopId =""
+    pageSize = ""
+    #exp
+    code = ""
+#2.4.7.4
+class monthPlanDetail:
+    url = ""
+    X_Type =""
+    planId = ""
+    #exp
+    code = ""
+#2.4.8.2
+class operationCaseList:
+    shopId = ""
+    url = ""
+    X_Type=""
+    #exp
+    code = ""
+#2.4.8.2
+class operationCaseDetail:
+    shopId=""
+    month=""
+    url = ""
+    X_Type = ""
+    #exp
+    code = ""
 #************************2.5*******************************
 #2.5.1
 class customerList:
@@ -313,6 +393,23 @@ class rankInfoList:
     X_Type = ""
     shopId = ""
     #exp
+    code = ""
+#2.5.8.1
+class customerCardList:
+    url = ""
+    X_Type = ""
+    shopId =""
+    customerId = ""
+    pageSize = ""
+    #exp
+    code= ""
+#2.5.8.2
+class cardConsummerDetailList:
+    url = ""
+    X_Type = ""
+    cardId = ""
+    pageSize = ""
+    # exp
     code = ""
 #*****************************************2.6*****************************************
 #2.6.1

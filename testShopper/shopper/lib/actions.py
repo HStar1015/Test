@@ -247,6 +247,38 @@ def deleteShop(url ="",businessId= "",id ="",X_Type='1'):
     header = {"Content-type": "application/json", "X-Type": 1, "X-Token": token['data']['token']}
     res = post_json(url, data, header)
     return null2None2dict(res)
+#2.2.6.1
+def shopStatics(url="",shopId="",X_Type="1"):
+    url =url
+    data = {"shopId":shopId}
+    token = mylogin()
+    header = {"Content-type": "application/json", "X-Type": 1, "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#2.2.6.2
+def saleStatics(url="",shopId="",X_Type="1"):
+    url =url
+    data = {"shopId":shopId}
+    token = mylogin()
+    header = {"Content-type": "application/json", "X-Type": 1, "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#2.2.6.3
+def newCustomerStatistics(url="",shopId="",X_Type="1"):
+    url =url
+    data = {"shopId":shopId}
+    token = mylogin()
+    header = {"Content-type": "application/json", "X-Type": 1, "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#2.2.6.3
+def projectSaleStatistics(url="",shopId="",X_Type="1"):
+    url =url
+    data = {"shopId":shopId}
+    token = mylogin()
+    header = {"Content-type": "application/json", "X-Type": 1, "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
 #************************2.3*******************************
 #2.3.1
 def addProject(url = "",businessId="",shopIds ="",projectName="",groupNo="",unitPrice="",coursePrice= "",courseRemark="",
@@ -306,6 +338,7 @@ def copyProject(url ="",businessId="",shopId="",projectIds ="",X_Type= "1"):
     header = {"Content-type": "application/json", "X-Type": 1, "X-Token": token['data']['token']}
     res = post_json(url,data,header)
     return null2None2dict(res)
+
 #***************************************2.4.1************************************
 #2.4.1
 def pushIncvitation(url ="",personnelPhone="",businessId="",shopId ="",phone="",X_Type="1"):
@@ -363,6 +396,54 @@ def commentList(url="",personnelId="",commentLevel="",pageSize="",X_Type = "1"):
     header = {"Content-type": "application/json", "X-Type": 1, "X-Token": token['data']['token']}
     res = post_json(url, data, header)
     return null2None2dict(res)
+#2.4.7.1
+def daySummarizeList(url="",day="",shopId="",pageSize="",X_Type ="1"):
+    url = url
+    data = {"day":day,"shopId":shopId,"pageSize":pageSize}
+    token = mylogin()
+    header = {"Content-type": "application/json", "X-Type": 1, "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#2.4.7.2
+def daySummarizeDetail(url="",summarizeId = "",X_Type="1"):
+    url = url
+    data = {"summarizeId":summarizeId}
+    token = mylogin()
+    header = {"Content-type": "application/json", "X-Type": 1, "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#2.4.7.3
+def monthPlanList(url="",month="",shopId="",pageSize="",X_Type=""):
+    url = url
+    data = {"month":month,"shopId":shopId,"pageSize":pageSize}
+    token = mylogin()
+    header = {"Content-type": "application/json", "X-Type": 1, "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#2.4.7.4
+def monthPlanDetail(url="",planId="",X_Type=""):
+    url = url
+    data = {"planId":planId}
+    token = mylogin()
+    header = {"Content-type": "application/json", "X-Type": 1, "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#2.4.8.1
+def operationCaseList(url="",shopId ="",X_Type ="1"):
+    url = url
+    data = {"shopId": shopId}
+    token = mylogin()
+    header = {"Content-type": "application/json", "X-Type": 1, "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#2.4.8.2
+def operationCaseDetail(url="",shopId="",month="",X_Type=""):
+    url = url
+    data = {"shopId": shopId,"month":month}
+    token = mylogin()
+    header = {"Content-type": "application/json", "X-Type": 1, "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
 #************************2.5*******************************
 #2.5.1
 def customerList(url ="",shopId="",pageSize="",X_Type="1"):
@@ -416,6 +497,22 @@ def changeRank(url="",shopId ="",rankId="",customerIds="",X_Type="1"):
 def rankInfoList(url = "",shopId="",X_Type="1"):
     url = url
     data = {"shopId":shopId}
+    token = mylogin()
+    header = {"Content-type": "application/json", "X-Type": 1, "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#2.5.8.1
+def customerCardList(url="",shopId ="",customerId="",pageSize="",X_Type="1"):
+    url = url
+    data = {"shopId":shopId,"customerId":customerId,"pageSize":pageSize}
+    token = mylogin()
+    header = {"Content-type": "application/json", "X-Type": 1, "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#2.5.8.2
+def cardConsummerDetailList(url ="",cardId="",pageSize="",X_Type="1"):
+    url = url
+    data = {"cardId": cardId, "pageSize": pageSize}
     token = mylogin()
     header = {"Content-type": "application/json", "X-Type": 1, "X-Token": token['data']['token']}
     res = post_json(url, data, header)

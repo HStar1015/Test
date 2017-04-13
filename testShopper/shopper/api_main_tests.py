@@ -292,3 +292,80 @@ class core_server_tests(unittest.TestCase):
         auth = apimsg.CoreServer_activityChooseProjectList_01
         self.test.test_activityChooseProjectList(auth)
         print "***********************************************************************************************"
+###############################################2017-04-12-新增接口--2.2.6店数据统计#########################################
+    #2.2.6.1
+    def test0047_shopStatics(self):
+        print "**************************************#2.2.6.1店业绩消耗统计**************************************"
+        auth = apimsg.CoreServer_shopStatics_01
+        self.test.test_shopStatics_test(auth)
+        print "***********************************************************************************************"
+    # 2.2.6.2
+    def test0048_saleStatics(self):
+        print "**************************************#2.2.6.2进店顾客统计**************************************"
+        auth = apimsg.CoreServer_saleStatistics_01
+        self.test.test_saleStatics_test(auth)
+        print "***********************************************************************************************"
+    # 2.2.6.3
+    def test0049_newCustomerStatistics(self):
+        print "**************************************#2.2.6.3新店量统计**************************************"
+        auth = apimsg.CoreServer_newCustomerStatistics_01
+        self.test.test_newCustomerStatistics_test(auth)
+        print "***********************************************************************************************"
+    # 2.2.6.4
+    def test0050_projectSaleStatistics(self):
+        print "**************************************#2.2.6.4项目销售统计**************************************"
+        auth = apimsg.CoreServer_projectSaleStatistics_01
+        self.test.test_projectSaleStatistics_test(auth)
+        print "***********************************************************************************************"
+###############################################2017-04-10-新增接口--2.4.7员工日志########################################
+    #2.4.7.1
+    def test0051_daySummarizeList(self):
+        print "**************************************#2.4.7.1员工日总结列表**************************************"
+        auth = apimsg.CoreServer_daySummarizeList_01
+        self.test.test_daySummarizeList(auth)
+        print "***********************************************************************************************"
+    # 2.4.7.2
+    def test0051_daySummarizeDetail(self):
+        print "**************************************#2.4.7.2员工日总结详情**************************************"
+        auth = apimsg.CoreServer_daySummarizeDetail_01
+        self.test.test_daySummarizeDetail(auth)
+        print "***********************************************************************************************"
+    #2.4.7.3
+    def test0052_monthPlanList(self):
+        print "**************************************#2.4.7.3 员工月计划列表**************************************"
+        auth = apimsg.CoreServer_monthPlanList_01
+        self.test.test_monthPlanList(auth)
+        print "***********************************************************************************************"
+    # 2.4.7.4
+    def test0053_monthDetail(self):
+        print "**************************************#2.4.7.4 员工月计划详情**************************************"
+        auth = apimsg.CoreServer_monthDetail_01
+        self.test.test_monthPlanDetail(auth)
+        print "***********************************************************************************************"
+
+    ###############################################2017-04-11-新增接口--2.4.8员工数据########################################
+    #2.4.8.1
+    def test0054_operationCaseList(self):
+        print "**************************************#2.4.8.1	员工操作业绩情况列表**************************************"
+        auth = apimsg.CoreServer_operationCaseList_01
+        self.test.test_operationCaseList(auth)
+        print "***********************************************************************************************"
+    # 2.4.8.2
+    def test0055_operationCaseDetail(self):
+        print "**************************************#2.4.8.2	销售项目详情**************************************"
+        auth = apimsg.CoreServer_operationDetail_01
+        self.test.test_operationCaseDetail(auth)
+        print "***********************************************************************************************"
+    ###############################################2017-04-07-新增接口--2.5.8顾客卡项########################################
+    #2.5.8.1
+    def test0056_customerCardList(self):
+        print "**************************************#2.5.8.1 顾客卡项列表**************************************"
+        auth = apimsg.CoreServer_customerCardList_01
+        self.test.test_customerCardList(auth)
+        print "***********************************************************************************************"
+    # 2.5.8.2
+    def test0057_cardConsummerDetailList(self):
+        print "**************************************#2.5.8.1 顾客卡项列表**************************************"
+        auth = apimsg.CoreServer_cardConsummerDetailList_01
+        self.test.test_cardConsummerDetailList(auth)
+        print "***********************************************************************************************"
