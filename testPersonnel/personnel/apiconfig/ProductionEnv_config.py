@@ -74,7 +74,7 @@ APP_a = {
     "operationType":"add",
     "recordType":"month",
     "customerType":0,
-    "day" : "2017-04-12 00:00:00",
+    "day" : "2017-04-12",
     "dayPerformance" :"0",
     "dayExpend" :"0",
     "dayOrder" : "0",
