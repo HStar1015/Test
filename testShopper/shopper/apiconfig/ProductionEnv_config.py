@@ -5,6 +5,8 @@ APP_a = {
     "error_code_correct" :1,
     "error_code_fail":0,
     "phone":"15651966757",
+    "authCode":"1123456",
+    "inviteCode":"123456",
     "shopId":15,#15651966757--商家id
     "mendianId":91,#门店id
     "deleteShopId":87,#删除门店id
@@ -78,9 +80,9 @@ CoreServer_register_01 = register()
 #input
 CoreServer_register_01.url = Shop_url +"/sys/business/register"
 CoreServer_register_01.phone = APP_a["phone"]
-CoreServer_register_01.password = APP_a["password"]
-CoreServer_register_01.authCode = 123456
-CoreServer_register_01.inviteCode = "QWERTYU"
+CoreServer_register_01.password = 123456
+CoreServer_register_01.authCode = APP_a["authCode"]
+CoreServer_register_01.inviteCode = APP_a["inviteCode"]
 CoreServer_register_01.X_Type = APP_a["X-Type"]
 #expect
 CoreServer_register_01.code = APP_a["error_code_correct"]
@@ -357,7 +359,7 @@ CoreServer_commentGroupNum_01.code = APP_a["error_code_correct"]
 CoreServer_commentList_01 = commentList()
 CoreServer_commentList_01.url = Shop_url +"/biz/personnel/commentList"
 CoreServer_commentList_01.personnelId = APP_a["personneId"]
-CoreServer_commentList_01.commentLevel = APP_a["commentLevel_all"]
+CoreServer_commentList_01.commentLevel = APP_a["commentLevel_1"]
 CoreServer_commentList_01.pageSize = APP_a["pageSize"]
 #exp
 CoreServer_commentList_01.code = APP_a["error_code_correct"]
