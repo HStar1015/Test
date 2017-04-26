@@ -62,7 +62,7 @@ APP_a = {
     "cardCalidityDate":"2018-04-18 00:00:00",#有效期
     "totalNum":50,
     "surplusNum":40,
-    "commentLevel":"",
+    "commentLevel":"1",
     "pageSize":100,
     "activityId":163,
     "month":"2017-06",
@@ -156,6 +156,10 @@ CoreServer_workTime.thuStart =APP_a["thuStart"]
 CoreServer_workTime.tueEnd = APP_a["tueEnd"]
 CoreServer_workTime.friStart = APP_a["friStart"]
 CoreServer_workTime.friEnd = APP_a["friEnd"]
+CoreServer_workTime.satStart =APP_a["satStart"]
+CoreServer_workTime.satEnd = APP_a["satEnd"]
+CoreServer_workTime.sunStart = APP_a["sunStart"]
+CoreServer_workTime.sunEnd = APP_a["sunEnd"]
 CoreServer_workTime.ifMonWork = APP_a["ifMonWork"]
 CoreServer_workTime.ifTueWork = APP_a["ifTueWork"]
 CoreServer_workTime.ifThuWork = APP_a["ifThuWork"]
@@ -185,6 +189,7 @@ CoreServer_shopInfo_01.code = APP_a["error_code_correct"]
 #3.1.9
 CoreServer_updateRegistrationId_01 = updateRegistrationId()
 CoreServer_updateRegistrationId_01.url = Personnel_url + "/sys/user/updateRegistrationId"
+CoreServer_updateRegistrationId_01.id= APP_a["personnelId"]
 CoreServer_updateRegistrationId_01.registrationId = APP_a["registrationId"]
 #exp
 CoreServer_updateRegistrationId_01.code = APP_a["error_code_correct"]
@@ -306,6 +311,7 @@ CoreServer_changeRemark_01.url= Personnel_url + "/biz/customer/changeRemark"
 CoreServer_changeRemark_01.X_Type = APP_a["X-Type"]
 CoreServer_changeRemark_01.shopId = APP_a["personnelId"]
 CoreServer_changeRemark_01.personnelId = APP_a["personnelId"]
+CoreServer_changeRemark_01.customerId = APP_a["customerId"]
 CoreServer_changeRemark_01.remark = APP_a["remark"]
 #exp
 CoreServer_changeRemark_01.code = APP_a["error_code_correct"]
@@ -394,6 +400,7 @@ CoreServer_customerCardList_01.X_Type = APP_a["X-Type"]
 CoreServer_customerCardList_01.shopId = APP_a["shopId"]
 CoreServer_customerCardList_01.customerId = APP_a["customerId"]
 CoreServer_customerCardList_01.pageSize = APP_a["pageSize"]
+CoreServer_customerCardList_01.page = 1
 #exp
 CoreServer_customerCardList_01.code = APP_a["error_code_correct"]
 # 3.4.8.5
