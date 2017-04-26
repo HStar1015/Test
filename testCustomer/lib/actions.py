@@ -5,7 +5,18 @@ import re
 import simplejson as json
 from poster.encode import multipart_encode
 from poster.streaminghttp import register_openers
-
+import types
+import hashlib
+key="&key=037F6F3127604B4FAE8AAD1AE4BE78E3"
+#MD5加密
+def md5(str):
+    if type(str) is types.StringType:
+        m = hashlib.md5()
+        m.update(str)
+        return m.hexdigest()
+        print """""", m.hexdigest
+    else:
+        return "ErrorType!"
 def get(url, header):
     # request headers
     req = urllib2.Request(url, None, header)
@@ -156,18 +167,172 @@ def null2None2dict(res=""):
     res = res.replace("false", "False")
     res = res.replace("true", "True")
     return eval(res)
+
+
+def mylogin():
+    # 登录用如下这个接口
+    url_login = 'https://www.iumer.cn/umer/webService/customer/sys/user/login'
+
+    # 自定义请求头
+    header_login = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3"}
+
+    # 访问登录页面
+    data_login = {'phone': '15651966757', 'password': '0adc3949ba59abbe56e057f20f883ee1',
+                  "sign": "E3599E79A9ABB6EED2DED4481090C716"}
+    res = post_json(url_login, data_login, header_login)
+
+    return null2None2dict(res)
 #******************************************4.1*************************************************
 #4.1.1
-def register(url = "",phone="",password= "",authCode ="",X_Type="2"):
+def register(url = "",phone="",password= "",authCode ="",X_Type="3"):
     url = url
-    data ={"phone":phone,"password":password,"authCode":authCode}
-    header = {"Content-type": "application/json;charset=UTF-8","X-Type":"2"}
+    data1 ={"phone":phone,"password":password,"authCode":authCode}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data ={"phone":phone,"password":password,"authCode":authCode,"sign":sign}
+    header = {"Content-type": "application/json;charset=UTF-8","X-Type":"3"}
     res = post_json(url,data,header)
     return null2None2dict(res)
 #4.1.2
-def login(url="",phone ="",password="",X_Type="2"):
+def login(url="",phone ="",password="",X_Type="3"):
     url = url
-    data = {"phone":phone,"password":password}
-    header = {"Content-type": "application/json;charset=UTF-8","X-Type":"2"}
+    data1 = {"phone":phone,"password":password}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"phone":phone,"password":password,"sign":sign}
+    header = {"Content-type": "application/json;charset=UTF-8","X-Type":"3"}
     res = post_json(url,data,header)
+    return null2None2dict(res)
+#!!!!!4.1.3
+def updateInfo(url = "",id ="",files="",X_Type="3"):
+    url = url
+    data = files
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8","X-Type":"3","X-Token":token['data']['token'],"id":id}
+    header.update(header)
+    res  = post_upload_file(url,data,header)
+    return null2None2dict(res)
+#4.1.4
+def customerInfo(url ="",id ="",X_Type="3"):
+    url = url
+    data1 = {"id":id}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"id": id,"sign":sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8","X-Type":"3","X-Token":token['data']['token']}
+    res = post_json(url,data,header)
+    return  null2None2dict(res)
+#4.1.5
+def collectProject(url="",customerId="",projectId="",ifCollect="",X_Type="3"):
+    url = url
+    data1 = {"customerId":customerId,"projectId":projectId,"ifCollect":ifCollect}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"customerId":customerId,"projectId":projectId,"ifCollect":ifCollect,"sign":sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#4.1.6
+def collectProjectList(url="",customerId="",longitude="",latitude="",pageSize= "",X_Type="3"):
+    url = url
+    data1 = {"customerId":customerId,"longitude":longitude,"latitude":latitude,"pageSize":pageSize}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"customerId":customerId,"longitude":longitude,"latitude":latitude,"pageSize":pageSize,"sign":sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#4.1.7
+def collectPersonnel(url ="",customerId="",personnelId="",ifCollect="",X_Type="3"):
+    url = url
+    data1 = {"customerId":customerId,"personnelId":personnelId,"ifCollect":ifCollect}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"customerId":customerId,"personnelId":personnelId,"ifCollect":ifCollect,"sign":sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#4.1.8
+def collectPersonnelList(url="",customerId="",longitude="",latitude="",pageSize= "",X_Type="3"):
+    url = url
+    data1 = {"customerId":customerId,"longitude":longitude,"latitude":latitude,"pageSize":pageSize}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"customerId":customerId,"longitude":longitude,"latitude":latitude,"pageSize":pageSize,"sign":sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#4.1.9
+def miniAppLogin(url = "",openId="",X_Type="3"):
+    url = url
+    data1 = {"openId":openId}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"openId":openId,"sign":sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#****************************************4.2*********************************
+#4.2.1
+def projectPersonnelList(url = "",projectId="",pageSize="",X_Type="3"):
+    url = url
+    data1 = {"projectId":projectId,"pageSize":pageSize}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"projectId":projectId,"pageSize":pageSize,"sign":sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#4.2.2
+def personnelProjectList(url = "",personnelId="",pageSize="",X_Type="3"):
+    url = url
+    data1 = {"personnelId":personnelId,"pageSize":pageSize}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"personnelId":personnelId,"pageSize":pageSize,"sign":sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#4.2.3
+def orderSave(url = "",projectId="",personnelId="",customerId="",makeStartDate="",makeEndDate="",priceType="",reserveName="",reservePhone="",X_Type="3"):
+    url = url
+    data1 = {"personelId":personnelId,"projectId":projectId,"personnelId":personnelId,"customerId":customerId,"makeStartDate":makeStartDate,
+             "makeEndDate":makeEndDate,"priceType":priceType,"reserveName":reserveName,"reservePhone":reservePhone}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"personnelId":personnelId,"projectId":projectId,"personnelId":personnelId,"customerId":customerId,"makeStartDate":makeStartDate,
+             "makeEndDate":makeEndDate,"priceType":priceType,"reserveName":reserveName,"reservePhone":reservePhone,"sign":sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
     return null2None2dict(res)
