@@ -227,18 +227,17 @@ def updateInfo(url= "",id = "",name="",sex="",X_Type="2",files=""):
               "id":id,"name":name,"sex":sex}
     res = post_upload_file(url,file,header)
     return  null2None2dict(res)
-#!!!!!!!!!!!!!!!!!!!3.1.6
+#3.1.6
 def workTime(url = "",id = "", monStart ="",monEnd="",tueStart="",tueEnd="",wedStart="",
     wedEnd="",thuStart="",thuEnd="",friStart="",friEnd="",satStart="",satEnd="",sunStart="",sunEnd="",
     ifMonWork="",ifTueWork="",ifWedWork="",ifThuWork="",ifFriWork="",ifSatWork="",ifSunWork="",X_Type="2"):
-
     url = url
     data1 = {"monStart":monStart,"monEnd":monEnd,"tueStart":tueStart,"tueEnd":tueEnd,
             "wedStart":wedStart,"wedEnd":wedEnd,"thuStart":thuStart,"thuEnd":tueEnd,"friStart":friStart,"friEnd":friEnd,
             "satStart":satStart,"satEnd":satEnd,"sunStart":sunStart,"sunEnd":sunEnd,"ifMonWork":ifMonWork,"ifTueWork":ifTueWork,"ifWedWork":ifWedWork,
             "ifThuWork":ifThuWork,"ifFriWork":ifFriWork,"ifSatWork":ifSatWork,"ifSunWork":ifSunWork}
     sort_data = sorted(data1.items(), key=lambda d: d[0])
-    res = urllib.urlencode(sort_data)
+    res = urllib.unquote(urllib.urlencode(sort_data))
     res2 = res + key
     sign = md5(res2).upper()
     data = {"monStart": monStart, "monEnd": monEnd, "tueStart": tueStart, "tueEnd": tueEnd,
@@ -423,7 +422,7 @@ def confirmFinishOrder(url = "",personnelId="",orderNo="",X_Type="2"):
     header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
     res = post_json(url, data, header)
     return null2None2dict(res)
-#3.3.5
+#3.3.6
 def scanFinishOrder(url = "",personnelId="",payCode="",X_Type="2"):
     url = url
     data1 = {"personnelId": personnelId, "payCode":payCode}
@@ -436,17 +435,16 @@ def scanFinishOrder(url = "",personnelId="",payCode="",X_Type="2"):
     header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
     res = post_json(url, data, header)
     return null2None2dict(res)
-#!!!!3.3.6
+#3.3.7
 def orderSave(url ="",projectId = "",personnelId = "",makeStartDate="",makeEndDate="",priceType="",reserveName="",
               reservePhone="",X_Type = "2"):
     url = url;
     data1 ={"projectId":projectId,"personnelId":personnelId,"makeStartDate":makeStartDate,"makeEndDate":makeEndDate,
            "priceType": priceType, "reserveName": reserveName, "reservePhone": reservePhone}
-
-
     sort_data = sorted(data1.items(), key=lambda d: d[0])
-    res = urllib.urlencode(sort_data)
-    res2 = res + key
+    res = urllib.unquote(urllib.urlencode(sort_data))
+    res1 = res.replace("+"," ")
+    res2 = res1 + key
     sign = md5(res2).upper()
     data = {"projectId": projectId, "personnelId": personnelId, "makeStartDate": makeStartDate,
             "makeEndDate": makeEndDate,
@@ -553,8 +551,11 @@ def createCard(url="",shopId="",personnelId="",customerId="",cardType="",name=""
     data1 = {"shopId":shopId,"personnelId":personnelId,"customerId":customerId,"cardType":cardType,
             "name":name,"remark":remark,"validityDate":validityDate}
     sort_data = sorted(data1.items(), key=lambda d: d[0])
-    res = urllib.urlencode(sort_data)
-    res2 = res + key
+    res = urllib.unquote(urllib.urlencode(sort_data))
+    print"BBBBBBBBBBBBBBBBBBB",res
+    res1 =res.replace("+"," ")
+    res2 = res1 + key
+    print "RRRRRRRRRRRRRRRRRRRRRRR",res2
     sign = md5(res2).upper()
     data = {"shopId": shopId, "personnelId": personnelId, "customerId": customerId, "cardType": cardType,
              "name": name, "remark": remark, "validityDate": validityDate,"sign":sign}
@@ -569,8 +570,11 @@ def editCard(url="",shopId="",personnelId="",customerId="",cardType="",id="",nam
     data1 = {"shopId":shopId,"personnelId":personnelId,"customerId":customerId,"cardType":cardType,"id":id,
             "name":name,"remark":remark,"validityDate":validityDate}
     sort_data = sorted(data1.items(), key=lambda d: d[0])
-    res = urllib.urlencode(sort_data)
-    res2 = res + key
+    res = urllib.unquote(urllib.urlencode(sort_data))
+    print"BBBBBBBBBBBBBBBBBBB",res
+    res1 =res.replace("+"," ")
+    res2 = res1 + key
+    print "RRRRRRRRRRRRRRRRRRRRRRR",res2
     sign = md5(res2).upper()
     data = {"shopId": shopId, "personnelId": personnelId, "customerId": customerId, "cardType": cardType, "id": id,
             "name": name, "remark": remark, "validityDate": validityDate,"sign":sign}
@@ -698,12 +702,12 @@ def activityQr(url = "",shopId ="",activityId="",personnelId="",X_Type=""):
     res = post_json(url, data, header)
     return null2None2dict(res)
 #******************************************3.7************************************
-#3.7.1
+#!!!!!!!!!!!!!!3.7.1
 def createPlan(url ="",month= "",personnelId="",personnelPlanDetailDtos={},customerRankId="",planPerformance="",planIntroduce="",X_Type="2"):
     url = url
     data1 = {"month":month,"personnelId":personnelId,"personnelPlanDetailDtos":[{"customerRankId":customerRankId,"planPerformance":planPerformance,"planIntroduce":planIntroduce},]}
     sort_data = sorted(data1.items(), key=lambda d: d[0])
-    res = urllib.urlencode(sort_data)
+    res = urllib.unquote(urllib.urlencode(sort_data))
     res2 = res + key
     sign = md5(res2).upper()
     data = {"month":month,"personnelId":personnelId,"personnelPlanDetailDtos":[{"customerRankId":customerRankId,"planPerformance":planPerformance,"planIntroduce":planIntroduce},],"sign":sign}

@@ -401,6 +401,7 @@ class customerCardList:
     shopId =""
     customerId = ""
     pageSize = ""
+    page = ""
     #exp
     code= ""
 #2.5.8.2

@@ -118,5 +118,31 @@ class cancelOrder:
     customerId = ""
     #exp
     code=""
-
+#4.2.5
+class applyCancelOrder:
+    url = ""
+    X_Type = ""
+    orderNo = ""
+    customerId = ""
+    # exp
+    code = ""
+#4.2.6
+class personnelServeProject:
+    url = ""
+    X_Type = ""
+    projectId = ""
+    personnelId = ""
+    #exp
+    code = ""
+#*************************************4.3***************************************
+#4.3.1.1
+class hotProject:
+    url = ""
+    X_Type = ""
+    longitude = ""
+    latitude = ""
+    cityId = ""
+    pageSize = ""
+    #exp
+    code = ""
 

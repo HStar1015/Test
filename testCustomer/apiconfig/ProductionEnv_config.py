@@ -21,23 +21,20 @@ APP_a = {
     "files":"",
     "pageSize":100,
     "projectId":"216",
-    "orderNo":"DD7312548808254750113",#订单编号
+    "orderNo":"DD1012706542136455067",#订单编号
     "payCode":"QR7543166741178590773",#支付码
     "makeStartDate":"2017-05-28 12:00:00",#预约开始时间
     "makeEndDate":"2017-03-25 12:30:00",#预约结束时间
     "priceType":1,#价格类型,0(单价)/1(疗程)
     "reserveName":"xing",
     "reservePhone":"13051175683",
-    "customerId":43,#顾客id
+    "customerId":42,#顾客id
     "remark":"hello",
     "rankId":1,
     "activityId":163,
     "longitude":"120.635753",
     "latitude":"31.267955",
     "openId":"oV4G3v3Na7WiI6hP7JEbZgXqAi2I",
-    "reserveName":"hanxing",
-    "reservePhone":"13013013012",
-    "orderNo":"DD4692409678014280"
 
 }
 Base_url = "https://www.iumer.cn/umer/webService"
@@ -163,3 +160,30 @@ CoreServer_cancelOrder_01.orderNo = APP_a["orderNo"]
 CoreServer_cancelOrder_01.customerId = APP_a["customerId"]
 #exp
 CoreServer_cancelOrder_01.code = APP_a["error_code_correct"]
+#4.2.5
+CoreServer_applyCancelOrder_01 = applyCancelOrder()
+CoreServer_applyCancelOrder_01.url = Customer_url + "/biz/reserve/applyCancelOrder"
+CoreServer_applyCancelOrder_01.X_Type = APP_a["X-Type"]
+CoreServer_applyCancelOrder_01.orderNo = APP_a["orderNo"]
+CoreServer_applyCancelOrder_01.customerId = APP_a["customerId"]
+#exp
+CoreServer_applyCancelOrder_01.code = APP_a["error_code_correct"]
+#4.2.6
+CoreServer_personnelServeProject_01 = personnelServeProject()
+CoreServer_personnelServeProject_01.url = Customer_url +"/biz/reserve/personnelServeProject"
+CoreServer_personnelServeProject_01.X_Type = APP_a["X-Type"]
+CoreServer_personnelServeProject_01.projectId  =APP_a["projectId"]
+CoreServer_personnelServeProject_01.personnelId = APP_a["personnelId"]
+#exp
+CoreServer_personnelServeProject_01.code =APP_a["error_code_correct"]
+#************************************************4.3***********************************************************
+#4.3.1.1
+CoreServer_hotProject_01 = hotProject()
+CoreServer_hotProject_01.url = Customer_url + "/biz/index/hotProject"
+CoreServer_hotProject_01.X_Type = APP_a["X-Type"]
+CoreServer_hotProject_01.longitude = APP_a["longitude"]
+CoreServer_hotProject_01.latitude = APP_a["latitude"]
+CoreServer_hotProject_01.cityId = APP_a["cityId"]
+CoreServer_hotProject_01.pageSize = APP_a["pageSize"]
+#exp
+CoreServer_hotProject_01.code = APP_a["error_code_correct"]

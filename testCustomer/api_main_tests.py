@@ -86,3 +86,27 @@ class core_server_tests(unittest.TestCase):
         auth = apimsg.CoreServer_orderSave_01
         self.test.test_orderSave_test(auth)
         print "**********************************************************************************************"
+     #4.2.4
+    def test0013_cancelOrder_test(self):
+        print "**********************************#4.2.4 取消预约**************************************************"
+        auth = apimsg.CoreServer_cancelOrder_01
+        self.test.test_cancelOrder_test(auth)
+        print "**********************************************************************************************"
+    #4.2.5
+    def test0014_applyCancelOrder_test(self):
+        print "**********************************#4.2.5申请取消预约**************************************************"
+        auth = apimsg.CoreServer_applyCancelOrder_01
+        self.test.test_applyCancelOrder_test(auth)
+        print "**********************************************************************************************"
+    #4.2.6
+    def test0015_personnelServeProject_test(self):
+        print "**********************************#4.2.6 判断美容师是否还服务项目**************************************************"
+        auth = apimsg.CoreServer_personnelServeProject_01
+        self.test.test_personnelServeProject_test(auth)
+        print "**********************************************************************************************"
+    #4.3.1.1
+    def test0015_personnelServeProject_test(self):
+        print "**********************************#4.3.1.1 热门项目**************************************************"
+        auth = apimsg.CoreServer_hotProject_01
+        self.test.test_hotProject_test(auth)
+        print "**********************************************************************************************"

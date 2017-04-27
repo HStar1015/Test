@@ -336,3 +336,56 @@ def orderSave(url = "",projectId="",personnelId="",customerId="",makeStartDate="
     header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
     res = post_json(url, data, header)
     return null2None2dict(res)
+#4.2.4
+def cancelOrder(url="",orderNo="",customerId="",X_Type="3"):
+    url = url
+    data1 = {"orderNo":orderNo,"customerId":customerId}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"orderNo":orderNo,"customerId":customerId,"sign":sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#4.2.5
+def applyCancelOrder(url="",orderNo="",customerId="",X_Type="3"):
+    url = url
+    data1 = {"orderNo":orderNo,"customerId":customerId}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"orderNo":orderNo,"customerId":customerId,"sign":sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#4.2.6
+def personnelServeProject(url="",projectId="",personnelId="",X_Type="3"):
+    url = url
+    data1 = {"projectId":projectId,"personnelId":personnelId}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"projectId":projectId,"personnelId":personnelId,"sign":sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#******************************************************4.3******************************************************
+#4.3.1.1
+def hotProject(url="",longitude="",latitude="",cityId ="",pageSize="",X_Type="3"):
+    url = url
+    data1 = {"longitude":longitude,"latitude":latitude,"cityId":cityId,"pageSize":pageSize}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"longitude": longitude, "latitude": latitude, "cityId": cityId, "pageSize": pageSize,"sign":sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)

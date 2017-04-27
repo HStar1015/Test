@@ -529,7 +529,7 @@ def daySummarizeList(url="",day="",shopId="",pageSize="",X_Type ="1"):
     url = url
     data1 = {"day":day,"shopId":shopId,"pageSize":pageSize}
     sort_data = sorted(data1.items(), key=lambda d: d[0])
-    res = urllib.urlencode(sort_data)
+    res = urllib.unquote(urllib.urlencode(sort_data))
     res2 = res + key
     sign = md5(res2).upper()
     data = {"day":day,"shopId":shopId,"pageSize":pageSize,"sign":sign}
@@ -555,7 +555,7 @@ def monthPlanList(url="",month="",shopId="",pageSize="",X_Type=""):
     url = url
     data1 = {"month":month,"shopId":shopId,"pageSize":pageSize}
     sort_data = sorted(data1.items(), key=lambda d: d[0])
-    res = urllib.urlencode(sort_data)
+    res = urllib.unquote(urllib.urlencode(sort_data))
     res2 = res + key
     sign = md5(res2).upper()
     data = {"month":month,"shopId":shopId,"pageSize":pageSize,"sign":sign}
@@ -581,7 +581,7 @@ def operationCaseList(url="",shopId ="",X_Type ="1"):
     url = url
     data1 = {"shopId": shopId}
     sort_data = sorted(data1.items(), key=lambda d: d[0])
-    res = urllib.urlencode(sort_data)
+    res = urllib.unquote(urllib.urlencode(sort_data))
     res2 = res + key
     sign = md5(res2).upper()
     data = {"shopId": shopId,"sign":sign}
@@ -594,7 +594,7 @@ def operationCaseDetail(url="",shopId="",month="",X_Type=""):
     url = url
     data1 = {"shopId": shopId,"month":month}
     sort_data = sorted(data1.items(), key=lambda d: d[0])
-    res = urllib.urlencode(sort_data)
+    res = urllib.unquote(urllib.urlencode(sort_data))
     res2 = res + key
     sign = md5(res2).upper()
     data = {"shopId": shopId,"month":month,"sign":sign}
@@ -695,14 +695,14 @@ def rankInfoList(url = "",shopId="",X_Type="1"):
     res = post_json(url, data, header)
     return null2None2dict(res)
 #2.5.8.1
-def customerCardList(url="",shopId ="",customerId="",pageSize="",X_Type="1"):
+def customerCardList(url="",shopId ="",customerId="",pageSize="",page="",X_Type="1"):
     url = url
-    data1 = {"shopId":shopId,"customerId":customerId,"pageSize":pageSize}
+    data1 = {"shopId":shopId,"customerId":customerId,"pageSize":pageSize,"page":page}
     sort_data = sorted(data1.items(), key=lambda d: d[0])
     res = urllib.urlencode(sort_data)
     res2 = res + key
     sign = md5(res2).upper()
-    data = {"shopId":shopId,"customerId":customerId,"pageSize":pageSize,"sign":sign}
+    data = {"shopId":shopId,"customerId":customerId,"pageSize":pageSize,"page":page,"sign":sign}
     token = mylogin()
     header = {"Content-type": "application/json", "X-Type": 1, "X-Token": token['data']['token']}
     res = post_json(url, data, header)
@@ -795,7 +795,7 @@ def shopCapacity(url = "",businessId= "",shopId="",bunkCount="",projectAverageDu
            "workStartDate":workStartDate,"workEndDate":workEndDate,"personnelCount":personnelCount,
            "customerAverageExpense":customerAverageExpense,"activeCustomerCount":activeCustomerCount,"mainProjectAverageDuration":mainProjectAverageDuration}
     sort_data = sorted(data1.items(), key=lambda d: d[0])
-    res = urllib.urlencode(sort_data)
+    res = urllib.unquote(urllib.urlencode(sort_data))
     res2 = res + key
     sign = md5(res2).upper()
     data = {"businessId": businessId, "shopId": shopId, "bunkCount": bunkCount,
@@ -815,7 +815,7 @@ def shopDiagnose(url="",businessId ="",shopId="",monthShopTurnover="",dayShopCus
             "personnelCount":personnelCount,"monthTookeenCount":monthTookeenCount,"yearShopTurnover":yearShopTurnover}
 
     sort_data = sorted(data1.items(), key=lambda d: d[0])
-    res = urllib.urlencode(sort_data)
+    res = urllib.unquote(urllib.urlencode(sort_data))
     res2 = res + key
     sign = md5(res2).upper()
     data = {"businessId": businessId, "shopId": shopId, "monthShopTurnover": monthShopTurnover,
@@ -861,8 +861,9 @@ def createActivity(url="",businessId = "",shopId="",activityName="",activityStar
     data1 ={"businessId": businessId,"shopId": shopId,"activityName": activityName,"activityStartDate": activityStartDate,"activityEndDate": activityEndDate,
         "activityUnitPrice": activityUnitPrice,"activityCoursePrice": activityCoursePrice,"projectIds": projectIds}
     sort_data = sorted(data1.items(), key=lambda d: d[0])
-    res = urllib.urlencode(sort_data)
-    res2 = res + key
+    res = urllib.unquote(urllib.urlencode(sort_data))
+    res1 = res.replace("+"," ")
+    res2 = res1 + key
     sign = md5(res2).upper()
     data = {"businessId": businessId, "shopId": shopId, "activityName": activityName,
             "activityStartDate": activityStartDate, "activityEndDate": activityEndDate,

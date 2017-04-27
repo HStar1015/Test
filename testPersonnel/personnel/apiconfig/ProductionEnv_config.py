@@ -43,8 +43,8 @@ APP_a = {
     "projectId":"216",
     "orderNo":"DD7312548808254750113",#订单编号
     "payCode":"QR7543166741178590773",#支付码
-    "makeStartDate":"2017-03-28 12:00:00",#预约开始时间
-    "makeEndDate":"2017-03-28 12:30:00",#预约结束时间
+    "makeStartDate":"2017-05-28 12:00:00",#预约开始时间
+    "makeEndDate":"2017-05-28 12:30:00",#预约结束时间
     "priceType":1,#价格类型,0(单价)/1(疗程)
     "reserveName":"xing",
     "reservePhone":"13051175683",

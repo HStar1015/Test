@@ -49,3 +49,18 @@ class test_core_server():
         res = actions.orderSave(orderSave_obj.url,orderSave_obj.projectId,orderSave_obj.personnelId,orderSave_obj.customerId,
                                 orderSave_obj.makeStartDate,orderSave_obj.makeEndDate,orderSave_obj.priceType,orderSave_obj.reserveName,
                                 orderSave_obj.reservePhone)
+    #4.2.4
+    def test_cancelOrder_test(self,cancelOrder_obj):
+        res = actions.cancelOrder(cancelOrder_obj.url,cancelOrder_obj.orderNo,cancelOrder_obj.customerId,cancelOrder_obj.X_Type)
+    #4.2.5
+    def test_applyCancelOrder_test(self,applyCancelOrder_obj):
+        res = actions.applyCancelOrder(applyCancelOrder_obj.url,applyCancelOrder_obj.orderNo,applyCancelOrder_obj.customerId,applyCancelOrder_obj)
+    #4.2.5
+    def test_personnelServeProject_test(self,personnelServeProject_obj):
+        res = actions.personnelServeProject(personnelServeProject_obj.url,personnelServeProject_obj.projectId,personnelServeProject_obj.personnelId,
+                                            personnelServeProject_obj.X_Type)
+    #***************************************4.3****************************************************
+    #4.3.1.1
+    def test_hotProject_test(self,hotProject_obj):
+        res = actions.hotProject(hotProject_obj.url,hotProject_obj.longitude,hotProject_obj.latitude,hotProject_obj.cityId,
+                                 hotProject_obj.pageSize,hotProject_obj.X_Type)

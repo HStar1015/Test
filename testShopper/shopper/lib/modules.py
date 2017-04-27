@@ -167,7 +167,7 @@ class test_core_server():
     #2.5.8.1
     def test_customerCardList(self,customerCardList_obj):
         res = actions.customerCardList(customerCardList_obj.url,customerCardList_obj.shopId,customerCardList_obj.customerId,
-                                       customerCardList_obj.pageSize,customerCardList_obj.X_Type)
+                                       customerCardList_obj.pageSize,customerCardList_obj.page,customerCardList_obj.X_Type)
     #2.5.8.2
     def test_cardConsummerDetailList(self, cardConsummerDetailList_obj):
         res = actions.cardConsummerDetailList(cardConsummerDetailList_obj.url, cardConsummerDetailList_obj.cardId,

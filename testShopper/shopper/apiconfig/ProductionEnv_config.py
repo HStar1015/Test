@@ -70,6 +70,7 @@ APP_a = {
     "summarizeId":"2",
     "planId":"23",
     "cardId":16,
+    "page":1,
 }
 Base_url = "https://www.iumer.cn/umer/webService"
 Shop_url = Base_url +"/shop"
@@ -474,6 +475,7 @@ CoreServer_customerCardList_01.X_Type = APP_a["X-Type"]
 CoreServer_customerCardList_01.shopId = APP_a["mendianId"]
 CoreServer_customerCardList_01.customerId = APP_a["customerId"]
 CoreServer_customerCardList_01.pageSize = APP_a["pageSize"]
+CoreServer_customerCardList_01.page = APP_a["page"]
 #exp
 CoreServer_customerCardList_01.code = APP_a["error_code_correct"]
 #2.5.8.2
