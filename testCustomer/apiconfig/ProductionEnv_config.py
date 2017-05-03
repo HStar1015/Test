@@ -35,7 +35,9 @@ APP_a = {
     "longitude":"120.635753",
     "latitude":"31.267955",
     "openId":"oV4G3v3Na7WiI6hP7JEbZgXqAi2I",
-
+    "page":1,
+    "commentLevel":3,
+    "approveStatus":3,
 }
 Base_url = "https://www.iumer.cn/umer/webService"
 Customer_url = Base_url +"/customer"
@@ -131,13 +133,13 @@ CoreServer_projectPersonnelList_01.pageSize = APP_a["pageSize"]
 #exp
 CoreServer_projectPersonnelList_01.code = APP_a["error_code_correct"]
 #4.2.2
-CoreServer_personnelProjectList_01 = personnelProjectList()
-CoreServer_personnelProjectList_01.url = Customer_url + "/biz/reserve/personnelProjectList"
-CoreServer_personnelProjectList_01.X_Type = APP_a["X-Type"]
-CoreServer_personnelProjectList_01.personnelId = APP_a["personnelId"]
-CoreServer_personnelProjectList_01.pageSize = APP_a["pageSize"]
+CoreServer_searchProjectList_01 = searchProjectList()
+CoreServer_searchProjectList_01.url = Customer_url + "/biz/reserve/personnelProjectList"
+CoreServer_searchProjectList_01.X_Type = APP_a["X-Type"]
+CoreServer_searchProjectList_01.personnelId = APP_a["personnelId"]
+CoreServer_searchProjectList_01.pageSize = APP_a["pageSize"]
 #exp
-CoreServer_projectPersonnelList_01.code = APP_a["error_code_correct"]
+CoreServer_searchProjectList_01.code = APP_a["error_code_correct"]
 #4.2.3
 CoreServer_orderSave_01 = orderSave()
 CoreServer_orderSave_01.url = Customer_url +"/biz/reserve/orderSave"
@@ -187,3 +189,150 @@ CoreServer_hotProject_01.cityId = APP_a["cityId"]
 CoreServer_hotProject_01.pageSize = APP_a["pageSize"]
 #exp
 CoreServer_hotProject_01.code = APP_a["error_code_correct"]
+#4.3.1.2
+CoreServer_searchProjectList_01 = searchProjectList()
+CoreServer_searchProjectList_01.url = Customer_url + "/biz/index/searchProjectList"
+CoreServer_searchProjectList_01.X_Type = APP_a["X-Type"]
+CoreServer_searchProjectList_01.cityId = APP_a["cityId"]
+CoreServer_searchProjectList_01.longitude = APP_a["longitude"]
+CoreServer_searchProjectList_01.latitude = APP_a["latitude"]
+CoreServer_searchProjectList_01.page = APP_a["page"]
+CoreServer_searchProjectList_01.pageSize = APP_a["pageSize"]
+#exp
+CoreServer_searchProjectList_01.code = APP_a["error_code_correct"]
+#4.3.1.3
+CoreServer_projectDetails_01 = projectDetails()
+CoreServer_projectDetails_01.url = Customer_url + "/biz/index/projectDetails"
+CoreServer_projectDetails_01.X_Type = APP_a["X-Type"]
+CoreServer_projectDetails_01.id = APP_a["projectId"]
+#ep
+CoreServer_projectDetails_01.code = APP_a["error_code_correct"]
+#4.3.1.4
+CoreServer_projectCommentGroupNum_01 = projectCommentGroupNum()
+CoreServer_projectCommentGroupNum_01.url = Customer_url + "/biz/index/projectCommentGroupNum"
+CoreServer_projectCommentGroupNum_01.X_Type = APP_a["X-Type"]
+CoreServer_projectCommentGroupNum_01.projectId = APP_a["projectId"]
+#ep
+CoreServer_projectCommentGroupNum_01.code = APP_a["error_code_correct"]
+#4.3.1.5
+CoreServer_projectCommentList_01 = projectCommentList()
+CoreServer_projectCommentList_01.url = Customer_url +"/biz/index/projectCommentList"
+CoreServer_projectCommentList_01.X_Type = APP_a["X-Type"]
+CoreServer_projectCommentList_01.projectId = APP_a["projectId"]
+CoreServer_projectCommentList_01.commentLevel = APP_a["commentLevel"]
+CoreServer_projectCommentList_01.pageSize = APP_a["pageSize"]
+#exo
+CoreServer_projectCommentList_01.code = APP_a["error_code_correct"]
+
+#4.3.2.1
+CoreServer_hotPersonnel_01 = hotPersonnel()
+CoreServer_hotPersonnel_01.url = Customer_url + "/biz/index/hotPersonnel"
+CoreServer_hotPersonnel_01.X_Type = APP_a["X-Type"]
+CoreServer_hotPersonnel_01.longitude = APP_a["longitude"]
+CoreServer_hotPersonnel_01.latitude = APP_a["latitude"]
+CoreServer_hotPersonnel_01.cityId = APP_a["cityId"]
+CoreServer_hotPersonnel_01.pageSize = APP_a["pageSize"]
+#exp
+CoreServer_hotPersonnel_01.code = APP_a["error_code_correct"]
+#4.3.2.2
+CoreServer_searchPersonnelList_01 = searchProjectList()
+CoreServer_searchProjectList_01.url = Customer_url + "/biz/index/searchPersonnelList"
+CoreServer_searchProjectList_01.X_Type = APP_a["X-Type"]
+CoreServer_searchProjectList_01.cityId = APP_a["cityId"]
+CoreServer_searchProjectList_01.longitude =APP_a["longitude"]
+CoreServer_searchProjectList_01.latitude = APP_a["latitude"]
+CoreServer_searchProjectList_01.pageSize = APP_a["pageSize"]
+#exp
+CoreServer_searchProjectList_01.code = APP_a["error_code_correct"]
+#4.3.2.3
+CoreServer_personnelDetail_01 = personnelDetail()
+CoreServer_personnelDetail_01.url = Customer_url + "/biz/index/personnelDetail"
+CoreServer_personnelDetail_01.X_Type = APP_a["X-Type"]
+CoreServer_personnelDetail_01.id = APP_a["personnelId"]
+#exp
+CoreServer_personnelDetail_01.code = APP_a["error_code_correct"]
+#4.3.2.4
+CoreServer_personnelProjectList_01 = personnelProjectList()
+CoreServer_personnelProjectList_01.url = Customer_url + "/biz/index/personnelProjectList"
+CoreServer_personnelProjectList_01.X_Type = APP_a["X-Type"]
+CoreServer_personnelProjectList_01.shopId = APP_a["shopId"]
+CoreServer_personnelProjectList_01.personnelId = APP_a["personnelId"]
+CoreServer_personnelProjectList_01.pageSize = APP_a["pageSize"]
+#exp
+CoreServer_personnelProjectList_01.code = APP_a["error_code_correct"]
+#4.3.2.5
+CoreServer_personnelCommentGroupNum_01  = personnelCommentGroupNum()
+CoreServer_personnelCommentGroupNum_01.url = Customer_url +"/biz/index/personnelCommentGroupNum "
+CoreServer_personnelCommentGroupNum_01.X_Type = APP_a["X-Type"]
+CoreServer_personnelCommentGroupNum_01.personnelId = APP_a["personnelId"]
+#exp
+CoreServer_personnelCommentGroupNum_01.code = APP_a["error_code_correct"]
+#4.3.2.6
+CoreServer_personnelCommentList_01 = personnelCommentList()
+CoreServer_personnelCommentList_01.url = Customer_url + "/biz/index/personnelCommentList"
+CoreServer_personnelCommentList_01.personnelId = APP_a["personnelId"]
+CoreServer_personnelCommentList_01.commentLevel = APP_a["commentLevel"]
+CoreServer_personnelCommentList_01.pageSize = APP_a["pageSize"]
+#exp
+CoreServer_personnelCommentList_01.code = APP_a["error_code_correct"]
+#***********************************************4.4**************************************************
+#4.4.1
+CoreServer_reserveProjectRecord_01 = reserveProjectRecord()
+CoreServer_reserveProjectRecord_01.url = Customer_url + "/biz/order/reserveProjectRecord"
+CoreServer_reserveProjectRecord_01.X_Type = APP_a["X-Type"]
+CoreServer_reserveProjectRecord_01.customerId = APP_a["customerId"]
+CoreServer_reserveProjectRecord_01.longitude = APP_a["longitude"]
+CoreServer_reserveProjectRecord_01.latitude = APP_a["latitude"]
+CoreServer_reserveProjectRecord_01.pageSize = APP_a["pageSize"]
+#exp
+CoreServer_reserveProjectRecord_01.code = APP_a["error_code_correct"]
+
+#4.4.2
+CoreServer_reservePersonnelRecord_01 = reservePersonnelRecord()
+CoreServer_reservePersonnelRecord_01.url = Customer_url + "/biz/order/reservePersonnelRecord"
+CoreServer_reservePersonnelRecord_01.X_Type = APP_a["X-Type"]
+CoreServer_reservePersonnelRecord_01.customerId = APP_a["customerId"]
+CoreServer_reservePersonnelRecord_01.longitude = APP_a["longitude"]
+CoreServer_reservePersonnelRecord_01.latitude = APP_a["latitude"]
+CoreServer_reservePersonnelRecord_01.pageSize = APP_a["pageSize"]
+#exp
+CoreServer_reservePersonnelRecord_01.code = APP_a["error_code_correct"]
+
+#4.4.3
+CoreServer_orderGroupNum_01 = orderGroupNum()
+CoreServer_orderGroupNum_01.url = Customer_url + "/biz/order/orderGroupNum"
+CoreServer_orderGroupNum_01.X_Type = APP_a["X-Type"]
+CoreServer_orderGroupNum_01.customerId = APP_a["customerId"]
+#exp
+CoreServer_orderGroupNum_01.code= APP_a["error_code_correct"]
+#4.4.4
+CoreServer_myOderList_01 = myOrderList()
+CoreServer_myOderList_01.url = Customer_url + "/biz/order/myOrderList"
+CoreServer_myOderList_01.X_Type = APP_a["X-Type"]
+CoreServer_myOderList_01.customerId = APP_a["customerId"]
+CoreServer_myOderList_01.approveStatus =  APP_a["approveStatus"]
+CoreServer_myOderList_01.pageSize = APP_a["pageSize"]
+#exp
+CoreServer_myOderList_01.code = APP_a["error_code_correct"]
+#4.4.5
+CoreServer_orderDetail_01 = orderDetail()
+CoreServer_orderDetail_01.url = Customer_url + "/biz/order/orderDetail"
+CoreServer_orderDetail_01.X_Type = APP_a["X-Type"]
+CoreServer_orderDetail_01.customerId = APP_a["customerId"]
+CoreServer_orderDetail_01.orderNo = APP_a["orderNo"]
+#exp
+CoreServer_orderDetail_01.code = APP_a["error_code_correct"]
+#4.4.6
+CoreServer_payQRDetail_01 = payQRDetail()
+CoreServer_payQRDetail_01.url = Customer_url + "/biz/order/payQRDetail"
+CoreServer_payQRDetail_01.X_Type = APP_a["X-Type"]
+CoreServer_payQRDetail_01.customerId = APP_a["customerId"]
+CoreServer_payQRDetail_01.orderNo = APP_a["orderNo"]
+#exp
+CoreServer_payQRDetail_01.code = APP_a["error_code_correct"]
+#4.4.7
+CoreServer_orderComment_01  = orderComment()
+CoreServer_orderComment_01.url = Customer_url + "/bin/order/orderComment"
+CoreServer_orderComment_01.X_Type = APP_a["X-Type"]
+CoreServer_orderComment_01.orderNo = APP_a["orderNo"]
+# CoreServer_orderComment_01.

@@ -110,3 +110,100 @@ class core_server_tests(unittest.TestCase):
         auth = apimsg.CoreServer_hotProject_01
         self.test.test_hotProject_test(auth)
         print "**********************************************************************************************"
+    #4.3.1.2
+    def test0016_searchProjectList_test(self):
+        print "**********************************#4.3.1.2 搜索项目列表**************************************************"
+        auth = apimsg.CoreServer_searchProjectList_01
+        self.test.test_searchProjectList_test(auth)
+        print "**********************************************************************************************"
+    #4.3.1.3
+    def test0017_projectDetails_test(self):
+        print "**********************************#4.3.1.3 项目详情**************************************************"
+        auth = apimsg.CoreServer_projectDetails_01
+        self.test.test_projectDetails_test(auth)
+        print "**********************************************************************************************"
+    #4.3.1.4
+    def test0018_projectCommentGroupNum_test(self):
+        print "**********************************#4.3.1.4 项目评论分组数量**************************************************"
+        auth = apimsg.CoreServer_projectCommentGroupNum_01
+        self.test.test_projectCommentGroupNum_test(auth)
+        print "**********************************************************************************************"
+    #4.3.1.5
+    def test0019_projectCommentList_test(self):
+        print "**********************************#4.3.1.5 项目评论列表**************************************************"
+        auth = apimsg.CoreServer_projectCommentList_01
+        self.test.test_projectCommentList_test(auth)
+        print "**********************************************************************************************"
+    #4.3.2.1
+    def test0020_hotPersonnel_test(self):
+        print "**********************************#4.3.2.1 热门美容师**************************************************"
+        auth = apimsg.CoreServer_hotPersonnel_01
+        self.test.test_hotPersonnel_test(auth)
+        print "**********************************************************************************************"
+    #4.3.2.2
+    def test0021_searchPersonnelList_test(self):
+        print "**********************************#4.3.2.2 搜索美容师列表**************************************************"
+        auth = apimsg.CoreServer_searchProjectList_01
+        self.test.test_searchProjectList_test(auth)
+        print "**********************************************************************************************"
+    #4.3.2.3
+    def test0022_personnelDetail_test(self):
+        print "**********************************#4.3.2.3 美容师详情**************************************************"
+        auth = apimsg.CoreServer_personnelDetail_01
+        self.test.test_personnelDetail_test(auth)
+        print "**********************************************************************************************"
+    #4.3.2.4
+    def test0023_personnelProjectList(self):
+        print "**********************************#4.3.2.4 美容师项目列表**************************************************"
+        auth = apimsg.CoreServer_personnelProjectList_01
+        self.test.test_personnelProjectList_test(auth)
+        print "**********************************************************************************************"
+    #4.3.2.5
+    def test0023_personnelCommentGroupNum(self):
+        print "**********************************#4.3.2.5 美容师评论分组数量**************************************************"
+        auth = apimsg.CoreServer_personnelCommentGroupNum_01
+        self.test.test_personnelCommentGroupNum_test(auth)
+        print "**********************************************************************************************"
+    #4.3.2.6
+    def test0024_personnelCommentList(self):
+        print "**********************************#4.3.2.6 美容师评论列表**************************************************"
+        auth = apimsg.CoreServer_personnelCommentList_01
+        self.test.test_personnelCommentList_test(auth)
+        print "************************************************************"
+    #4.4.1
+    def test0025_reserveProjectRecord(self):
+        print "**********************************#4.4.1 预约过的项目**************************************************"
+        auth = apimsg.CoreServer_reserveProjectRecord_01
+        self.test.test_reserveProjectRecord(auth)
+        print "**********************************************************************************************"
+    #4.4.2
+    def test0026_reservePersonnelRecord(self):
+        print "**********************************#4.4.2 预约过的美容师**************************************************"
+        auth = apimsg.CoreServer_reservePersonnelRecord_01
+        self.test.test_reservePersonnelRecord(auth)
+        print "**********************************************************************************************"
+    #4.4.3
+    def test0027_orderGroupNum(self):
+        print "**********************************#4.4.3 我的订单分组数量**************************************************"
+        auth = apimsg.CoreServer_orderGroupNum_01
+        self.test.test_orderGroupNum(auth)
+        print "**********************************************************************************************"
+    #4.4.4
+    def test0028_myOderList(self):
+        print "**********************************#4.4.4 我的订单列表**************************************************"
+        auth = apimsg.CoreServer_myOderList_01
+        self.test.test_myOrderList(auth)
+        print "**********************************************************************************************"
+    #4.4.5
+    def test0029_orderDetail(self):
+        print "**********************************#4.4.5 订单详情**************************************************"
+        auth = apimsg.CoreServer_orderDetail_01
+        self.test.test_orderDetail(auth)
+        print "**********************************************************************************************"
+    #4.4.6
+    def test0030_payQRDetail(self):
+        print "**********************************#4.4.6 获取支付二维码信息**************************************************"
+        auth = apimsg.CoreServer_payQRDetail_01
+        self.test.test_payQRDetail(auth)
+        print "**********************************************************************************************"
+

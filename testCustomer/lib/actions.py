@@ -389,3 +389,224 @@ def hotProject(url="",longitude="",latitude="",cityId ="",pageSize="",X_Type="3"
     header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
     res = post_json(url, data, header)
     return null2None2dict(res)
+#4.3.1.2
+def searchProjectList(url = "",cityId= "",longitude="",latitude ="",page ="",pageSize="",X_Type ="3"):
+    url = url
+    data1 = {"cityId":cityId,"longitude":longitude,"latitude":latitude,"page":page,"pageSize":pageSize}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"cityId":cityId,"longitude":longitude,"latitude":latitude,"page":page,"pageSize":pageSize,"sign":sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#4.3.1.3
+def projectDetails(url ="",id ="",X_Type ="3"):
+    url = url
+    data1 = {"id":id}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"id":id,"sign": sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#4.3.1.4
+def projectCommentGroupNum(url ="",projectId ="",X_Type ="3"):
+    url = url
+    data1 = {"projectId":projectId}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"projectId":projectId,"sign": sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#4.3.1.5
+def projectCommentList(url ="",projectId="",commentLevel="",pageSize="3"):
+    url = url
+    data1 = {"projectId":projectId,"commentLevel":commentLevel,"pageSize":pageSize}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    print "res2 = ",res2
+    sign = md5(res2).upper()
+    data = {"projectId": projectId, "commentLevel": commentLevel, "pageSize": pageSize,"sign":sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+
+#4.3.2.1
+def hotPersonnel(url ="",longitude="",latitude ="",cityId ="",pageSize ="",X_Type ="3"):
+    url = url
+    data1 = {"longitude":longitude,"latitude":latitude,"cityId":cityId,"pageSize":pageSize}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    print "res2 = ", res2
+    sign = md5(res2).upper()
+    data = {"longitude": longitude, "latitude": latitude, "cityId": cityId, "pageSize": pageSize,"sign": sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#4.3.2.2
+def searchPersonnelList(url ="",cityId ="",longitude="",latitude ="",pageSize ="",X_Type ="3"):
+    url = url
+    data1 = {"cityId":cityId,"longitude":longitude,"latitude":latitude,"pageSize":pageSize}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    print "res2 = ", res2
+    sign = md5(res2).upper()
+    data = {"cityId": cityId,"longitude": longitude, "latitude": latitude,  "pageSize": pageSize,"sign": sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#4.3.2.3
+def personnelDetail(url ="",id="",X_Type="3"):
+    url = url
+    data1 = {"id":id}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    print "res2 = ", res2
+    sign = md5(res2).upper()
+    data = {"id": id,"sign": sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#4.3.3.4
+def personnelProjectList(url ="",shopId="",personnelId ="",pageSize ="",X_Type="3"):
+    url = url
+    data1 = {"shopId":shopId,"personnelId":personnelId,"pageSize":pageSize}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"shopId":shopId,"personnelId":personnelId,"pageSize":pageSize, "sign": sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#4.3.3.5
+def personnelCommentGroupNum (url ="",personnelId="",X_Type="3"):
+    url = url
+    data1 = {"personnelId":personnelId}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"personnelId":personnelId,"sign": sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#4.3.3.6
+def personnelCommentList(url ="",personnelId="",commentLevel="",pageSize="",X_Type="3"):
+    url = url
+    data1= {"personnelId":personnelId,"commentLevel":commentLevel,"pageSize":pageSize}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"personnelId":personnelId,"commentLevel":commentLevel,"pageSize":pageSize,"sign": sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#***********************************************4.4******************************************************
+#4.4.1
+def reserveProjectRecord(url ="",customerId="",longitude="",latitude="",pageSize="",X_Type="3"):
+    url = url
+    data1 = {"customerId":customerId,"longitude":longitude,"latitude":latitude,"pageSize":pageSize}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    print "res2 = ",res2
+    sign = md5(res2).upper()
+    data = {"customerId":customerId,"longitude":longitude,"latitude":latitude,"pageSize":pageSize,"sign": sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#4.4.2
+def reservePersonnelRecord(url ="",customerId="",longitude="",latitude="",pageSize="",X_Type="3"):
+    url = url
+    data1 = {"customerId":customerId,"longitude":longitude,"latitude":latitude,"pageSize":pageSize}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    print "res2 = ",res2
+    sign = md5(res2).upper()
+    data = {"customerId":customerId,"longitude":longitude,"latitude":latitude,"pageSize":pageSize,"sign": sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#4.4.3
+def orderGroupNum(url ="",customerId ="",X_Type ="3"):
+    url = url
+    data1= {"customerId":customerId}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    print "res2 = ", res2
+    sign = md5(res2).upper()
+    data = {"customerId": customerId,"sign": sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#4.4.4
+def myOrderList(url ="",customerId ="",approveStatus ="",pageSize ="",X_Type="3"):
+    url = url
+    data1 = {"customerId":customerId,"approveStatus":approveStatus,"pageSize":pageSize}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    print "res2 = ", res2
+    sign = md5(res2).upper()
+    data = {"customerId":customerId,"approveStatus":approveStatus,"pageSize":pageSize, "sign": sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#4.4.5
+def orderDetail(url ="",customerId ="",orderNo ="",X_Type="3"):
+    url = url
+    data1 = {"customerId":customerId,"orderNo":orderNo}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    print "res2 = ", res2
+    sign = md5(res2).upper()
+    data = {"customerId":customerId,"orderNo":orderNo, "sign": sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#4.4.6
+def payQRDetail(url ="",customerId ="",orderNo ="",X_Type="3"):
+    url = url
+    data1 = {"customerId":customerId,"orderNo":orderNo}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    print "res2 = ", res2
+    sign = md5(res2).upper()
+    data = {"customerId":customerId,"orderNo":orderNo, "sign": sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+

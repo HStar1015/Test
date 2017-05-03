@@ -41,9 +41,9 @@ class test_core_server():
         res = actions.projectPersonnelList(projectPersonnelList_obj.url,projectPersonnelList_obj.projectId
                                            ,projectPersonnelList_obj.pageSize,projectPersonnelList_obj.X_Type)
     #4.2.2
-    def test_personnelProjectList_test(self,personnelProjectList_obj):
-        res = actions.personnelProjectList(personnelProjectList_obj.url,personnelProjectList_obj.personnelId,personnelProjectList_obj.pageSize,
-                                           personnelProjectList_obj.X_Type)
+    def test_searchPersonnelList_test(self,searchPersonnelList_obj):
+        res = actions.searchProjectList(searchPersonnelList_obj.url,searchPersonnelList_obj.personnelId,searchPersonnelList_obj.pageSize,
+                                        searchPersonnelList_obj.X_Type)
     #4.2.3
     def test_orderSave_test(self,orderSave_obj):
         res = actions.orderSave(orderSave_obj.url,orderSave_obj.projectId,orderSave_obj.personnelId,orderSave_obj.customerId,
@@ -64,3 +64,63 @@ class test_core_server():
     def test_hotProject_test(self,hotProject_obj):
         res = actions.hotProject(hotProject_obj.url,hotProject_obj.longitude,hotProject_obj.latitude,hotProject_obj.cityId,
                                  hotProject_obj.pageSize,hotProject_obj.X_Type)
+    #4.3.1.2
+    def test_searchProjectList_test(self,searchProjectList_obj):
+        res = actions.searchProjectList(searchProjectList_obj.url,searchProjectList_obj.cityId,searchProjectList_obj.longitude,searchProjectList_obj.latitude,
+                                 searchProjectList_obj.page,searchProjectList_obj.pageSize,searchProjectList_obj.X_Type)
+    #4.3.1.3
+    def test_projectDetails_test(self,projectDetails_obj):
+        res = actions.projectDetails(projectDetails_obj.url,projectDetails_obj.id,projectDetails_obj.X_Type)
+    #4.3.1.4
+    def test_projectCommentGroupNum_test(self,projectCommentGroupNum_obj):
+        res = actions.projectCommentGroupNum(projectCommentGroupNum_obj.url,projectCommentGroupNum_obj.projectId,projectCommentGroupNum_obj.X_Type)
+    #4.3.1.5
+    def test_projectCommentList_test(self,projectCommentList_obj):
+        res = actions.projectCommentList(projectCommentList_obj.url,projectCommentList_obj.projectId,projectCommentList_obj.commentLevel,
+                                         projectCommentList_obj.pageSize)
+    #4.3.2.1
+    def test_hotPersonnel_test(self,hotPersonnel_obj):
+        res = actions.hotPersonnel(hotPersonnel_obj.url,hotPersonnel_obj.longitude,hotPersonnel_obj.latitude,hotPersonnel_obj.cityId,
+                                   hotPersonnel_obj.pageSize,hotPersonnel_obj.X_Type)
+    #4.3.2.2
+    def test_searchPersonnelList_test(self,searchPersonnelList_obj):
+        res = actions.searchPersonnelList(searchPersonnelList_obj.url,searchPersonnelList_obj.cityId,searchPersonnelList_obj.longitude,searchPersonnelList_obj.latitude,
+                                          searchPersonnelList_obj.pageSize,searchPersonnelList_obj.X_Type)
+    #4.3.2.3
+    def test_personnelDetail_test(self,personnelDetail_obj):
+        res = actions.personnelDetail(personnelDetail_obj.url,personnelDetail_obj.id,personnelDetail_obj.X_Type)
+    #4.3.2.4
+    def test_personnelProjectList_test(self,personnelProjectList_obj):
+        res = actions.personnelProjectList(personnelProjectList_obj.url,personnelProjectList_obj.shopId,personnelProjectList_obj.personnelId,
+                                           personnelProjectList_obj.pageSize)
+    #4.3.2.5
+    def test_personnelCommentGroupNum_test(self,personnelCommentGroupNum_obj):
+        res  = actions.personnelCommentGroupNum(personnelCommentGroupNum_obj.url,personnelCommentGroupNum_obj.personnelId,
+                                                personnelCommentGroupNum_obj.X_Type)
+    #4.3.2.6
+    def test_personnelCommentList_test(self,personnelCommentList_obj):
+        res = actions.personnelCommentList(personnelCommentList_obj.url,personnelCommentList_obj.personnelId,
+                                           personnelCommentList_obj.commentLevel,personnelCommentList_obj.pageSize,
+                                           personnelCommentList_obj.X_Type)
+    #************************************************4.4*****************************************************************************
+    #4.4.1
+    def test_reserveProjectRecord(self,reserveProjectRecord_obj):
+        res = actions.reserveProjectRecord(reserveProjectRecord_obj.url,reserveProjectRecord_obj.customerId,reserveProjectRecord_obj.longitude,
+                                           reserveProjectRecord_obj.latitude,reserveProjectRecord_obj.pageSize,reserveProjectRecord_obj.X_Type)
+    #4.4.2
+    def test_reservePersonnelRecord(self,reservePersonnelRecord_obj):
+        res = actions.reservePersonnelRecord(reservePersonnelRecord_obj.url,reservePersonnelRecord_obj.customerId,reservePersonnelRecord_obj.longitude,
+                                             reservePersonnelRecord_obj.latitude,reservePersonnelRecord_obj.pageSize,reservePersonnelRecord_obj.X_Type)
+    #4.4.3
+    def test_orderGroupNum(self,orderGroupNum_obj):
+        res = actions.orderGroupNum(orderGroupNum_obj.url,orderGroupNum_obj.customerId,orderGroupNum_obj.X_Type)
+    #4.4.4
+    def test_myOrderList(self,myOderList_obj):
+        res = actions.myOrderList(myOderList_obj.url,myOderList_obj.X_Type,myOderList_obj.customerId,myOderList_obj.approveStatus,
+                                  myOderList_obj.pageSize)
+    #4.4.5
+    def test_orderDetail(self,orderDetail_obj):
+        res = actions.orderDetail(orderDetail_obj.url,orderDetail_obj.customerId,orderDetail_obj.orderNo,orderDetail_obj.X_Type)
+    #4.4.6
+    def test_payQRDetail(self,payQRDetail_obj):
+        res = actions.payQRDetail(payQRDetail_obj.url,payQRDetail_obj.customerId,payQRDetail_obj.orderNo,payQRDetail_obj.X_Type)
