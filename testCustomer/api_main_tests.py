@@ -206,4 +206,15 @@ class core_server_tests(unittest.TestCase):
         auth = apimsg.CoreServer_payQRDetail_01
         self.test.test_payQRDetail(auth)
         print "**********************************************************************************************"
-
+    #4.4.7
+    def test0031_orderComment(self):
+        print "**********************************#4.4.7 订单评价**************************************************"
+        auth = apimsg.CoreServer_orderComment_01
+        self.test.test_orderComment(auth)
+        print "**********************************************************************************************"
+    #4.4.8
+    def test0032_confirmFinishOrder(self):
+        print "**********************************#4.4.8 确认完成**************************************************"
+        auth = apimsg.CoreServer_confirmFinishOrder_01
+        self.test.test_confirmFinishOrder(auth)
+        print "**********************************************************************************************"

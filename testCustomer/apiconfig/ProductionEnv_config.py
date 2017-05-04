@@ -38,6 +38,7 @@ APP_a = {
     "page":1,
     "commentLevel":3,
     "approveStatus":3,
+    "content":"very nice",
 }
 Base_url = "https://www.iumer.cn/umer/webService"
 Customer_url = Base_url +"/customer"
@@ -332,7 +333,26 @@ CoreServer_payQRDetail_01.orderNo = APP_a["orderNo"]
 CoreServer_payQRDetail_01.code = APP_a["error_code_correct"]
 #4.4.7
 CoreServer_orderComment_01  = orderComment()
-CoreServer_orderComment_01.url = Customer_url + "/bin/order/orderComment"
+CoreServer_orderComment_01.url = Customer_url + "/biz/order/orderComment"
 CoreServer_orderComment_01.X_Type = APP_a["X-Type"]
 CoreServer_orderComment_01.orderNo = APP_a["orderNo"]
-# CoreServer_orderComment_01.
+CoreServer_orderComment_01.customerId = APP_a["customerId"]
+CoreServer_orderComment_01.personnelId = APP_a["personnelId"]
+CoreServer_orderComment_01.projectId = APP_a["projectId"]
+CoreServer_orderComment_01.content = APP_a["content"]
+CoreServer_orderComment_01.domainLevel  = 1
+CoreServer_orderComment_01.serveLevel = 1
+CoreServer_orderComment_01.communicationLevel = 1
+#exp
+CoreServer_orderComment_01.code = APP_a["error_code_correct"]
+#4.4.8
+CoreServer_confirmFinishOrder_01 = confirmFinishOrder()
+CoreServer_confirmFinishOrder_01.url = Customer_url + "/biz/order/confirmFinishOrder"
+CoreServer_confirmFinishOrder_01.X_Type = APP_a["X-Type"]
+CoreServer_confirmFinishOrder_01.personnelId = APP_a["personnelId"]
+CoreServer_confirmFinishOrder_01.orderNo = APP_a["orderNo"]
+#exp
+CoreServer_confirmFinishOrder_01.code = APP_a["error_code_correct"]
+#************************4.5*********************
+CoreServer_wechatSubmitPay_01 = wechatSubmitPay()
+CoreServer_wechatSubmitPay_01.url = Customer_url

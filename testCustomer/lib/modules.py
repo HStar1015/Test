@@ -124,3 +124,12 @@ class test_core_server():
     #4.4.6
     def test_payQRDetail(self,payQRDetail_obj):
         res = actions.payQRDetail(payQRDetail_obj.url,payQRDetail_obj.customerId,payQRDetail_obj.orderNo,payQRDetail_obj.X_Type)
+    #4.4.7
+    def test_orderComment(self,orderComment_obj):
+        res = actions.orderComment(orderComment_obj.url,orderComment_obj.orderNo,orderComment_obj.customerId,orderComment_obj.personnelId,
+                                   orderComment_obj.projectId,orderComment_obj.content,orderComment_obj.domainLevel,orderComment_obj.serveLevel,
+                                   orderComment_obj.communicationLevel,orderComment_obj.X_Type)
+    #4.4.8
+    def test_confirmFinishOrder(self,confirmFinishOrder_obj):
+        res = actions.confirmFinishOrder(confirmFinishOrder_obj.url,confirmFinishOrder_obj.personnelId,confirmFinishOrder_obj.orderNo,
+                                         confirmFinishOrder_obj.X_Type)

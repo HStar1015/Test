@@ -299,4 +299,22 @@ class orderComment:
     communicationLevel =""
     #exp
     code = ""
-
+#4.4.7
+class confirmFinishOrder:
+    url = ""
+    X_Type = ""
+    personnelId  = ""
+    orderNo = ""
+    #exp
+    code = ""
+#************************4.5*********************
+#4.5.1
+class wechatSubmitPay:
+    url = ""
+    X_Type =""
+    openId = ""
+    customerId= ""
+    orderNo = ""
+    paymentMode = ""
+    #exp
+    code = ""

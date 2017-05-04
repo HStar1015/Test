@@ -609,4 +609,34 @@ def payQRDetail(url ="",customerId ="",orderNo ="",X_Type="3"):
     header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
     res = post_json(url, data, header)
     return null2None2dict(res)
+#4.4.7
+def orderComment (url ="",orderNo="",customerId ="",personnelId="",projectId="",content="",domainLevel="",serveLevel="",communicationLevel="",X_Type="3"):
+    url = url
+    data1 = {"orderNo":orderNo,"customerId":customerId,"personnelId":personnelId,"projectId":projectId,"content":content,"domainLevel":domainLevel,
+             "serveLevel":serveLevel,"communicationLevel":communicationLevel}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    print "res2 = ", res2
+    sign = md5(res2).upper()
+    data = {"orderNo":orderNo,"customerId":customerId,"personnelId":personnelId,"projectId":projectId,"content":content,"domainLevel":domainLevel,
+             "serveLevel":serveLevel,"communicationLevel":communicationLevel, "sign": sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#4.4.8
+def confirmFinishOrder(url ="",personnelId ="",orderNo ="",X_Type ="3"):
+    url = url
+    data1 = {"personnelId":personnelId,"orderNo": orderNo}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    print "res2 = ", res2
+    sign = md5(res2).upper()
+    data = {"personnelId":personnelId,"orderNo": orderNo, "sign": sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
 
