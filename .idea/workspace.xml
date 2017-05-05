@@ -790,7 +790,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493947649822</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="顾客端接口更新">
+      <created>1493967722128</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1493967722128</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -912,9 +919,9 @@
     <MESSAGE value="2017-04-26：接口加密(涉及到时间接口暂未处理)" />
     <MESSAGE value="2017-04-26：customer-4.2.4" />
     <MESSAGE value="接口加密，顾客端接口更新" />
-    <MESSAGE value="顾客端接口更新" />
     <MESSAGE value="顾客端接口删除4.1.9小程序授权用户查询" />
-    <option name="LAST_COMMIT_MESSAGE" value="顾客端接口删除4.1.9小程序授权用户查询" />
+    <MESSAGE value="顾客端接口更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="顾客端接口更新" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.87456447" />
   </component>
   <component name="XDebuggerManager">
