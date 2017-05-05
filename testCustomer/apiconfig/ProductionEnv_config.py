@@ -39,6 +39,7 @@ APP_a = {
     "commentLevel":3,
     "approveStatus":3,
     "content":"very nice",
+    "paymentMode":"offline"
 }
 Base_url = "https://www.iumer.cn/umer/webService"
 Customer_url = Base_url +"/customer"
@@ -354,5 +355,30 @@ CoreServer_confirmFinishOrder_01.orderNo = APP_a["orderNo"]
 #exp
 CoreServer_confirmFinishOrder_01.code = APP_a["error_code_correct"]
 #************************4.5*********************
+#4.5.1
 CoreServer_wechatSubmitPay_01 = wechatSubmitPay()
-CoreServer_wechatSubmitPay_01.url = Customer_url
+CoreServer_wechatSubmitPay_01.url = Customer_url + "/biz/pay/wechatSubmitPay"
+CoreServer_wechatSubmitPay_01.openId = APP_a["openId"]
+CoreServer_wechatSubmitPay_01.customerId = APP_a["customerId"]
+CoreServer_wechatSubmitPay_01.orderNo = APP_a["orderNo"]
+CoreServer_wechatSubmitPay_01.paymentMode = APP_a["paymentMode"]
+#exp
+CoreServer_wechatSubmitPay_01.code = APP_a["error_code_correct"]
+#4.5.2
+CoreServer_appSubmitPay_01 = appSubmitPay()
+CoreServer_appSubmitPay_01.url = Customer_url + "/biz/pay/appSubmitPay"
+CoreServer_appSubmitPay_01.customerId = APP_a["customerId"]
+CoreServer_appSubmitPay_01.orderNo = APP_a["orderNo"]
+CoreServer_appSubmitPay_01.paymentMode = APP_a["paymentMode"]
+#exp
+CoreServer_appSubmitPay_01.code = APP_a["error_code_correct"]
+#4.5.3
+CoreServer_checkOrderPayStatus_01 = checkOrderPayStatus()
+CoreServer_checkOrderPayStatus_01.url = Customer_url + "/biz/pay/checkOrderPayStatus"
+CoreServer_checkOrderPayStatus_01.X_Type = APP_a["X-Type"]
+CoreServer_checkOrderPayStatus_01.customerId = APP_a["customerId"]
+CoreServer_checkOrderPayStatus_01.orderNo = APP_a["orderNo"]
+#exp
+CoreServer_checkOrderPayStatus_01.code = APP_a["error_code_correct"]
+
+

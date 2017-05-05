@@ -318,3 +318,20 @@ class wechatSubmitPay:
     paymentMode = ""
     #exp
     code = ""
+#4.5.2
+class appSubmitPay:
+    url = ""
+    X_Type = ""
+    customerId = ""
+    orderNo = ""
+    paymentMode = ""
+    # exp
+    code = ""
+#4.5.3
+class checkOrderPayStatus:
+    url = ""
+    X_Type = ""
+    customerId = ""
+    orderNo = ""
+    #exp
+    code = ""

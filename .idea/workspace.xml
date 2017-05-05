@@ -34,18 +34,18 @@
       <file leaf-file-name="ApiClass.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testCustomer/apiconfig/ApiClass.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="309" column="49" selection-start-line="309" selection-start-column="0" selection-end-line="309" selection-end-column="49" />
+            <state relative-caret-position="573">
+              <caret line="336" column="12" selection-start-line="336" selection-start-column="12" selection-end-line="336" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductionEnv_config.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProductionEnv_config.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testCustomer/apiconfig/ProductionEnv_config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
-              <caret line="357" column="0" selection-start-line="357" selection-start-column="0" selection-end-line="357" selection-end-column="0" />
+            <state relative-caret-position="448">
+              <caret line="376" column="84" selection-start-line="376" selection-start-column="84" selection-end-line="376" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -54,8 +54,8 @@
       <file leaf-file-name="actions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testCustomer/lib/actions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="636" column="56" selection-start-line="636" selection-start-column="56" selection-end-line="636" selection-end-column="56" />
+            <state relative-caret-position="309">
+              <caret line="678" column="54" selection-start-line="678" selection-start-column="54" selection-end-line="678" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -64,18 +64,18 @@
       <file leaf-file-name="modules.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testCustomer/lib/modules.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="134" column="70" selection-start-line="134" selection-start-column="70" selection-end-line="134" selection-end-column="70" />
+            <state relative-caret-position="529">
+              <caret line="147" column="35" selection-start-line="147" selection-start-column="35" selection-end-line="147" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="api_main_tests.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="api_main_tests.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/testCustomer/api_main_tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="214" column="10" selection-start-line="214" selection-start-column="10" selection-end-line="214" selection-end-column="10" />
+            <state relative-caret-position="248">
+              <caret line="228" column="20" selection-start-line="228" selection-start-column="20" selection-end-line="228" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -112,17 +112,17 @@
         <option value="$PROJECT_DIR$/testPersonnel/personnel/apiconfig/ProductionEnv_config.py" />
         <option value="$PROJECT_DIR$/testShopper/shopper/lib/actions.py" />
         <option value="$PROJECT_DIR$/testPersonnel/personnel/lib/actions.py" />
+        <option value="$PROJECT_DIR$/testCustomer/apiconfig/ApiClass.py" />
         <option value="$PROJECT_DIR$/testCustomer/lib/actions.py" />
         <option value="$PROJECT_DIR$/testCustomer/lib/modules.py" />
         <option value="$PROJECT_DIR$/testCustomer/api_main_tests.py" />
-        <option value="$PROJECT_DIR$/testCustomer/apiconfig/ApiClass.py" />
         <option value="$PROJECT_DIR$/testCustomer/apiconfig/ProductionEnv_config.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="170" />
-    <option name="y" value="47" />
+    <option name="x" value="407" />
+    <option name="y" value="15" />
     <option name="width" value="1398" />
     <option name="height" value="1058" />
   </component>
@@ -171,38 +171,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testCustomer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testCustomer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apiconfig" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -237,95 +205,7 @@
       <recent name="D:\hanxing\Test\Test\testCustomer" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittest core_server_tests.test0032_confirmFinishOrder">
-    <configuration default="false" name="Unittest core_server_tests.test0030_payQRDetail" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testCustomer" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Test" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testCustomer/api_main_tests.py" />
-      <option name="CLASS_NAME" value="core_server_tests" />
-      <option name="METHOD_NAME" value="test0030_payQRDetail" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittest core_server_tests.test0041_selectDaySummarize" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testPersonnel/personnel" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Test" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testPersonnel/personnel/api_main_tests.py" />
-      <option name="CLASS_NAME" value="core_server_tests" />
-      <option name="METHOD_NAME" value="test0041_selectDaySummarize" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittest core_server_tests.test0043_createCard" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testPersonnel/personnel" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Test" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testPersonnel/personnel/api_main_tests.py" />
-      <option name="CLASS_NAME" value="core_server_tests" />
-      <option name="METHOD_NAME" value="test0043_createCard" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittest core_server_tests.test0031_orderComment" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testCustomer" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Test" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testCustomer/api_main_tests.py" />
-      <option name="CLASS_NAME" value="core_server_tests" />
-      <option name="METHOD_NAME" value="test0031_orderComment" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Unittest core_server_tests.test0035_checkOrderPayStatus">
     <configuration default="false" name="Unittest core_server_tests.test0032_confirmFinishOrder" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -339,6 +219,94 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testCustomer/api_main_tests.py" />
       <option name="CLASS_NAME" value="core_server_tests" />
       <option name="METHOD_NAME" value="test0032_confirmFinishOrder" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest core_server_tests.test0029_orderDetail" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testCustomer" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Test" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testCustomer/api_main_tests.py" />
+      <option name="CLASS_NAME" value="core_server_tests" />
+      <option name="METHOD_NAME" value="test0029_orderDetail" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest core_server_tests.test0033_wechatSubmitPay" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testCustomer" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Test" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testCustomer/api_main_tests.py" />
+      <option name="CLASS_NAME" value="core_server_tests" />
+      <option name="METHOD_NAME" value="test0033_wechatSubmitPay" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest core_server_tests.test0034_appSubmitPay" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testCustomer" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Test" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testCustomer/api_main_tests.py" />
+      <option name="CLASS_NAME" value="core_server_tests" />
+      <option name="METHOD_NAME" value="test0034_appSubmitPay" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest core_server_tests.test0035_checkOrderPayStatus" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testCustomer" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Test" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testCustomer/api_main_tests.py" />
+      <option name="CLASS_NAME" value="core_server_tests" />
+      <option name="METHOD_NAME" value="test0035_checkOrderPayStatus" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
@@ -483,19 +451,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0030_payQRDetail" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0041_selectDaySummarize" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0043_createCard" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0031_orderComment" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0032_confirmFinishOrder" />
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0032_confirmFinishOrder" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0029_orderDetail" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0033_wechatSubmitPay" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0034_appSubmitPay" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0035_checkOrderPayStatus" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0032_confirmFinishOrder" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0031_orderComment" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0030_payQRDetail" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0043_createCard" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0041_selectDaySummarize" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0035_checkOrderPayStatus" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0034_appSubmitPay" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0033_wechatSubmitPay" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0029_orderDetail" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest core_server_tests.test0032_confirmFinishOrder" />
       </list>
     </recent_temporary>
   </component>
@@ -740,21 +708,19 @@
       <option name="project" value="LOCAL" />
       <updated>1493793126836</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="顾客端接口更新">
+      <created>1493878294021</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1493878294021</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittest_core_server_tests_test0030_payQRDetail - 2017.05.04 at 10h 47m 45s.xml">
-      <configuration name="Unittest core_server_tests.test0030_payQRDetail" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittest_core_server_tests_test0031_orderComment - 2017.05.04 at 10h 46m 10s.xml">
-      <configuration name="Unittest core_server_tests.test0031_orderComment" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittest_core_server_tests_test0031_orderComment - 2017.05.04 at 10h 46m 55s.xml">
-      <configuration name="Unittest core_server_tests.test0031_orderComment" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittest_core_server_tests_test0031_orderComment - 2017.05.04 at 10h 47m 50s.xml">
-      <configuration name="Unittest core_server_tests.test0031_orderComment" configurationId="tests" />
+    <history-entry file="Unittest_core_server_tests_test0029_orderDetail - 2017.05.04 at 17h 32m 07s.xml">
+      <configuration name="Unittest core_server_tests.test0029_orderDetail" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittest_core_server_tests_test0031_orderComment - 2017.05.04 at 10h 49m 27s.xml">
       <configuration name="Unittest core_server_tests.test0031_orderComment" configurationId="tests" />
@@ -768,11 +734,20 @@
     <history-entry file="Unittest_core_server_tests_test0032_confirmFinishOrder - 2017.05.04 at 11h 23m 28s.xml">
       <configuration name="Unittest core_server_tests.test0032_confirmFinishOrder" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_core_server_tests_test0041_selectDaySummarize - 2017.05.03 at 10h 30m 39s.xml">
-      <configuration name="Unittest core_server_tests.test0041_selectDaySummarize" configurationId="tests" />
+    <history-entry file="Unittest_core_server_tests_test0033_wechatSubmitPay - 2017.05.04 at 17h 51m 24s.xml">
+      <configuration name="Unittest core_server_tests.test0033_wechatSubmitPay" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_core_server_tests_test0043_createCard - 2017.05.03 at 10h 30m 51s.xml">
-      <configuration name="Unittest core_server_tests.test0043_createCard" configurationId="tests" />
+    <history-entry file="Unittest_core_server_tests_test0033_wechatSubmitPay - 2017.05.04 at 17h 51m 41s.xml">
+      <configuration name="Unittest core_server_tests.test0033_wechatSubmitPay" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittest_core_server_tests_test0034_appSubmitPay - 2017.05.05 at 09h 15m 08s.xml">
+      <configuration name="Unittest core_server_tests.test0034_appSubmitPay" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittest_core_server_tests_test0035_checkOrderPayStatus - 2017.05.05 at 09h 21m 15s.xml">
+      <configuration name="Unittest core_server_tests.test0035_checkOrderPayStatus" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittest_core_server_tests_test0035_checkOrderPayStatus - 2017.05.05 at 09h 21m 48s.xml">
+      <configuration name="Unittest core_server_tests.test0035_checkOrderPayStatus" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -785,7 +760,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="170" y="47" width="1398" height="1058" extended-state="0" />
+    <frame x="407" y="15" width="1398" height="1058" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18455882" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -815,7 +790,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2379455" sideWeight="0.49763033" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28197065" sideWeight="0.4956427" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29513514" sideWeight="0.4956427" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18455882" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -823,7 +798,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24983074" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3532495" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35243243" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -886,7 +861,7 @@
           <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="53" />
+      <option name="time" value="54" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="tests">
@@ -1118,42 +1093,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/testCustomer/apiconfig/ApiClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="336" column="12" selection-start-line="336" selection-start-column="12" selection-end-line="336" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/testCustomer/lib/actions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="636" column="56" selection-start-line="636" selection-start-column="56" selection-end-line="636" selection-end-column="56" />
+        <state relative-caret-position="309">
+          <caret line="678" column="54" selection-start-line="678" selection-start-column="54" selection-end-line="678" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testCustomer/lib/modules.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="134" column="70" selection-start-line="134" selection-start-column="70" selection-end-line="134" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testCustomer/api_main_tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="214" column="10" selection-start-line="214" selection-start-column="10" selection-end-line="214" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testCustomer/apiconfig/ApiClass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="309" column="49" selection-start-line="309" selection-start-column="0" selection-end-line="309" selection-end-column="49" />
+        <state relative-caret-position="529">
+          <caret line="147" column="35" selection-start-line="147" selection-start-column="35" selection-end-line="147" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testCustomer/apiconfig/ProductionEnv_config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="357" column="0" selection-start-line="357" selection-start-column="0" selection-end-line="357" selection-end-column="0" />
+        <state relative-caret-position="448">
+          <caret line="376" column="84" selection-start-line="376" selection-start-column="84" selection-end-line="376" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testCustomer/api_main_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="228" column="20" selection-start-line="228" selection-start-column="20" selection-end-line="228" selection-end-column="20" />
           <folding />
         </state>
       </provider>

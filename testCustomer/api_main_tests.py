@@ -218,3 +218,21 @@ class core_server_tests(unittest.TestCase):
         auth = apimsg.CoreServer_confirmFinishOrder_01
         self.test.test_confirmFinishOrder(auth)
         print "**********************************************************************************************"
+    #4.5.1
+    def test0033_wechatSubmitPay(self):
+        print "**********************************#4.5.1 微信端提交付款**************************************************"
+        auth = apimsg.CoreServer_wechatSubmitPay_01
+        self.test.test_wechatSubmitPay(auth)
+        print "**********************************************************************************************"
+    #4.5.2
+    def test0034_appSubmitPay(self):
+        print "**********************************#4.5.2 移动端提交付款**************************************************"
+        auth = apimsg.CoreServer_appSubmitPay_01
+        self.test.test_appSubmitPay(auth)
+        print "**********************************************************************************************"
+    #4.5.3
+    def test0035_checkOrderPayStatus(self):
+        print "**********************************#4.5.3 订单付款状态**************************************************"
+        auth = apimsg.CoreServer_checkOrderPayStatus_01
+        self.test.test_checkOrderPayStatus(auth)
+        print "**********************************************************************************************"

@@ -133,3 +133,16 @@ class test_core_server():
     def test_confirmFinishOrder(self,confirmFinishOrder_obj):
         res = actions.confirmFinishOrder(confirmFinishOrder_obj.url,confirmFinishOrder_obj.personnelId,confirmFinishOrder_obj.orderNo,
                                          confirmFinishOrder_obj.X_Type)
+    #*************************************4.5************************************************
+    #4.5.1
+    def test_wechatSubmitPay(self,wechatSubmitPay_obj):
+        res = actions.wechatSubmitPay(wechatSubmitPay_obj.url,wechatSubmitPay_obj.openId,wechatSubmitPay_obj.customerId,wechatSubmitPay_obj.orderNo,
+                                      wechatSubmitPay_obj.paymentMode,wechatSubmitPay_obj.X_Type)
+    #4.5.2
+    def test_appSubmitPay(self,appSubmitPay_obj):
+        res = actions.appSubmitPay(appSubmitPay_obj.url,appSubmitPay_obj.customerId,appSubmitPay_obj.orderNo,
+                                   appSubmitPay_obj.paymentMode,appSubmitPay_obj.X_Type)
+    #4.5.3
+    def test_checkOrderPayStatus(self,checkOrderPayStatus_obj):
+        res = actions.checkOrderPayStatus(checkOrderPayStatus_obj.url,checkOrderPayStatus_obj.customerId,checkOrderPayStatus_obj.orderNo,
+                                   checkOrderPayStatus_obj.X_Type)

@@ -639,4 +639,46 @@ def confirmFinishOrder(url ="",personnelId ="",orderNo ="",X_Type ="3"):
     header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
     res = post_json(url, data, header)
     return null2None2dict(res)
+#4.4.8
+def wechatSubmitPay(url ="",openId ="",customerId="",orderNo ="",paymentMode ="",X_Type ="3"):
+    url = url
+    data1 = {"openId":openId,"customerId":customerId,"orderNo":orderNo,"paymentMode":paymentMode}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    print "res2 = ", res2
+    sign = md5(res2).upper()
+    data = {"openId":openId,"customerId":customerId,"orderNo":orderNo,"paymentMode":paymentMode, "sign": sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#4.4.8
+def appSubmitPay(url ="",customerId="",orderNo ="",paymentMode ="",X_Type ="3"):
+    url = url
+    data1 = {"customerId":customerId,"orderNo":orderNo,"paymentMode":paymentMode}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    print "res2 = ", res2
+    sign = md5(res2).upper()
+    data = {"customerId":customerId,"orderNo":orderNo,"paymentMode":paymentMode, "sign": sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
+#4.4.8
+def checkOrderPayStatus(url ="",customerId="",orderNo ="",X_Type ="3"):
+    url = url
+    data1 = {"customerId":customerId,"orderNo":orderNo}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    print "res2 = ", res2
+    sign = md5(res2).upper()
+    data = {"customerId":customerId,"orderNo":orderNo, "sign": sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+    res = post_json(url, data, header)
+    return null2None2dict(res)
 
