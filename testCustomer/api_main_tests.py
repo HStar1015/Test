@@ -62,12 +62,12 @@ class core_server_tests(unittest.TestCase):
         auth = apimsg.CoreServer_collectPersonnelList_01
         self.test.test_collectPersonneList_test(auth)
         print "**********************************************************************************************"
-    #4.1.9
-    def test0009_miniAppLogin_test(self):
-        print "**********************************#4.1.9 小程序授权用户查询**************************************************"
-        auth = apimsg.CoreServer_miniAppLogin_01
-        self.test.test_miniAppLogin_test(auth)
-        print "**********************************************************************************************"
+    # #4.1.9
+    # def test0009_miniAppLogin_test(self):
+    #     print "**********************************#4.1.9 小程序授权用户查询**************************************************"
+    #     auth = apimsg.CoreServer_miniAppLogin_01
+    #     self.test.test_miniAppLogin_test(auth)
+    #     print "**********************************************************************************************"
     #4.2.1
     def test0010_projectPersonnelList_test(self):
         print "**********************************#4.2.1 获取参与项目的美容师列表**************************************************"

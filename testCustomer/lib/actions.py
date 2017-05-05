@@ -281,19 +281,19 @@ def collectPersonnelList(url="",customerId="",longitude="",latitude="",pageSize=
     header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
     res = post_json(url, data, header)
     return null2None2dict(res)
-#4.1.9
-def miniAppLogin(url = "",openId="",X_Type="3"):
-    url = url
-    data1 = {"openId":openId}
-    sort_data = sorted(data1.items(), key=lambda d: d[0])
-    res = urllib.urlencode(sort_data)
-    res2 = res + key
-    sign = md5(res2).upper()
-    data = {"openId":openId,"sign":sign}
-    token = mylogin()
-    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
-    res = post_json(url, data, header)
-    return null2None2dict(res)
+# #4.1.9
+# def miniAppLogin(url = "",openId="",X_Type="3"):
+#     url = url
+#     data1 = {"openId":openId}
+#     sort_data = sorted(data1.items(), key=lambda d: d[0])
+#     res = urllib.urlencode(sort_data)
+#     res2 = res + key
+#     sign = md5(res2).upper()
+#     data = {"openId":openId,"sign":sign}
+#     token = mylogin()
+#     header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "3", "X-Token": token['data']['token']}
+#     res = post_json(url, data, header)
+#     return null2None2dict(res)
 #****************************************4.2*********************************
 #4.2.1
 def projectPersonnelList(url = "",projectId="",pageSize="",X_Type="3"):

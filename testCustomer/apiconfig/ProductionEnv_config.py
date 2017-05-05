@@ -118,13 +118,13 @@ CoreServer_collectPersonnelList_01.longitude = APP_a["longitude"]
 CoreServer_collectPersonnelList_01.latitude = APP_a["latitude"]
 CoreServer_collectPersonnelList_01.pageSize = APP_a["pageSize"]
 CoreServer_collectPersonnelList_01.customerId = APP_a["customerId"]
-#4.1.9
-CoreServer_miniAppLogin_01 = miniAppLogin()
-CoreServer_miniAppLogin_01.url = Customer_url + "/sys/user/miniAppLogin"
-CoreServer_miniAppLogin_01.X_Type = APP_a["X-Type"]
-CoreServer_miniAppLogin_01.openId = APP_a["openId"]
-#exp
-CoreServer_miniAppLogin_01.code = APP_a["error_code_correct"]
+# #4.1.9
+# CoreServer_miniAppLogin_01 = miniAppLogin()
+# CoreServer_miniAppLogin_01.url = Customer_url + "/sys/user/miniAppLogin"
+# CoreServer_miniAppLogin_01.X_Type = APP_a["X-Type"]
+# CoreServer_miniAppLogin_01.openId = APP_a["openId"]
+# #exp
+# CoreServer_miniAppLogin_01.code = APP_a["error_code_correct"]
 #***************************************4.2******************************************
 #4.2.1
 CoreServer_projectPersonnelList_01 = projectPersonnelList()

@@ -32,9 +32,9 @@ class test_core_server():
     def test_collectPersonneList_test(self,collectPersonneListt_obj):
         res = actions.collectProjectList(collectPersonneListt_obj.url,collectPersonneListt_obj.customerId,collectPersonneListt_obj.longitude,
                                          collectPersonneListt_obj.latitude,collectPersonneListt_obj.pageSize,collectPersonneListt_obj.X_Type)
-    #4.1.9
-    def test_miniAppLogin_test(self,miniAppLogin_obj):
-        res = actions.miniAppLogin(miniAppLogin_obj.url,miniAppLogin_obj.openId,miniAppLogin_obj.X_Type)
+    # #4.1.9
+    # def test_miniAppLogin_test(self,miniAppLogin_obj):
+    #     res = actions.miniAppLogin(miniAppLogin_obj.url,miniAppLogin_obj.openId,miniAppLogin_obj.X_Type)
     #****************************************************4.2****************************************************************
     #4.2.1
     def test_projectPersonnelList_test(self,projectPersonnelList_obj):
