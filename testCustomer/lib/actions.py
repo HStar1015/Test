@@ -148,19 +148,6 @@ def post_json(url, data, header):
     res.close()
 
     return res_body
-#************************************************************************************
-def mylogin():
-    # 登录用如下这个接口
-    url_login = 'https://www.iumer.cn/umer/webService/personnel/sys/user/login'
-
-    # 自定义请求头
-    header_login ={"Content-type": "application/json;charset=UTF-8","X-Type":"2"}
-
-    # 访问登录页面
-    data_login = {'phone':'15651966757', 'password':'0adc3949ba59abbe56e057f20f883ee1'}
-    res = post_json(url_login,data_login, header_login)
-
-    return null2None2dict(res)
 
 def null2None2dict(res=""):
     res = res.replace("null", "None")
@@ -208,14 +195,31 @@ def login(url="",phone ="",password="",X_Type="3"):
     res = post_json(url,data,header)
     return null2None2dict(res)
 #!!!!!4.1.3
-def updateInfo(url = "",id ="",files="",X_Type="3"):
-    url = url
-    data = files
+def updateInfo(url = "",id ="",X_Type="3"):
+    boundary = '------WebKitFormBoundaryDsGZYHEMOfjfFbAW'
+    data = []
+    data.append('--%s' % boundary)
+    data.append('Content-Disposition: form-data; name="id"\r\n')
+    data.append(id)
+    data.append('--%s' % boundary)
+    data.append('Content-Disposition: form-data; name="filename"; filename=""')
+    data.append('Content-Type: application/octet-stream\r\n')
+    data.append('--%s--\r\n' % boundary)
+    httpBody = '\r\n'.join(data)
+    print type(httpBody)
+    print "*************************httpBody******************\n", httpBody
+    postDataUrl = url
+    req = urllib2.Request(postDataUrl, data=httpBody)
     token = mylogin()
-    header = {"Content-type": "application/json;charset=UTF-8","X-Type":"3","X-Token":token['data']['token'],"id":id}
-    header.update(header)
-    res  = post_upload_file(url,data,header)
-    return null2None2dict(res)
+    req.add_header('Content-Type','multipart/form-data; boundary=%s' % boundary)
+    req.add_header('X-Type','3')
+    req.add_header( "X-Token", token['data']['token'])
+    req.add_header('User-Agent', 'Mozilla/5.0')
+    req.add_header('Referer', 'https://www.iumer.cn/umer/wechat/my/updateInfo')
+    resp = urllib2.urlopen(req)
+    res = resp.read()
+    print res
+    # return null2None2dict(res)
 #4.1.4
 def customerInfo(url ="",id ="",X_Type="3"):
     url = url

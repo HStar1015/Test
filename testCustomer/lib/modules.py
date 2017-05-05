@@ -12,7 +12,7 @@ class test_core_server():
         res = actions.login(login_obj.url,login_obj.phone,login_obj.password,login_obj.X_Type)
     #4.1.3
     def test_updateInfo_test(self,updateInfo_obj):
-        res = actions.updateInfo(updateInfo_obj.url,updateInfo_obj.id,updateInfo_obj.files,updateInfo_obj.X_Type)
+        res = actions.updateInfo(updateInfo_obj.url,updateInfo_obj.id,updateInfo_obj.X_Type)
     #4.1.4
     def test_customerInfo_test(self,customerInfo_obj):
         res = actions.customerInfo(customerInfo_obj.url,customerInfo_obj.id,customerInfo_obj.X_Type)

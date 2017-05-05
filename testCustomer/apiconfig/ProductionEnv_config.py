@@ -28,7 +28,7 @@ APP_a = {
     "priceType":1,#价格类型,0(单价)/1(疗程)
     "reserveName":"xing",
     "reservePhone":"13051175683",
-    "customerId":42,#顾客id
+    "customerId":"42",#顾客id
     "remark":"hello",
     "rankId":1,
     "activityId":163,
@@ -72,7 +72,7 @@ CoreServer_updateInfo_01 = updateInfo()
 CoreServer_updateInfo_01.url = Customer_url +"/sys/user/updateInfo"
 CoreServer_updateInfo_01.X_Type = APP_a["X-Type"]
 CoreServer_updateInfo_01.id = APP_a["customerId"]
-CoreServer_updateInfo_01.files = APP_a["files"]
+# CoreServer_updateInfo_01.files = APP_a["files"]
 #exp
 CoreServer_updateInfo_01.code = APP_a["error_code_correct"]
 #4.1.4
