@@ -8,9 +8,9 @@ APP_a = {
     "password":"0adc3949ba59abbe56e057f20f883ee1",
     "authCode":"123456",#验证码
     "X-Type":3,
-    "personnelId":17,#员工id
-    "shopId":91,#员工对应门店id
-    "businessId":15,#员工对应商家id
+    "personnelId":177,#员工id
+    "shopId":434,#员工对应门店id
+    "businessId":180,#员工对应商家id
     "name":"xing",
     "sex":"1",#性别
     "provinceId":320000,#jiangsu
@@ -20,15 +20,15 @@ APP_a = {
     "ifCollect":1,
     "files":"",
     "pageSize":100,
-    "projectId":"216",
-    "orderNo":"DD1012706542136455067",#订单编号
-    "payCode":"QR7543166741178590773",#支付码
+    "projectId":"703",
+    "orderNo":"DD170518174073006",#订单编号
+    "payCode":"QR170518167129620",#支付码
     "makeStartDate":"2017-05-28 12:00:00",#预约开始时间
     "makeEndDate":"2017-03-25 12:30:00",#预约结束时间
     "priceType":1,#价格类型,0(单价)/1(疗程)
     "reserveName":"xing",
     "reservePhone":"13051175683",
-    "customerId":"42",#顾客id
+    "customerId":"92",#顾客id
     "remark":"hello",
     "rankId":1,
     "activityId":163,
