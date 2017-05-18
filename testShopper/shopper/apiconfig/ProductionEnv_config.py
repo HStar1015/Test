@@ -7,9 +7,9 @@ APP_a = {
     "phone":"15651966757",
     "authCode":"1123456",
     "inviteCode":"123456",
-    "shopId":15,#15651966757--商家id
-    "mendianId":91,#门店id
-    "deleteShopId":87,#删除门店id
+    "shopId":180,#15651966757--商家id
+    "mendianId":434,#门店id
+    "deleteShopId":444,#删除门店id
     "password":"0adc3949ba59abbe56e057f20f883ee1",
     "X-Type":1,
     "provinceId":320000,#jiangsu
@@ -30,22 +30,22 @@ APP_a = {
     "applyPerson":"young man",
     "brand":"测试",
     "noticeMatters":"test test test",
-    "projectId":"142",#项目ID
+    "projectId":"686",#项目ID
     "fileUuid":"5230f677909648d89dadc37a25604a31",
     "picCount":5,#图片数量
     "pageSize":100,#分页数量
-    "personneId":"18",#员工id
+    "personneId":"298",#员工id
     "commentLevel_1":"1",#差评
     "commentLevel_2":"2",#中评
     "commentLevel_3":"3",#好评
     "commentLevel_all":"",#全部评价
-    "customerId":"43",#顾客id
+    "customerId":"92",#顾客id
     "rankId":"1",#备注级别id
     "paymentMode_alipay":"alipay",#提现付款方式--支付宝
     "paymentMode_card":"card",#提现付款方式---银行卡
     "price":"0.00",#提现金额
-    "putApplyId":"92",#提现记录id
-    "incomeId":"91",#进账记录id
+    "putApplyId":"166",#提现记录id
+    "incomeId":"154",#进账记录id
     "bunkCount": "3",#床位数
     "projectAverageDuration": "45",#项目平均操作时长
     "workStartDate": "09:00",#上班时间
@@ -69,7 +69,7 @@ APP_a = {
     "month":"2017-04",
     "summarizeId":"2",
     "planId":"23",
-    "cardId":16,
+    "cardId":65,
     "page":1,
 }
 Base_url = "https://www.iumer.cn/umer/webService"
@@ -109,7 +109,7 @@ CoreServer_login_01.inviteStatus = ""
 CoreServer_applyInvite_01 = applyInvite()
 CoreServer_applyInvite_01.url = Shop_url +"/sys/business/applyInvite"
 CoreServer_applyInvite_01.name = "hanxing"
-CoreServer_applyInvite_01.phone = "15651966755"
+CoreServer_applyInvite_01.phone = "18112656817"
 CoreServer_applyInvite_01.provinceId = APP_a["provinceId"]
 CoreServer_applyInvite_01.areaId = APP_a["areaId"]
 CoreServer_applyInvite_01.cityId = APP_a["cityId"]
@@ -189,10 +189,10 @@ CoreServer_shopList_01.code = APP_a["error_code_correct"]
 CoreServer_shopInfo_01 = shopInfo()
 #input
 CoreServer_shopInfo_01.X_Type  = APP_a["X-Type"]
-CoreServer_shopList_01.url = Shop_url +"/sys/user/shopInfo"
-CoreServer_shopList_01.id = APP_a["mendianId"]
+CoreServer_shopInfo_01.url = Shop_url +"/sys/user/shopInfo"
+CoreServer_shopInfo_01.id = APP_a["mendianId"]
 #exp
-CoreServer_shopList_01.code = APP_a["error_code_correct"]
+CoreServer_shopInfo_01.code = APP_a["error_code_correct"]
 #2.2.5
 CoreServer_deleteShop_01 = deleteShop()
 #input

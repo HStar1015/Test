@@ -45,7 +45,7 @@ class test_core_server():
     def test_shopList_test(self,shopList_obj):
         res = actions.shopList(shopList_obj.url,shopList_obj.businessId,shopList_obj.X_Type)
     #2.2.4
-    def test_shopInf_test(self,shopInfo_obj):
+    def test_shopInfo_test(self,shopInfo_obj):
         res = actions.shopInfo(shopInfo_obj.url,shopInfo_obj.id,shopInfo_obj.X_Type)
     #2.2.5
     def test_deleteShop_test(self,deleteShop_obj):

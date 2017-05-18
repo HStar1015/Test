@@ -73,8 +73,8 @@ class core_server_tests(unittest.TestCase):
     #2.2.4获取门店信息
     def test0010_shopInfo_test(self):
         print "**************************************#2.2.4获取门店信息***************************************"
-        auth = apimsg.CoreServer_shopList_01
-        self.test.test_shopInf_test(auth)
+        auth = apimsg.CoreServer_shopInfo_01
+        self.test.test_shopInfo_test(auth)
         print "***********************************************************************************************"
     #2.2.5删除门店
     def test0011_deleteShop_test(self):
@@ -84,7 +84,7 @@ class core_server_tests(unittest.TestCase):
         print "***********************************************************************************************"
     # 2.3.1添加项目
     def test0012_addProject_test(self):
-        print "**************************************#2.3.1添加项目***************************************"
+        print "**************************************#!2.3.1添加项目***************************************"
         auth = apimsg.CoreServer_addProject_01
         self.test.test_addProject_test(auth)
         print "***********************************************************************************************"
@@ -96,7 +96,7 @@ class core_server_tests(unittest.TestCase):
         print "***********************************************************************************************"
     #2.3.3编辑项目
     def test0014_editProject_test(self):
-        print "**************************************#2.3.3编辑项目***************************************"
+        print "**************************************#!2.3.3编辑项目***************************************"
         auth = apimsg.CoreServer_editProject_01
         self.test.test_editProject_test(auth)
         print "***********************************************************************************************"
