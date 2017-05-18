@@ -8,9 +8,9 @@ APP_a = {
     "password":"0adc3949ba59abbe56e057f20f883ee1",
     "authCode":"123456",#验证码
     "X-Type":2,
-    "personnelId":17,#员工id
-    "shopId":91,#员工对应门店id
-    "businessId":15,#员工对应商家id
+    "personnelId":177,#员工id
+    "shopId":434,#员工对应门店id
+    "businessId":180,#员工对应商家id
     "name":"xing",
     "sex":"1",#性别
     "provinceId":320000,#jiangsu
@@ -40,26 +40,26 @@ APP_a = {
     "ifSatWork": 1,
     "ifSunWork": 1,
     "pageSize":100,
-    "projectId":"216",
-    "orderNo":"DD7312548808254750113",#订单编号
-    "payCode":"QR7543166741178590773",#支付码
+    "projectId":"703",
+    "orderNo":"DD170518165159164",#订单编号
+    "payCode":"QR170518167129620",#支付码
     "makeStartDate":"2017-05-28 12:00:00",#预约开始时间
     "makeEndDate":"2017-05-28 12:30:00",#预约结束时间
     "priceType":1,#价格类型,0(单价)/1(疗程)
     "reserveName":"xing",
     "reservePhone":"13051175683",
-    "customerId":43,#顾客id
+    "customerId":92,#顾客id
     "remark":"hello",
     "rankId":1,
     "cardType_1":1,
     "cardType_2":2,
     "cardType_3":3, #卡类型：1-年卡，2次卡，3储值卡
     "cardName":"cardName",
-    "cardId":15,#年卡id
-    "numCardId":16,
+    "cardId":64,#年卡id
+    "numCardId":65,#次卡id
     "deductNum":1,#扣次
     "cardRemark":"REMARK",
-    "cardCalidityDate":"2018-04-18 00:00:00",#有效期
+    "cardCalidityDate":"2019-04-18 00:00:00",#有效期
     "totalNum":50,
     "surplusNum":40,
     "commentLevel":"1",
@@ -70,11 +70,11 @@ APP_a = {
     "customerRankId": 1,
     "planPerformance": "12.12",
     "planIntroduce": "12",
-    "planId":"23",
+    "planId":"54",
     "operationType":"add",
     "recordType":"month",
     "customerType":0,
-    "day" : "2017-04-12",
+    "day" : "2017-05-18",
     "dayPerformance" :"0",
     "dayExpend" :"0",
     "dayOrder" : "0",
