@@ -267,7 +267,7 @@ def updateInfo(url = "",id ="",files ="",X_Type="3"):
     res2 = res + key
     sign = md5(res2).upper()
     data2 = {"id": id, "files":files,"sign": sign}
-    data = json.dumps(data1)
+    data = json.dumps(data2)
     res = post_multipart(url,data)
     return null2None2dict(res)
 #4.1.4
