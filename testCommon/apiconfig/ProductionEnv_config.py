@@ -13,7 +13,7 @@ APP_a = {
     "platform":"shop",
     "pageSize":100,
     "type":1,
-    "id":38,
+    "id":38,#分享URl-id
     "cityId":"320500",
     "userId":"180",
     "activityId":"26",
@@ -21,6 +21,17 @@ APP_a = {
     "groupNo":"1002",
     "longitude": "120.635753",
     "latitude": "31.267955",
+    "jsCode":"1234",
+    "personnelId":"177",
+    "dataTime":"2017-05-26",
+    "name":"Tester",
+    "content":"Test",
+    "path":"https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxfa398cdc57b80304&redirect_uri=https://www.iumer.cn/umer/wechat/index/shopDetail?shopId=38&urlType=share&response_type=code&scope=snsapi_userinfo&state=STATE&connect_redirect=1#wechat_redirect",
+    "width":"100",
+    "os_android":"android",
+    "os_ios":"ios",
+    "port_0":0,
+    "port_1":1,
 }
 Base_url = "https://www.iumer.cn/umer/webService"
 Common_url = Base_url +"/common"
@@ -159,3 +170,70 @@ CoreServer_baiduCoordinate_01.latitude = APP_a["latitude"]
 CoreServer_baiduCoordinate_01.longitude = APP_a["longitude"]
 #exp
 CoreServer_baiduCoordinate_01.code = APP_a["error_code_correct"]
+
+#5.18
+CoreServer_getOpenId_01 = getOpenId()
+CoreServer_getOpenId_01.url = Common_url + "/getOpenId"
+CoreServer_getOpenId_01.jsCode = APP_a["jsCode"]
+#exp
+CoreServer_getOpenId_01.code = APP_a["error_code_correct"]
+
+#5.19
+CoreServer_reservePeriodList_01 = reservePeriodList()
+CoreServer_reservePeriodList_01.url = Common_url +"/reservePeriodList"
+#exp
+CoreServer_reservePeriodList_01.code = APP_a["error_code_correct"]
+
+#5.20
+CoreServer_reserveTimeList_01 = reserveTimeList()
+CoreServer_reserveTimeList_01.url = Common_url + "/reserveTimeList"
+CoreServer_reserveTimeList_01.dateTime = APP_a["dataTime"]
+CoreServer_reserveTimeList_01.personnelId = APP_a["personnelId"]
+#exp
+CoreServer_reserveTimeList_01.code = APP_a["error_code_correct"]
+
+#5.21
+CoreServer_feedback_01  = feedback()
+CoreServer_feedback_01.url = Common_url + "/feedback"
+CoreServer_feedback_01.userType = APP_a["X-Type"]
+CoreServer_feedback_01.userId = APP_a["userId"]
+CoreServer_feedback_01.phone = APP_a["phone"]
+CoreServer_feedback_01.name = APP_a["name"]
+CoreServer_feedback_01.content = APP_a["content"]
+#exo
+CoreServer_feedback_01.code = APP_a["error_code_correct"]
+
+#5.22
+CoreServer_getShareQR_01 = getShareUrl()
+CoreServer_getShareQR_01.url = Common_url + "/getShareQR"
+CoreServer_getShareQR_01.personnelId = APP_a["personnelId"]
+CoreServer_getShareQR_01.path = APP_a["path"]
+CoreServer_getShareQR_01.width = APP_a["width"]
+#exp
+CoreServer_getShareQR_01.code = APP_a["error_code_correct"]
+
+#5.23
+CoreServer_versionRenewal_01 = versionRenewal()
+CoreServer_versionRenewal_01.url = Common_url + "/version/versionRenewal"
+CoreServer_versionRenewal_01.os = APP_a["os_android"]
+CoreServer_versionRenewal_01.port = APP_a["port_0"]
+#exp
+CoreServer_versionRenewal_01.code = APP_a["error_code_correct"]
+
+#5.24
+CoreServer_getZoning_01 = getZonig()
+CoreServer_getZoning_01.url = Common_url + "/getZoning"
+#exp
+CoreServer_getZoning_01.code = APP_a["error_code_correct"]
+
+#5.25
+CoreServer_getCitySort_01 = getCtiySort()
+CoreServer_getCitySort_01.url = Common_url + "/getCitySort"
+#exp
+CoreServer_getZoning_01.code = APP_a["error_code_correct"]
+
+#5.26
+CoreServer_getBankCardList_01 = getBankCardList()
+CoreServer_getBankCardList_01.url = Common_url + "/getBankCardList"
+#exp
+CoreServer_getBankCardList_01.code = APP_a["error_code_correct"]

@@ -81,38 +81,92 @@ class core_server_tests(unittest.TestCase):
         self.test.test_activityDetail(auth)
         print "******************************************************************************************"
     #5.12
-    def test_vote_test(self):
+    def test0012_vote_test(self):
         print "**********************************#5.12活动投票*******************************************"
         auth = apimsg.CoreServer_vote_01
         self.test.test_vote(auth)
         print "******************************************************************************************"
     #5.13
-    def test_voteStatical_test(self):
+    def test0013_voteStatical_test(self):
         print "**********************************#5.13活动投票统计结果*******************************************"
         auth = apimsg.CoreServer_voteStatical_01
         self.test.test_voteStatical(auth)
         print "******************************************************************************************"
     #5.14
-    def test_winList_test(self):
+    def test0014_winList_test(self):
         print "**********************************#5.14中奖人名单*******************************************"
         auth = apimsg.CoreServer_winList_01
         self.test.test_winList(auth)
         print "******************************************************************************************"
     #5.15
-    def test_peopleVoteStatus_test(self):
+    def test0015_peopleVoteStatus_test(self):
         print "**********************************#5.15 用户投票状态*******************************************"
         auth = apimsg.CoreServer_peopleVoteStatus_01
         self.test.test_peopleVoteStatus(auth)
         print "******************************************************************************************"
     #5.16
-    def test_peopleVoteStatus_test(self):
+    def test0016_peopleVoteStatus_test(self):
         print "**********************************#5.16 获取项目图片库*******************************************"
         auth = apimsg.CoreServer_projectPhoto_01
         self.test.test_projectPhoto(auth)
         print "******************************************************************************************"
-    #5.16
-    def test_baiduCoordinate_test(self):
+    #5.17
+    def test0017_baiduCoordinate_test(self):
         print "**********************************#5.17 获取百度地图坐标信息*******************************************"
         auth = apimsg.CoreServer_baiduCoordinate_01
         self.test.test_baiduCoordinate(auth)
+        print "******************************************************************************************"
+    #5.18
+    def test0018_getOpenId_test(self):
+        print "**********************************#5.18 获取小程序OPENID*******************************************"
+        auth = apimsg.CoreServer_getOpenId_01
+        self.test.test_getOpenId(auth)
+        print "******************************************************************************************"
+    #5.19
+    def test0019_reservePeriodList_test(self):
+        print "**********************************#5.19 获取预约周期列表*******************************************"
+        auth = apimsg.CoreServer_reservePeriodList_01
+        self.test.test_reservePeriodList(auth)
+        print "******************************************************************************************"
+    #5.20
+    def test0020_reserveTimeList_test(self):
+        print "**********************************#5.20 获取预约时间段列表*******************************************"
+        auth = apimsg.CoreServer_reserveTimeList_01
+        self.test.test_reserveTimeList(auth)
+        print "******************************************************************************************"
+    #5.21
+    def test0021_feedback_test(self):
+        print "**********************************#5.21 反馈问题*******************************************"
+        auth = apimsg.CoreServer_feedback_01
+        self.test.test_feedback(auth)
+        print "******************************************************************************************"
+    #5.22
+    def test0022_getShareQR_test(self):
+        print "**********************************#5.22 小程序获取分享二维码地址***********************************"
+        auth = apimsg.CoreServer_getShareQR_01
+        self.test.test_getShareQR(auth)
+        print "******************************************************************************************"
+    #5.23
+    def test0023_versionRenewal(self):
+        print "**********************************#5.23 版本更新***********************************"
+        auth = apimsg.CoreServer_versionRenewal_01
+        self.test.test_versionRenewal(auth)
+        print "******************************************************************************************"
+    #5.24
+    def test0024_getZoning(self):
+        print "**********************************#5.24 获取城市区划***********************************"
+        auth = apimsg.CoreServer_getZoning_01
+        self.test.test_getZoning(auth)
+        print "******************************************************************************************"
+    #5.25
+    def test0025_getZoning(self):
+        print "**********************************#5.25 获取城市按字母排序***********************************"
+        auth = apimsg.CoreServer_getCitySort_01
+        self.test.test_getCitySort(auth)
+        print "******************************************************************************************"
+    #5.26
+    def test0026_getBankCardList(self):
+        print "**********************************#5.26 获取银行卡列表***********************************"
+        auth = apimsg.CoreServer_getBankCardList_01
+        self.test.test_getBankCardList(auth)
         print "******************************************************************************************"

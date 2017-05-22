@@ -56,3 +56,32 @@ class test_core_server():
     #5.17
     def test_baiduCoordinate(self,baiduCoordinateo_obj):
         res = actions.baiduCoordinate(baiduCoordinateo_obj.url,baiduCoordinateo_obj.latitude,baiduCoordinateo_obj.longitude)
+    #5.18
+    def test_getOpenId(self,getOpenId_obj):
+        res = actions.getOpenId(getOpenId_obj.url,getOpenId_obj.jsCode)
+    #5.19
+    def test_reservePeriodList(self,reservePeriod_obj):
+        res = actions.reservePeriodList(reservePeriod_obj.url)
+    #5.20
+    def test_reserveTimeList(self,reserveTimeList_obj):
+        res = actions.reserveTimeList(reserveTimeList_obj.url,reserveTimeList_obj.personnelId,reserveTimeList_obj.dateTime)
+    #5.21
+    def test_feedback(self,feedback_obj):
+        res = actions.feedback(feedback_obj.url,feedback_obj.userType,feedback_obj.userId,feedback_obj.phone,feedback_obj.name,
+                               feedback_obj.content)
+    #5.22
+    def test_getShareQR(self,getShareQR_obj):
+        res = actions.getShareQR(getShareQR_obj.url,getShareQR_obj.personnelId,getShareQR_obj.path,getShareQR_obj.width)
+
+    #5.23
+    def test_versionRenewal(self,versionRenewal_obj):
+        res = actions.versionRenewal(versionRenewal_obj.url,versionRenewal_obj.os,versionRenewal_obj.port)
+    #5.24
+    def test_getZoning(self,getZoning_obj):
+        res = actions.getZoning(getZoning_obj.url)
+    #5.25
+    def test_getCitySort(self,getCitySort_obj):
+        res = actions.getCitySort(getCitySort_obj.url)
+    #5.26
+    def test_getBankCardList(self,getBankCardList_obj):
+        res = actions.getBankCardList(getBankCardList_obj.url)

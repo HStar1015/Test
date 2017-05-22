@@ -375,3 +375,114 @@ def baiduCoordinate(url="",latitude ="",longitude=""):
     header = {"Content-type": "application/json;charset=UTF-8", "X-Type": 1, "X-Token": token['data']['token']}
     res = post_json(url, data, header)
     return res
+#5.18
+def getOpenId(url="",jsCode=""):
+    url = url
+    data1 = {"jsCode":jsCode}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"jsCode":jsCode, "sign": sign}
+    header = {"Content-type": "application/json;charset=UTF-8"}
+    res = post_json(url, data, header)
+    return res
+#5.19
+def reservePeriodList(url =""):
+    url = url
+    data1 = {}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"sign":sign}
+    header = {"Content-type": "application/json;charset=UTF-8"}
+    res = post_json(url, data, header)
+    return res
+#5.20
+def reserveTimeList(url="",personnelId= "",dateTime= ""):
+    url = url
+    data1 = {"personnelId":personnelId,"dateTime":dateTime}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"personnelId":personnelId,"dateTime":dateTime,"sign":sign}
+    header = {"Content-type": "application/json;charset=UTF-8"}
+    res = post_json(url, data, header)
+    return res
+#5.21
+def feedback(url= "",userType= "",userId="",phone= "",name="",content=""):
+    url = url
+    data1 = {"userType": userType, "userId": userId,"phone":phone,"name":name,"content":content}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"userType": userType, "userId": userId,"phone":phone,"name":name,"content":content, "sign": sign}
+    token = mylogin()
+    header = {"Content-type": "application/json;charset=UTF-8","X-Type":1,"X-Token":token['data']['token']}
+    res = post_json(url, data, header)
+    return res
+#5.22
+def getShareQR(url="",personnelId= "",path= "",width =""):
+    url = url
+    data1 = {"personnelId":personnelId,"path":path,"width":width}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res1 = res.replace("%3A%2F%2F","://")
+    res11 = res1.replace("%2F","/")
+    res111 = res11.replace("%3F","?")
+    res1111 = res111.replace("%3D","=")
+    res11111 = res1111.replace("%26","&")
+    res111111 = res11111.replace("%23","#")
+    res2 = res111111 + key
+    sign = md5(res2).upper()
+    data = {"personnelId":personnelId,"path":path,"width":width, "sign": sign}
+    header = {"Content-type": "application/json;charset=UTF-8"}
+    res = post_json(url, data, header)
+    return res
+#5.23
+def versionRenewal(url="",os ="",port=""):
+    url = url
+    data1 = {"os":os,"port":port}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res+ key
+    sign = md5(res2).upper()
+    data = {"os":os,"port":port,"sign": sign}
+    header = {"Content-type": "application/json;charset=UTF-8"}
+    res = post_json(url, data, header)
+#5.24
+def getZoning(url=""):
+    url = url
+    data1 = {}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"sign": sign}
+    header = {"Content-type": "application/json;charset=UTF-8"}
+    res = post_json(url, data, header)
+#5.25
+def getCitySort(url =""):
+    url = url
+    data1 = {}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"sign": sign}
+    header = {"Content-type": "application/json;charset=UTF-8"}
+    res = post_json(url, data, header)
+#5.26
+def getBankCardList(url =""):
+    url = url
+    data1 = {}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"sign": sign}
+    header = {"Content-type": "application/json;charset=UTF-8"}
+    res = post_json(url, data, header)

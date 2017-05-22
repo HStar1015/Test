@@ -117,3 +117,63 @@ class baiduCoordinate:
     longitude = ""
     #exp
     code = ""
+#5.18
+class getOpenId:
+    url = ""
+    jsCode = ""
+    #exp
+    code = ""
+#5.19
+class reservePeriodList:
+    url = ""
+    dateTime = ""
+    week = ""
+    #exp
+    code = ""
+#5.20
+class reserveTimeList:
+    url = ""
+    personnelId = ""
+    dateTime = ""
+    #exp
+    code = ""
+#5.21
+class feedback:
+    url = ""
+    userType = ""
+    userId = ""
+    phone = ""
+    name = ""
+    content = ""
+    #exp
+    code = ""
+#5.22
+class getShareQR:
+    url = ""
+    personnelId = ""
+    path = ""
+    width = ""
+    #exp
+    code = ""
+#5.23
+class versionRenewal:
+    url = ""
+    os = ""
+    port = ""
+    #exp
+    code = ""
+#5.24
+class getZonig:
+    url = ""
+    #exp
+    code = ""
+#5.25
+class getCtiySort:
+    url = ""
+    #exp
+    code = ""
+#5.26
+class getBankCardList:
+    url = ""
+    #exp
+    code= ""
