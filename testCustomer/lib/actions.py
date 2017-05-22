@@ -266,8 +266,8 @@ def updateInfo(url = "",id ="",files ="",X_Type="3"):
     res = urllib.urlencode(sort_data)
     res2 = res + key
     sign = md5(res2).upper()
-    data2 = {"id": id, "files":files,"sign": sign}
-    data = json.dumps(data2)
+    data = {"id": id, "files":files,"sign": sign}
+    data = json
     res = post_multipart(url,data)
     return null2None2dict(res)
 #4.1.4
