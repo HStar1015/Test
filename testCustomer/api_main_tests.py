@@ -26,12 +26,12 @@ class core_server_tests(unittest.TestCase):
         auth = apimsg.CoreServer_login_01
         self.test.test_login_test(auth)
         print "**********************************************************************************************"
-    # #4.1.3
-    # def test0003_updateInfo_test(self):
-    #     print "**********************************#4.1.3修改顾客信息**************************************************"
-    #     auth = apimsg.CoreServer_updateInfo_01
-    #     self.test.test_updateInfo_test(auth)
-    #     print "**********************************************************************************************"
+    #4.1.3
+    def test0003_updateInfo_test(self):
+        print "**********************************#4.1.3修改顾客信息**************************************************"
+        auth = apimsg.CoreServer_updateInfo_01
+        self.test.test_updateInfo_test(auth)
+        print "**********************************************************************************************"
     #4.1.4
     def test0004_customerInfo_test(self):
         print "**********************************#4.1.4获取顾客信息**************************************************"

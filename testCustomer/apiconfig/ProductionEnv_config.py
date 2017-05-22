@@ -18,7 +18,7 @@ APP_a = {
     "areaId":320506,#wuzhongqu
     "registrationId":861759031496572,#EVL00
     "ifCollect":1,
-    "files":"",
+    "files":"files",
     "pageSize":100,
     "projectId":"703",
     "orderNo":"DD170518174073006",#订单编号
@@ -72,7 +72,7 @@ CoreServer_updateInfo_01 = updateInfo()
 CoreServer_updateInfo_01.url = Customer_url +"/sys/user/updateInfo"
 CoreServer_updateInfo_01.X_Type = APP_a["X-Type"]
 CoreServer_updateInfo_01.id = APP_a["customerId"]
-# CoreServer_updateInfo_01.files = APP_a["files"]
+CoreServer_updateInfo_01.files = APP_a["files"]
 #exp
 CoreServer_updateInfo_01.code = APP_a["error_code_correct"]
 #4.1.4

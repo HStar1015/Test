@@ -146,8 +146,72 @@ def post_json(url, data, header):
     res_body =  res.read()
     print "***response body = ***\n%s" % res_body
     res.close()
-
     return res_body
+
+def encode_multipart_formdata(key, value):
+    BOUNDARY = '----------WebKitFormBoundaryBsaDjKcwB8AyZLJ7'
+
+    CRLF = '\r\n'
+
+    L = []
+
+    L.append('--' + BOUNDARY)
+
+    L.append('Content-Disposition: form-data; name="%s"' % key)
+
+    L.append('')
+
+    L.append(value)
+
+    L.append('--' + BOUNDARY + '--')
+
+    L.append('')
+
+    body = CRLF.join(L)
+
+    content_type = 'multipart/form-data; boundary=%s' % BOUNDARY
+
+    return content_type, body
+
+def post_multipart(url, fields):
+    content_type, body = encode_multipart_formdata("data",fields)
+
+    req = urllib2.Request(url, body)
+
+    req.add_header("User-Agent",
+                   "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36 SE 2.X MetaSr 1.0)")
+
+    req.add_header("Accept", "*/*")
+
+    req.add_header("Accept-Language", "zh-CN,zh;q=0.8")
+
+    req.add_header("Accept-Encoding", "gzip,deflate,sdch")
+
+    req.add_header("Connection", "keep-alive")
+
+    req.add_header("Content-Type", content_type)
+
+    req.add_header("User-Agent1", "SogouMSE")
+
+    req.add_header('X-Type',3)
+
+    token = mylogin()['data']['token']
+
+    req.add_header("X-Token",token)
+
+    try:
+        response = urllib2.urlopen(req)
+        the_page = response.read().decode('utf-8')
+        print the_page
+        return the_page
+    except urllib2.HTTPError, e:
+        print e.code
+        pass
+    except urllib2.URLError, e:
+        print str(e)
+        pass
+
+
 
 def null2None2dict(res=""):
     res = res.replace("null", "None")
@@ -194,32 +258,18 @@ def login(url="",phone ="",password="",X_Type="3"):
     header = {"Content-type": "application/json;charset=UTF-8","X-Type":"3"}
     res = post_json(url,data,header)
     return null2None2dict(res)
-#!!!!!4.1.3
-def updateInfo(url = "",id ="",X_Type="3"):
-    boundary = '------WebKitFormBoundaryDsGZYHEMOfjfFbAW'
-    data = []
-    data.append('--%s' % boundary)
-    data.append('Content-Disposition: form-data; name="id"\r\n')
-    data.append(id)
-    data.append('--%s' % boundary)
-    data.append('Content-Disposition: form-data; name="filename"; filename=""')
-    data.append('Content-Type: application/octet-stream\r\n')
-    data.append('--%s--\r\n' % boundary)
-    httpBody = '\r\n'.join(data)
-    print type(httpBody)
-    print "*************************httpBody******************\n", httpBody
-    postDataUrl = url
-    req = urllib2.Request(postDataUrl, data=httpBody)
-    token = mylogin()
-    req.add_header('Content-Type','multipart/form-data; boundary=%s' % boundary)
-    req.add_header('X-Type','3')
-    req.add_header( "X-Token", token['data']['token'])
-    req.add_header('User-Agent', 'Mozilla/5.0')
-    req.add_header('Referer', 'https://www.iumer.cn/umer/wechat/my/updateInfo')
-    resp = urllib2.urlopen(req)
-    res = resp.read()
-    print res
-    # return null2None2dict(res)
+#4.1.3
+def updateInfo(url = "",id ="",files ="",X_Type="3"):
+    url = url
+    data1 = {"id":id,"file":files}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+    data2 = {"id": id, "files":files,"sign": sign}
+    data = json.dumps(data1)
+    res = post_multipart(url,data)
+    return null2None2dict(res)
 #4.1.4
 def customerInfo(url ="",id ="",X_Type="3"):
     url = url
