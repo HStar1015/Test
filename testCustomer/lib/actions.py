@@ -7,6 +7,8 @@ from poster.encode import multipart_encode
 from poster.streaminghttp import register_openers
 import types
 import hashlib
+import  mimetools
+
 key="&key=037F6F3127604B4FAE8AAD1AE4BE78E3"
 #MD5加密
 def md5(str):
@@ -149,7 +151,8 @@ def post_json(url, data, header):
     return res_body
 
 def encode_multipart_formdata(key, value):
-    BOUNDARY = '----------WebKitFormBoundaryBsaDjKcwB8AyZLJ7'
+    bundary = mimetools.choose_boundary()
+    BOUNDARY = '----------'+bundary+'--'
 
     CRLF = '\r\n'
 
@@ -198,6 +201,17 @@ def post_multipart(url, fields):
     token = mylogin()['data']['token']
 
     req.add_header("X-Token",token)
+
+
+    req_header_get = req.header_items()
+    print "***request header_get = ***\n%s" % req_header_get
+
+    req_body = req.get_data()
+    print "***request body = ***\n%s" % req_body
+
+    res = urllib2.urlopen(req)
+    res_code = res.getcode()
+    print "***response code = ***\n%s" % res_code
 
     try:
         response = urllib2.urlopen(req)
@@ -261,13 +275,14 @@ def login(url="",phone ="",password="",X_Type="3"):
 #4.1.3
 def updateInfo(url = "",id ="",files ="",X_Type="3"):
     url = url
-    data1 = {"id":id,"file":files}
+    data1 = {"id":id,"files":files}
     sort_data = sorted(data1.items(), key=lambda d: d[0])
     res = urllib.urlencode(sort_data)
     res2 = res + key
     sign = md5(res2).upper()
-    data = {"id": id, "files":files,"sign": sign}
-    data = json
+    data2 = {"id": id, "files":files,"sign": sign}
+    data = json.dumps(data2)
+    print "----------MARK---------",data
     res = post_multipart(url,data)
     return null2None2dict(res)
 #4.1.4

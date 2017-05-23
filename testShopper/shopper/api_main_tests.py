@@ -60,8 +60,8 @@ class core_server_tests(unittest.TestCase):
     #2.2.2修改门店信息
     def test0008_updateInfo_test(self):
         print "**************************************#2.2.2修改门店信息******************************************"
-        auth =apimsg.CoreServer_updateInfo_01
-        self.test.test_updateInfo_test(auth)
+        auth =apimsg.CoreServer_updateShopInfo_01
+        self.test.test_updateShopInfo_test(auth)
         print "**********************************************************************************************"
 
     #2.2.3获取门店列表

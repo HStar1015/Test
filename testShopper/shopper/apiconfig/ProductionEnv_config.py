@@ -18,18 +18,17 @@ APP_a = {
     "registrationId":861759031496572,#EVL00
     "shopName":"Test",
     "shortName":"T",
-    "description":"QWERTYUIOPASDFGHJKL",
+    "description":"test",
     "address":"suzhou",
-    "files":"",
-    "projectName":"补水",
+    "projectName":"test",
     "groupNo":"1002",#项目编号
     "unitPrice":"10.00",
     "coursePrice":"100",
-    "courseRemark":"test test",
+    "courseRemark":"testtest",
     "duration":"20",
-    "applyPerson":"young man",
-    "brand":"测试",
-    "noticeMatters":"test test test",
+    "applyPerson":"youngman",
+    "brand":"test",
+    "noticeMatters":"testtesttest",
     "projectId":"686",#项目ID
     "fileUuid":"5230f677909648d89dadc37a25604a31",
     "picCount":5,#图片数量
@@ -71,6 +70,10 @@ APP_a = {
     "planId":"23",
     "cardId":65,
     "page":1,
+    "files":"files",
+    "shopLicenseFile": "shopLicenseFile",
+    "identityFrontFile" : "identityFrontFile",
+    "identityBackFile":"identityBackFile",
 }
 Base_url = "https://www.iumer.cn/umer/webService"
 Shop_url = Base_url +"/shop"
@@ -122,6 +125,8 @@ CoreServer_applyInvite_01.code = APP_a["error_code_correct"]
 CoreServer_updateInfo_01 = updateInfo()
 CoreServer_updateInfo_01.url = Shop_url +"/sys/business/updateInfo"
 CoreServer_updateInfo_01.id = APP_a["shopId"]
+CoreServer_updateInfo_01.files = APP_a["files"]
+CoreServer_updateInfo_01.X_Type = APP_a["X-Type"]
 #exp
 CoreServer_updateInfo_01.code = APP_a["error_code_correct"]
 
@@ -158,25 +163,30 @@ CoreServer_saveShop_01.provinceId = APP_a["provinceId"]
 CoreServer_saveShop_01.cityId = APP_a["cityId"]
 CoreServer_saveShop_01.areaId = APP_a["areaId"]
 CoreServer_saveShop_01.address = APP_a["address"]
-CoreServer_saveShop_01.files = APP_a["files"]
+CoreServer_saveShop_01.shopLicenseFile = APP_a["shopLicenseFile"]
+CoreServer_saveShop_01.identityFrontFile = APP_a["identityFrontFile"]
+CoreServer_saveShop_01.identityBackFile = APP_a["identityBackFile"]
 #exp
 CoreServer_saveShop_01.code = APP_a["error_code_correct"]
 #2.2.2
-CoreServer_saveShop_01 = saveShop()
-CoreServer_saveShop_01.url = Shop_url +"/sys/user/updateInfo"
-CoreServer_saveShop_01.X_Type = APP_a["X-Type"]
-CoreServer_saveShop_01.businessId = APP_a["shopId"]
-CoreServer_saveShop_01.phone = APP_a["phone"]
-CoreServer_saveShop_01.shopName = APP_a["shopName"]
-CoreServer_saveShop_01.shortName = APP_a["shortName"]
-CoreServer_saveShop_01.description = APP_a["description"]
-CoreServer_saveShop_01.provinceId = APP_a["provinceId"]
-CoreServer_saveShop_01.cityId = APP_a["cityId"]
-CoreServer_saveShop_01.areaId = APP_a["areaId"]
-CoreServer_saveShop_01.address = APP_a["address"]
-CoreServer_saveShop_01.files = APP_a["files"]
+CoreServer_updateShopInfo_01 = updateShopInfo()
+CoreServer_updateShopInfo_01.url = Shop_url +"/sys/user/updateInfo"
+CoreServer_updateShopInfo_01.X_Type = APP_a["X-Type"]
+CoreServer_updateShopInfo_01.businessId = APP_a["shopId"]
+CoreServer_updateShopInfo_01.phone = APP_a["phone"]
+CoreServer_updateShopInfo_01.shopName = APP_a["shopName"]
+CoreServer_updateShopInfo_01.shortName = APP_a["shortName"]
+CoreServer_updateShopInfo_01.description = APP_a["description"]
+CoreServer_updateShopInfo_01.provinceId = APP_a["provinceId"]
+CoreServer_updateShopInfo_01.cityId = APP_a["cityId"]
+CoreServer_updateShopInfo_01.areaId = APP_a["areaId"]
+CoreServer_updateShopInfo_01.address = APP_a["address"]
+CoreServer_updateShopInfo_01.shopLicenseFile = APP_a["shopLicenseFile"]
+CoreServer_updateShopInfo_01.identityFrontFile = APP_a["identityFrontFile"]
+CoreServer_updateShopInfo_01.identityBackFile = APP_a["identityBackFile"]
+
 #exp
-CoreServer_saveShop_01.code = APP_a["error_code_correct"]
+CoreServer_updateShopInfo_01.code = APP_a["error_code_correct"]
 #2.2.3
 CoreServer_shopList_01 = shopList()
 #input

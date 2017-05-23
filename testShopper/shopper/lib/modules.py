@@ -17,8 +17,7 @@ class test_core_server():
                                        applyInvite_test_obj.X_Type)
     #2.1.4
     def test_updateInfo_test(self,updateInfo_test_obj):
-
-        res = actions.updateInfo_test(updateInfo_test_obj.url, updateInfo_test_obj.id, updateInfo_test_obj.X_Type)
+        res = actions.updateInfo_test(updateInfo_test_obj.url, updateInfo_test_obj.id,updateInfo_test_obj.files, updateInfo_test_obj.X_Type)
     #2.1.5
     def test_businessInfo_test(self, businessInfo_test_obj):
 
@@ -33,14 +32,14 @@ class test_core_server():
     def test_saveShop_test(self,saveShop_obj):
         res = actions.saveShop(saveShop_obj.url,saveShop_obj.businessId,saveShop_obj.phone,saveShop_obj.shopName,saveShop_obj.shortName,
                                saveShop_obj.description,saveShop_obj.provinceId,saveShop_obj.cityId,saveShop_obj.areaId,saveShop_obj.address,
-                               saveShop_obj.X_Type,saveShop_obj.files)
-
-    def test_updateInfo_test(self, updateInfo_obj):
-        res = actions.saveShop(updateInfo_obj.url, updateInfo_obj.businessId, updateInfo_obj.phone, updateInfo_obj.shopName,
-                               updateInfo_obj.shortName,
-                               updateInfo_obj.description, updateInfo_obj.provinceId, updateInfo_obj.cityId,
-                               updateInfo_obj.areaId, updateInfo_obj.address,
-                               updateInfo_obj.X_Type, updateInfo_obj.files)
+                               saveShop_obj.X_Type,saveShop_obj.shopLicenseFile,saveShop_obj.identityFrontFile,saveShop_obj.identityBackFile)
+    #2.2.2
+    def test_updateShopInfo_test(self, updateShopInfo_obj):
+        res = actions.updateShopInfo(updateShopInfo_obj.url, updateShopInfo_obj.businessId, updateShopInfo_obj.phone, updateShopInfo_obj.shopName,
+                                     updateShopInfo_obj.shortName,
+                                     updateShopInfo_obj.description, updateShopInfo_obj.provinceId, updateShopInfo_obj.cityId,
+                                     updateShopInfo_obj.areaId, updateShopInfo_obj.address,
+                                     updateShopInfo_obj.X_Type, updateShopInfo_obj.shopLicenseFile,updateShopInfo_obj.identityFrontFile,updateShopInfo_obj.identityBackFile)
     #2.2.3
     def test_shopList_test(self,shopList_obj):
         res = actions.shopList(shopList_obj.url,shopList_obj.businessId,shopList_obj.X_Type)

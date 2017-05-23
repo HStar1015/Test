@@ -7,6 +7,7 @@ from poster.encode import multipart_encode
 from poster.streaminghttp import register_openers
 import hashlib
 import types
+import mimetools
 key="&key=037F6F3127604B4FAE8AAD1AE4BE78E3"
 #MD5加密
 def md5(str):
@@ -150,6 +151,91 @@ def post_json(url, data, header):
     res.close()
 
     return res_body
+
+def encode_multipart_formdata(key, value):
+    bundary = mimetools.choose_boundary()
+    BOUNDARY = '----------'+bundary+'--'
+
+    CRLF = '\r\n'
+
+    L = []
+
+    L.append('--' + BOUNDARY)
+
+    L.append('Content-Disposition: form-data; name="%s"' % key)
+
+    L.append('')
+
+    L.append(value)
+
+    L.append('--' + BOUNDARY + '--')
+
+    L.append('')
+
+    body = CRLF.join(L)
+
+    content_type = 'multipart/form-data; boundary=%s' % BOUNDARY
+
+    return content_type, body
+
+def post_multipart(url, fields):
+    content_type, body = encode_multipart_formdata("data",fields)
+
+    req = urllib2.Request(url, body)
+
+    req.add_header("User-Agent",
+                   "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36 SE 2.X MetaSr 1.0)")
+
+    req.add_header("Accept", "*/*")
+
+    req.add_header("Accept-Language", "zh-CN,zh;q=0.8")
+
+    req.add_header("Accept-Encoding", "gzip,deflate,sdch")
+
+    req.add_header("Connection", "keep-alive")
+
+    req.add_header("Content-Type", content_type)
+
+    req.add_header("User-Agent1", "SogouMSE")
+
+    req.add_header('X-Type',1)
+
+    token = mylogin()['data']['token']
+
+    req.add_header("X-Token",token)
+
+    req_body = req.get_data()
+    print "***request body = ***\n%s" % req_body
+
+    try:
+        response = urllib2.urlopen(req)
+        the_page = response.read().decode('utf-8')
+        print the_page
+        return the_page
+    except urllib2.HTTPError, e:
+        print e.code
+        pass
+    except urllib2.URLError, e:
+        print str(e)
+        pass
+
+    # send request and get response handle
+    res = urllib2.urlopen(req)
+    req_header_get = req.header_items()
+    print "***request header_get = ***\n%s" % req_header_get
+    # response code
+    res_code = res.getcode()
+    print "***response code = ***\n%s" % res_code
+    # response header
+    res_header = res.info()
+    print "***response header = ***\n%s" % res_header
+    # response body
+    res_body = res.read()
+
+    print "***response body = ***\n%s" % res_body
+    res.close()
+
+    return res_body
 #************************************************************************************
 def mylogin():
     # 登录用如下这个接口
@@ -170,7 +256,7 @@ def null2None2dict(res=""):
     res = res.replace("true", "True")
     return eval(res)
 #******************************************2.1*************************************************
-#注册
+#2.1.1注册
 def register_test(url = "",phone="",password= "",authCode ="",inviteCode="",X_Type="1"):
     url = url
     data1 = {"phone": phone, "password": password, "authCode": authCode, "inviteCode": inviteCode}
@@ -182,14 +268,14 @@ def register_test(url = "",phone="",password= "",authCode ="",inviteCode="",X_Ty
     header = {"Content-type": "application/json;charset=UTF-8","X-Type":"1"}
     res = post_json(url,data,header)
     return null2None2dict(res)
-#登录
+#2.1.2登录
 def login_test(url="",phone ="",password="",X_Type="1"):
     url = url
     data = {"phone":phone,"password":password,"sign":"E3599E79A9ABB6EED2DED4481090C716"}
     header = {"Content-type": "application/json;charset=UTF-8","X-Type":"1"}
     res = post_json(url,data,header)
     return null2None2dict(res)
-#申请邀请码
+#2.1.3申请邀请码
 def applyInvite_test(url="",phone ="",name="",pronvinceId="",cityId ="",areaId = "",X_Type="1"):
     url = url
     data1 = {"phone":phone,"name":name,"provinceId":pronvinceId,"cityId":cityId,"areaId":areaId}
@@ -201,20 +287,22 @@ def applyInvite_test(url="",phone ="",name="",pronvinceId="",cityId ="",areaId =
     header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "1"}
     res = post_json(url, data, header)
     return null2None2dict(res)
-#!!!!!!!!!!!!!!!!修改商家信息
-def updateInfo_test(url="",id="",files="",X_Type = '1'):
+#2.1.4修改商家信息
+def updateInfo_test(url="",id="",files="",X_Type = "1"):
     url = url
-    data1 = {"id":id}
+    print "***URl = ***\n%s" % url
+    data1 = {"id":id,"files":files}
     sort_data = sorted(data1.items(), key=lambda d: d[0])
     res = urllib.urlencode(sort_data)
     res2 = res + key
+    print "----mark----res2=",res2
     sign = md5(res2).upper()
-    data= {"id":id,"sign":sign}
-    token = mylogin()
-    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "1","X-Token":token['data']['token']}
-    res = post_json(url, data, header)
+    data= {"id":id,"files":files,"sign":sign}
+    data2 = json.dumps(data)
+    print "*******MARK*********data2-----",data2
+    res = post_multipart(url,data2)
     return null2None2dict(res)
-#获取商家信息
+#2.1.6获取商家信息
 def businessInfo_test(url="",id="",X_Type = '1'):
     url = url
     data1 = {"id":id}
@@ -227,7 +315,7 @@ def businessInfo_test(url="",id="",X_Type = '1'):
     header = {"Content-type": "application/json", "X-Type": 1,"X-Token":token['data']['token']}
     res = post_json(url, data, header)
     return null2None2dict(res)
-#更新用户设备ID
+#2.1.7更新用户设备ID
 def updateRegistrationId(url ="",id ="",registrationId="",X_Type = '1'):
     url = url
     data1 = {"id": id, "registrationId": registrationId}
@@ -241,25 +329,43 @@ def updateRegistrationId(url ="",id ="",registrationId="",X_Type = '1'):
     res = post_json(url, data, header)
     return null2None2dict(res)
 #************************2.2*******************************
-#!!!!!!!!!!!!!!!!2.2.1
-def saveShop(url ="",businessId="",phone="",shopName= "",shortName= "",description= "",provinceId="",cityId="",areaId="",address="",X_Type="1",files=""):
-
-    data = files
-    token = mylogin()
-    header = {"Content-type": "application/octet-stream", "X-Type": 1, "X-Token": token['data']['token'],"businessId":businessId,"phone":phone,"shopName":shopName,"shortName":shortName,"description":description,"provinceId":provinceId,
-            "cityId":cityId,"areaId":areaId,"address":address}
-    header.update(header)
-    res = post_upload_file(url, data, header)
+#!!!!2.2.1
+def saveShop(url ="",businessId="",phone="",shopName= "",shortName= "",description= "",provinceId="",cityId="",areaId="",address="",X_Type="1",
+             shopLicenseFile ="",identityFrontFile ="",identityBackFile =""):
+    url = url
+    data1 = {"businessId":businessId,"phone":phone,"shopName":shopName,"shortName":shortName,"description":description,"provinceId":provinceId,"cityId":cityId,
+             "areaId":areaId,"address":address,"shopLicenseFile":shopLicenseFile,"identityFrontFile":identityFrontFile,"identityBackFile":identityBackFile}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    print "RRRRRRRRRRRRRRRRRRRRRRRRRR",res2
+    sign = md5(res2).upper()
+    data= {"businessId":businessId,"phone":phone,"shopName":shopName,"shortName":shortName,"description":description,"provinceId":provinceId,"cityId":cityId,
+             "areaId":areaId,"address":address,"shopLicenseFile":shopLicenseFile,"identityFrontFile":identityFrontFile,"identityBackFile":identityBackFile,"sign":sign}
+    data2 = json.dumps(data)
+    print "DDDDDDDDDDDDDD",data2
+    res = post_multipart(url,data2)
     return null2None2dict(res)
-#!!!!!!!!!!!!!!!!!2.2.2
-def updateInfo(url ="",businessId="",phone="",shopName= "",shortName= "",description= "",provinceId="",cityId="",areaId="",address="",X_Type="1",files=""):
-
-    data = files
-    token = mylogin()
-    header = {"Content-type": "application/octet-stream", "X-Type": 1, "X-Token": token['data']['token'],"businessId":businessId,"phone":phone,"shopName":shopName,"shortName":shortName,"description":description,"provinceId":provinceId,
-            "cityId":cityId,"areaId":areaId,"address":address}
-    header.update(header)
-    res = post_upload_file(url, data, header)
+#2.2.2
+def updateShopInfo(url ="",businessId="",phone="",shopName= "",shortName= "",description= "",provinceId="",cityId="",areaId="",address="",X_Type="1",
+             shopLicenseFile ="",identityFrontFile ="",identityBackFile =""):
+    url = url
+    data1 = {"businessId": businessId, "phone": phone, "shopName": shopName, "shortName": shortName,
+             "description": description, "provinceId": provinceId, "cityId": cityId,
+             "areaId": areaId, "address": address, "shopLicenseFile": shopLicenseFile,
+             "identityFrontFile": identityFrontFile, "identityBackFile": identityBackFile}
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    print "RRRRRRRRRRRRRRRRRRRRRRRRRR", res2
+    sign = md5(res2).upper()
+    data = {"businessId": businessId, "phone": phone, "shopName": shopName, "shortName": shortName,
+            "description": description, "provinceId": provinceId, "cityId": cityId,
+            "areaId": areaId, "address": address, "shopLicenseFile": shopLicenseFile,
+            "identityFrontFile": identityFrontFile, "identityBackFile": identityBackFile, "sign": sign}
+    data2 = json.dumps(data)
+    print "DDDDDDDDDDDDDD", data2
+    res = post_multipart(url, data2)
     return null2None2dict(res)
 #2.2.3
 def shopList(url="",businessId="",X_Type='1'):
@@ -357,14 +463,20 @@ def projectSaleStatistics(url="",shopId="",X_Type="1"):
 def addProject(url = "",businessId="",shopIds ="",projectName="",groupNo="",unitPrice="",coursePrice= "",courseRemark="",
                duration ="",description= "",applyPerson ="",brand="",noticeMatters="",X_Type="1",files =""):
     url = url
-    file = files
-    token = mylogin()
-    header = {"Content-type": "application/json", "X-Type": 1, "X-Token": token['data']['token'],
-            "businessId":businessId,"shopIds":shopIds,"projectName":projectName,"groupNo":groupNo,"unitPrice":unitPrice,"coursePrice":coursePrice,
+    data1 = {"businessId":businessId,"shopIds":shopIds,"projectName":projectName,"groupNo":groupNo,"unitPrice":unitPrice,"coursePrice":coursePrice,
               "courseRemark":courseRemark,"duration":duration,"description":description,"applyPerson":applyPerson,"brand":brand,
               "noticeMatters":noticeMatters,"files":files}
-    res = post_upload_file(url,file,header)
-    return null2None2dict(res)
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+
+    data1 = {"businessId":businessId,"shopIds":shopIds,"projectName":projectName,"groupNo":groupNo,"unitPrice":unitPrice,"coursePrice":coursePrice,
+              "courseRemark":courseRemark,"duration":duration,"description":description,"applyPerson":applyPerson,"brand":brand,
+              "noticeMatters":noticeMatters,"files":files,"sign":sign}
+    data2 = json.dumps(data1)
+    res3 = post_multipart(url,data2)
+    return null2None2dict(res3)
 #2.3.2
 def deleteProject(url ="",id="",X_Type ="1"):
     url = url
@@ -383,15 +495,22 @@ def editProject(url="", id="", projectName="", groupNo="", unitPrice="", courseP
                 courseRemark="",duration="", description="", applyPerson="", brand="", noticeMatters="",
                X_Type="1", files="",fileUuid =""):
     url = url
-    file = files
-    token = mylogin()
-    header = {"Content-type": "application/json", "X-Type": 1, "X-Token": token['data']['token'],
-          "id": id,  "projectName": projectName, "groupNo": groupNo,
+    data1 = {"id": id,  "projectName": projectName, "groupNo": groupNo,
           "unitPrice": unitPrice, "coursePrice": coursePrice,
           "courseRemark": courseRemark, "duration": duration, "description": description, "applyPerson": applyPerson,
           "brand": brand,  "noticeMatters": noticeMatters, "files": files,"fileUuid":fileUuid}
-    res = post_upload_file(url,file,header)
-    return null2None2dict(res)
+    sort_data = sorted(data1.items(), key=lambda d: d[0])
+    res = urllib.urlencode(sort_data)
+    res2 = res + key
+    sign = md5(res2).upper()
+
+    data = {"id": id,  "projectName": projectName, "groupNo": groupNo,
+          "unitPrice": unitPrice, "coursePrice": coursePrice,
+          "courseRemark": courseRemark, "duration": duration, "description": description, "applyPerson": applyPerson,
+          "brand": brand,  "noticeMatters": noticeMatters, "files": files,"fileUuid":fileUuid,"sign":sign}
+    data2 = json.dumps(data)
+    res1 = post_multipart(url,data2)
+    return null2None2dict(res1)
 #2.3.4
 def projectList(url="",shopId="",pageSize="",X_Type="1"):
     url = url

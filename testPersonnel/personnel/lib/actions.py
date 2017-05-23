@@ -7,6 +7,7 @@ from poster.encode import multipart_encode
 from poster.streaminghttp import register_openers
 import types
 import hashlib
+import mimetools
 key="&key=037F6F3127604B4FAE8AAD1AE4BE78E3"
 #MD5加密
 def md5(str):
@@ -148,6 +149,82 @@ def post_json(url, data, header):
     res.close()
 
     return res_body
+
+def encode_multipart_formdata(key, value):
+    bundary = mimetools.choose_boundary()
+    BOUNDARY = '----------'+bundary+'--'
+
+    CRLF = '\r\n'
+
+    L = []
+
+    L.append('--' + BOUNDARY)
+
+    L.append('Content-Disposition: form-data; name="%s"' % key)
+
+    L.append('')
+
+    L.append(value)
+
+    L.append('--' + BOUNDARY + '--')
+
+    L.append('')
+
+    body = CRLF.join(L)
+
+    content_type = 'multipart/form-data; boundary=%s' % BOUNDARY
+
+    return content_type, body
+
+def post_multipart(url, fields):
+    content_type, body = encode_multipart_formdata("data",fields)
+
+    req = urllib2.Request(url, body)
+
+    req.add_header("User-Agent",
+                   "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36 SE 2.X MetaSr 1.0)")
+
+    req.add_header("Accept", "*/*")
+
+    req.add_header("Accept-Language", "zh-CN,zh;q=0.8")
+
+    req.add_header("Accept-Encoding", "gzip,deflate,sdch")
+
+    req.add_header("Connection", "keep-alive")
+
+    req.add_header("Content-Type", content_type)
+
+    req.add_header("User-Agent1", "SogouMSE")
+
+    req.add_header('X-Type',3)
+
+    token = mylogin()['data']['token']
+
+    req.add_header("X-Token",token)
+
+
+    req_header_get = req.header_items()
+    print "***request header_get = ***\n%s" % req_header_get
+
+    req_body = req.get_data()
+    print "***request body = ***\n%s" % req_body
+
+    res = urllib2.urlopen(req)
+    res_code = res.getcode()
+    print "***response code = ***\n%s" % res_code
+
+    try:
+        response = urllib2.urlopen(req)
+        the_page = response.read().decode('utf-8')
+        print the_page
+        return the_page
+    except urllib2.HTTPError, e:
+        print e.code
+        pass
+    except urllib2.URLError, e:
+        print str(e)
+        pass
+
 #************************************************************************************
 def mylogin():
     # 登录用如下这个接口
@@ -218,14 +295,17 @@ def personnelInfo(url ="",id= "",X_Type = "2"):
     header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token']}
     res = post_json(url, data, header)
     return null2None2dict(res)
-#!!!!!!!!!!!!!3.1.5
+#3.1.5
 def updateInfo(url= "",id = "",name="",sex="",X_Type="2",files=""):
     url = url
-    file = files
-    token = mylogin()
-    header = {"Content-type": "application/json;charset=UTF-8", "X-Type": "2", "X-Token": token['data']['token'],
-              "id":id,"name":name,"sex":sex}
-    res = post_upload_file(url,file,header)
+    data1 = {"id":id,"name":name,"sex":sex}
+    sort_data = sorted(data1.items(),key=lambda d:d[0])
+    res = urllib.unquote(urllib.urlencode(sort_data))
+    res2 = res + key
+    sign = md5(res2).upper()
+    data = {"id":id,"name":name,"sex":sex,"sign":sign}
+    data2 = json.dumps(data)
+    res = post_multipart(url,data2)
     return  null2None2dict(res)
 #3.1.6
 def workTime(url = "",id = "", monStart ="",monEnd="",tueStart="",tueEnd="",wedStart="",

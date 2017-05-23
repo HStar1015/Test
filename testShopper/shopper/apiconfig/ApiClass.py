@@ -47,6 +47,7 @@ class updateInfo:
     url = ""
     id = ""
     X_Type =""
+    files = ""
     #exp
     code = ""
 #2.1.5获取商家信息
@@ -78,11 +79,14 @@ class saveShop:
     address = ""
     url = ""
     X_Type =""
-    files =""
+    shopLicenseFile =""
+    identityFrontFile =""
+    identityBackFile =""
+
     #exp
     code = ""
 #2.2.2
-class updateInfo:
+class updateShopInfo:
     businessId = ""
     phone = ""
     shopName = ""
