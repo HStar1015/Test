@@ -4,6 +4,8 @@ from lib import actions
 from lib import modules
 import apiconfig.ProductionEnv_config as apimsg
 import datetime
+import os
+print os.getenv("BUILD_NUMBER")
 
 class core_server_tests(unittest.TestCase):
     test = modules.test_core_server()

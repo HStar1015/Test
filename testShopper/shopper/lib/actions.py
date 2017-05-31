@@ -8,6 +8,13 @@ from poster.streaminghttp import register_openers
 import hashlib
 import types
 import mimetools
+import sys
+import os
+curPath = os.path.abspath(os.path.dirname(__file__))
+rootPath = os.path.split(curPath)[0]
+sys.path.append(rootPath)
+
+
 key="&key=037F6F3127604B4FAE8AAD1AE4BE78E3"
 #MD5加密
 def md5(str):

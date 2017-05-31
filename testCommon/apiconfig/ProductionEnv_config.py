@@ -14,7 +14,7 @@ APP_a = {
     "pageSize":100,
     "type":1,
     "id":38,#分享URl-id
-    "cityId":"320500",
+    "cityId":"371000",
     "userId":"180",
     "activityId":"26",
     "contentId":"45",
